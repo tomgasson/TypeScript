@@ -81,7 +81,6 @@ type EmitResolver interface {
 	IsTopLevelValueImportEqualsWithEntityName(node *ast.Node) bool
 	MarkLinkedReferencesRecursively(file *ast.SourceFile)
 	GetExternalModuleFileFromDeclaration(node *ast.Node) *ast.SourceFile
-	GetEffectiveDeclarationFlags(node *ast.Node, flags ast.ModifierFlags) ast.ModifierFlags
 
 	// decorator metadata
 	GetTypeReferenceSerializationKind(name *ast.EntityName, serialScope *ast.Node) TypeReferenceSerializationKind

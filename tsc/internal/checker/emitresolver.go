@@ -834,13 +834,6 @@ func (r *EmitResolver) CreateLateBoundIndexSignatures(container *ast.Node, enclo
 	return result
 }
 
-func (r *EmitResolver) GetEffectiveDeclarationFlags(node *ast.Node, flags ast.ModifierFlags) ast.ModifierFlags {
-	// node = emitContext.ParseNode(node)
-	r.checkerMu.Lock()
-	defer r.checkerMu.Unlock()
-	return r.checker.GetEffectiveDeclarationFlags(node, flags)
-}
-
 func (r *EmitResolver) GetConstantValue(node *ast.Node) any {
 	// node = emitContext.ParseNode(node)
 	r.checkerMu.Lock()

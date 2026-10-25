@@ -10,11 +10,11 @@ func needsScopeMarker(result *ast.Node) bool {
 	return !ast.IsAnyImportOrReExport(result) && !ast.IsExportAssignment(result) && !ast.HasSyntacticModifier(result, ast.ModifierFlagsExport) && !ast.IsAmbientModule(result)
 }
 
-func canHaveLiteralInitializer(resolver printer.EmitResolver, node *ast.Node) bool {
+func canHaveLiteralInitializer(node *ast.Node) bool {
 	switch node.Kind {
 	case ast.KindPropertyDeclaration,
 		ast.KindPropertySignature:
-		return resolver.GetEffectiveDeclarationFlags(node, ast.ModifierFlagsPrivate) == 0
+		return ast.GetCombinedModifierFlags(node)&ast.ModifierFlagsPrivate == 0
 	case ast.KindParameter,
 		ast.KindVariableDeclaration:
 		return true
@@ -146,8 +146,8 @@ func unwrapParenthesizedExpression(o *ast.Node) *ast.Node {
 	return o
 }
 
-func isPrivateMethodTypeParameter(resolver printer.EmitResolver, node *ast.TypeParameterDeclaration) bool {
-	return node.AsNode().Parent.Kind == ast.KindMethodDeclaration && resolver.GetEffectiveDeclarationFlags(node.AsNode().Parent, ast.ModifierFlagsPrivate) != 0
+func isPrivateMethodTypeParameter(node *ast.TypeParameterDeclaration) bool {
+	return node.AsNode().Parent.Kind == ast.KindMethodDeclaration && ast.GetCombinedModifierFlags(node.AsNode().Parent)&ast.ModifierFlagsPrivate != 0
 }
 
 // Returns true if expando properties should be emitted for this function.
