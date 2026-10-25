@@ -2382,6 +2382,10 @@ func (tx *DeclarationTransformer) ensureModifierFlags(node *ast.Node) ast.Modifi
 }
 
 func (tx *DeclarationTransformer) ensureTypeParams(node *ast.Node, params *ast.TypeParameterList) *ast.TypeParameterList {
+	data := node.FunctionLikeData()
+	if params == nil && (data == nil || data.FullSignature == nil) {
+		return nil
+	}
 	if tx.resolver.GetEffectiveDeclarationFlags(tx.EmitContext().ParseNode(node), ast.ModifierFlagsPrivate) != 0 {
 		return nil
 	}
@@ -2399,7 +2403,7 @@ func (tx *DeclarationTransformer) ensureTypeParams(node *ast.Node, params *ast.T
 		}
 	}
 
-	if data := node.FunctionLikeData(); data != nil && data.FullSignature != nil {
+	if data != nil && data.FullSignature != nil {
 		if nodes := tx.resolver.CreateTypeParametersOfSignatureDeclaration(node, tx.enclosingDeclaration, declarationEmitNodeBuilderFlags, declarationEmitInternalNodeBuilderFlags, tx.tracker); nodes != nil {
 			typeParameters = &ast.TypeParameterList{
 				Loc:   node.Loc,
@@ -2416,7 +2420,7 @@ func (tx *DeclarationTransformer) ensureTypeParams(node *ast.Node, params *ast.T
 }
 
 func (tx *DeclarationTransformer) updateParamList(node *ast.Node, params *ast.ParameterList) *ast.ParameterList {
-	if tx.resolver.GetEffectiveDeclarationFlags(tx.EmitContext().ParseNode(node), ast.ModifierFlagsPrivate) != 0 || len(params.Nodes) == 0 {
+	if len(params.Nodes) == 0 || tx.resolver.GetEffectiveDeclarationFlags(tx.EmitContext().ParseNode(node), ast.ModifierFlagsPrivate) != 0 {
 		return tx.Factory().NewNodeList([]*ast.Node{})
 	}
 	results := make([]*ast.Node, len(params.Nodes))
