@@ -7,6 +7,7 @@ import (
 
 	"github.com/microsoft/TypeScript/tsc/internal/ast"
 	"github.com/microsoft/TypeScript/tsc/internal/core"
+	"github.com/microsoft/TypeScript/tsc/internal/tracing"
 	"github.com/microsoft/TypeScript/tsc/internal/tsoptions"
 	"github.com/microsoft/TypeScript/tsc/internal/tspath"
 )
@@ -158,8 +159,21 @@ func emitProjectReferenceDeclarations(program *Program) map[tspath.RootedFilePat
 		len(program.GetSyntacticDiagnostics(ctx, nil)) != 0 {
 		return nil
 	}
+	emit := program.Emit
+	if program.Options().NoEmitOnError.IsTrue() && !program.Options().NoEmit.IsTrue() {
+		if tr := program.hosts.Tracing; tr != nil {
+			defer tr.Push(tracing.PhaseEmit, "emit", nil, true)()
+		}
+		// Preserve whole-program noEmitOnError checking, but let the actual emit
+		// collect declaration diagnostics. This capture publishes nothing until
+		// every declaration succeeds, so it need not transform declarations twice.
+		if len(GetDiagnosticsOfAnyProgram(ctx, program, nil, false, program.GetBindDiagnostics, program.GetSemanticDiagnostics)) != 0 {
+			return nil
+		}
+		emit = program.emitWorker
+	}
 	outputs := make(map[tspath.RootedFilePath]string)
-	result := program.Emit(ctx, EmitOptions{
+	result := emit(ctx, EmitOptions{
 		EmitOnly: EmitOnlyDts,
 		WriteFile: func(path tspath.RootedFilePath, text string, _ *WriteFileData) error {
 			outputs[path] = text
