@@ -13,6 +13,8 @@ type projectReferenceFileMapper struct {
 	config                      *tsoptions.ParsedCommandLine
 	useSourceOfProjectReference bool
 	dtsDirectories              collections.Set[tspath.PathKey]
+	declarationProjects         collections.Set[*tsoptions.ParsedCommandLine]
+	generatedDeclarations       collections.SyncMap[tspath.PathKey, string]
 
 	configToProjectReference    map[tspath.PathKey]*tsoptions.ParsedCommandLine // All the resolved references needed
 	referencesInConfigFile      map[tspath.PathKey][]tspath.PathKey             // Map of config file to its references
@@ -28,9 +30,9 @@ type projectReferenceFileMapperBuilder struct {
 	host module.ResolutionHost
 }
 
-func (mapper *projectReferenceFileMapper) resolutionHost(host module.ResolutionHost) module.ResolutionHost {
-	if mapper.useSourceOfProjectReference && len(mapper.outputDtsToProjectReference) != 0 {
-		return newProjectReferenceDtsFakingHost(host, mapper)
+func (mapper *projectReferenceFileMapper) resolutionHost(host module.ResolutionHost, generateDeclaration func(ast.HasFileName) (string, bool)) module.ResolutionHost {
+	if (mapper.useSourceOfProjectReference || mapper.declarationProjects.Len() != 0) && len(mapper.outputDtsToProjectReference) != 0 {
+		return newProjectReferenceDtsFakingHost(host, mapper, generateDeclaration)
 	}
 	return host
 }

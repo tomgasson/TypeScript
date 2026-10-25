@@ -73,7 +73,10 @@ func (p *projectReferenceParser) initMapper(tasks []*projectReferenceParseTask) 
 	p.loader.projectReferences.sourceToProjectReference = make(map[tspath.PathKey]*tsoptions.SourceOutputAndProjectReference)
 	p.loader.projectReferences.outputDtsToProjectReference = make(map[tspath.PathKey]*tsoptions.SourceOutputAndProjectReference)
 	p.loader.projectReferences.referencesInConfigFile[p.loader.projectReferences.rootConfigPath()] = p.initMapperWorker(tasks, &collections.Set[*projectReferenceParseTask]{})
-	p.loader.projectReferences.host = p.loader.projectReferences.resolutionHost(p.loader.projectReferences.host)
+	if p.loader.allowProjectReferenceDeclarationGeneration {
+		p.loader.prepareProjectReferenceDeclarations()
+	}
+	p.loader.projectReferences.host = p.loader.projectReferences.resolutionHost(p.loader.projectReferences.host, p.loader.generateProjectReferenceDeclaration)
 }
 
 func (p *projectReferenceParser) initMapperWorker(tasks []*projectReferenceParseTask, seen *collections.Set[*projectReferenceParseTask]) []tspath.PathKey {

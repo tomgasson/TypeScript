@@ -67,7 +67,9 @@ type fileLoader struct {
 	factoryMu sync.Mutex
 	factory   ast.NodeFactory
 
-	projectReferences *projectReferenceFileMapperBuilder
+	projectReferences                          *projectReferenceFileMapperBuilder
+	declarationEmits                           collections.SyncMap[*tsoptions.ParsedCommandLine, *sync.Once]
+	allowProjectReferenceDeclarationGeneration bool
 
 	pathForLibFileCache       collections.SyncMap[string, *LibFile]
 	pathForLibFileResolutions collections.SyncMap[tspath.PathKey, *libResolution]
@@ -190,6 +192,7 @@ func processAllProgramFiles(
 		supportedExtensions: supportedExtensions,
 		supportedExtensionsWithJsonIfResolveJsonModule: supportedExtensionsWithJsonIfResolveJsonModule,
 		contentMapperExtensions:                        opts.Config.ContentMapperExtensions(),
+		allowProjectReferenceDeclarationGeneration:     opts.CreateModuleResolver == nil && !opts.SkipModuleResolution && !opts.skipProjectReferenceDeclarationGeneration && !opts.canUseProjectReferenceSource(),
 	}
 	loader.addProjectReferenceTasks(singleThreaded)
 	resolverOptions := module.ResolverOptions{
@@ -423,7 +426,14 @@ func (p *fileLoader) parseSourceFile(t *parseTask) *ast.SourceFile {
 	if t.normalizedFilePath.ExtensionIsOneOf(p.contentMapperExtensions) {
 		return p.parseContentMappedFile(parseOptions)
 	}
-	return p.host.GetSourceFile(parseOptions)
+	file := p.host.GetSourceFile(parseOptions)
+	if file != nil || p.host.FS().FileExists(parseOptions.FileName) {
+		return file
+	}
+	if text, ok := p.generateProjectReferenceDeclaration(t); ok {
+		return p.host.GetSourceFileFromText(parseOptions, text, core.ScriptKindTS)
+	}
+	return nil
 }
 
 // parseContentMappedFile produces a content-mapped virtual source file via the host's content
@@ -701,13 +711,13 @@ func (p *fileLoader) getSourceFileFromReference(
 			return "", "", &sourceFileFromReferenceDiagnostic{message: diagnostics.File_0_has_an_unsupported_extension_The_only_supported_extensions_are_1, args: []string{diagnosticFileName, "'" + strings.Join(core.Flatten(p.supportedExtensions), "', '") + "'"}}
 		}
 
-		if !p.host.FS().FileExists(fileName) {
+		if !p.referenceFileExists(fileName) {
 			return "", "", &sourceFileFromReferenceDiagnostic{message: diagnostics.File_0_not_found, args: []string{diagnosticFileName}}
 		}
 		return fileName, canonicalFileName, nil
 	}
 
-	if allowNonTsExtensions && p.host.FS().FileExists(fileName) {
+	if allowNonTsExtensions && p.referenceFileExists(fileName) {
 		return fileName, p.caseSensitivity.PathKey(tspath.RootedPath(fileName)), nil
 	}
 
@@ -717,7 +727,7 @@ func (p *fileLoader) getSourceFileFromReference(
 
 	for _, ext := range p.supportedExtensions[0] {
 		candidate := fileName.AppendSuffix(ext)
-		if p.host.FS().FileExists(candidate) {
+		if p.referenceFileExists(candidate) {
 			return candidate, p.caseSensitivity.PathKey(tspath.RootedPath(candidate)), nil
 		}
 	}

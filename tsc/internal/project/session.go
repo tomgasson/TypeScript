@@ -1140,7 +1140,7 @@ func (s *Session) getSnapshotAndDefaultProject(ctx context.Context, uri lsproto.
 		}
 		return nil, nil, nil, fmt.Errorf("no project found for URI %s", uri)
 	}
-	return snapshot, project, ls.NewLanguageService(project.ID(), project.GetProgram(), snapshot, uri.FileName().AsString()), nil
+	return snapshot, project, ls.NewLanguageService(project.ID(), project.GetProgram(), snapshot.LanguageServiceHost(project.GetProgram()), uri.FileName().AsString()), nil
 }
 
 func (s *Session) GetLanguageService(ctx context.Context, uri lsproto.DocumentUri) (*ls.LanguageService, error) {
@@ -1201,7 +1201,7 @@ func (s *Session) GetLanguageServicesForDocumentsLoadingProjectTree(ctx context.
 			continue
 		}
 
-		services = append(services, ls.NewLanguageService(project.ID(), program, snapshot, activeFile))
+		services = append(services, ls.NewLanguageService(project.ID(), program, snapshot.LanguageServiceHost(program), activeFile))
 	}
 	return services
 }
@@ -1221,7 +1221,7 @@ func (s *Session) GetLanguageServiceForProjectWithFile(ctx context.Context, proj
 	if !project.HasFile(uri.FileName()) {
 		return nil
 	}
-	return ls.NewLanguageService(project.ID(), project.GetProgram(), snapshot, uri.FileName().AsString())
+	return ls.NewLanguageService(project.ID(), project.GetProgram(), snapshot.LanguageServiceHost(project.GetProgram()), uri.FileName().AsString())
 }
 
 // WithSnapshotLoadingProjectTree acquires a ref'd snapshot with the
@@ -1269,7 +1269,7 @@ func (s *Session) GetCurrentLanguageServiceWithAutoImports(ctx context.Context, 
 	if project == nil {
 		return nil, fmt.Errorf("no project found for URI %s", uri)
 	}
-	return ls.NewLanguageService(project.ID(), project.GetProgram(), snapshot, uri.FileName().AsString()), nil
+	return ls.NewLanguageService(project.ID(), project.GetProgram(), snapshot.LanguageServiceHost(project.GetProgram()), uri.FileName().AsString()), nil
 }
 
 // WithLanguageServiceAndSnapshot synchronously acquires a ref'd snapshot and
@@ -1317,7 +1317,7 @@ func (s *Session) GetLanguageServiceWithAutoImports(ctx context.Context, baseSna
 
 	s.tryAdoptSnapshotChangeInBackground(baseSnapshot, newSnapshot)
 
-	return ls.NewLanguageService(project.ID(), project.GetProgram(), newSnapshot, uri.FileName().AsString()), nil
+	return ls.NewLanguageService(project.ID(), project.GetProgram(), newSnapshot.LanguageServiceHost(project.GetProgram()), uri.FileName().AsString()), nil
 }
 
 func (s *Session) tryAdoptSnapshotChangeInBackground(baseSnapshot, newSnapshot *Snapshot) {

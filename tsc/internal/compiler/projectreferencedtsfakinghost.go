@@ -1,8 +1,10 @@
 package compiler
 
 import (
+	"strings"
 	"time"
 
+	"github.com/microsoft/TypeScript/tsc/internal/ast"
 	"github.com/microsoft/TypeScript/tsc/internal/core"
 	"github.com/microsoft/TypeScript/tsc/internal/module"
 	"github.com/microsoft/TypeScript/tsc/internal/symlinks"
@@ -18,7 +20,7 @@ type projectReferenceDtsFakingHost struct {
 
 var _ module.ResolutionHost = (*projectReferenceDtsFakingHost)(nil)
 
-func newProjectReferenceDtsFakingHost(host module.ResolutionHost, references *projectReferenceFileMapper) module.ResolutionHost {
+func newProjectReferenceDtsFakingHost(host module.ResolutionHost, references *projectReferenceFileMapper, generateDeclaration func(ast.HasFileName) (string, bool)) module.ResolutionHost {
 	// Create a new host that will fake the dts files
 	return &projectReferenceDtsFakingHost{
 		currentDirectory: host.GetCurrentDirectory(),
@@ -26,6 +28,7 @@ func newProjectReferenceDtsFakingHost(host module.ResolutionHost, references *pr
 			host:                       host,
 			projectReferenceFileMapper: references,
 			knownSymlinks:              symlinks.KnownSymlinks{},
+			generateDeclaration:        generateDeclaration,
 		}),
 	}
 }
@@ -44,6 +47,8 @@ type projectReferenceDtsFakingVfs struct {
 	host                       module.ResolutionHost
 	projectReferenceFileMapper *projectReferenceFileMapper
 	knownSymlinks              symlinks.KnownSymlinks
+	// Set only while loading a program. Later resolvers can read successful output only.
+	generateDeclaration func(ast.HasFileName) (string, bool)
 }
 
 var _ vfs.FS = (*projectReferenceDtsFakingVfs)(nil)
@@ -58,6 +63,9 @@ func (fs *projectReferenceDtsFakingVfs) FileExists(path tspath.RootedFilePath) b
 	if fs.host.FS().FileExists(path) {
 		return true
 	}
+	if _, ok := fs.getGeneratedDeclarationText(path); ok {
+		return true
+	}
 	if !path.IsDeclarationFile() {
 		return false
 	}
@@ -67,8 +75,42 @@ func (fs *projectReferenceDtsFakingVfs) FileExists(path tspath.RootedFilePath) b
 
 // ReadFile implements vfs.FS.
 func (fs *projectReferenceDtsFakingVfs) ReadFile(path tspath.RootedFilePath) (contents string, ok bool) {
-	// Dont need to override as we cannot mimick read file
-	return fs.host.FS().ReadFile(path)
+	// A generated declaration's matching map supersedes a stale map left on disk.
+	if text, ok := fs.getGeneratedDeclarationText(path); ok {
+		return text, true
+	}
+	if contents, ok := fs.host.FS().ReadFile(path); ok {
+		return contents, true
+	}
+	if fs.host.FS().FileExists(path) {
+		return "", false
+	}
+	return fs.projectReferenceFileMapper.getGeneratedDeclarationText(fs.pathKey(path.AsPath()))
+}
+
+func (fs *projectReferenceDtsFakingVfs) getGeneratedDeclarationText(file tspath.RootedFilePath) (string, bool) {
+	if text, ok := fs.projectReferenceFileMapper.getGeneratedDeclarationText(fs.pathKey(file.AsPath())); ok {
+		return text, true
+	}
+	declaration, suffix := file, ""
+	if name, isMap := strings.CutSuffix(file.AsString(), ".map"); isMap {
+		declaration, suffix = tspath.RootedFilePathFromNormalized(name), ".map"
+	}
+	if !declaration.IsDeclarationFile() {
+		return "", false
+	}
+	if fs.host.FS().FileExists(declaration) {
+		return "", false
+	}
+	// A map or a direct read may be the first lookup through this package alias.
+	fs.fileExistsUsingSource(declaration)
+	if text, ok := fs.projectReferenceFileMapper.getGeneratedDeclarationText(fs.pathKey(file.AsPath())); ok {
+		return text, true
+	}
+	if target, ok := fs.knownSymlinks.Files().Load(fs.pathKey(declaration.AsPath())); ok {
+		return fs.projectReferenceFileMapper.getGeneratedDeclarationText(fs.pathKey(target.AppendSuffix(suffix).AsPath()))
+	}
+	return "", false
 }
 
 // WriteFile implements vfs.FS.
@@ -102,12 +144,12 @@ func (fs *projectReferenceDtsFakingVfs) DirectoryExists(path tspath.RootedDirect
 
 // GetAccessibleEntries implements vfs.FS.
 func (fs *projectReferenceDtsFakingVfs) GetAccessibleEntries(path tspath.RootedDirectoryPath) vfs.Entries {
-	panic("should not be called by resolver")
+	return fs.host.FS().GetAccessibleEntries(path)
 }
 
 // Stat implements vfs.FS.
 func (fs *projectReferenceDtsFakingVfs) Stat(path tspath.RootedPath) vfs.FileInfo {
-	panic("should not be called by resolver")
+	return fs.host.FS().Stat(path)
 }
 
 // Realpath implements vfs.FS.
@@ -235,6 +277,16 @@ func (fs *projectReferenceDtsFakingVfs) fileOrDirectoryExistsUsingSource(
 func (fs *projectReferenceDtsFakingVfs) fileExistsIfProjectReferenceDts(file tspath.RootedFilePath) core.Tristate {
 	source := fs.projectReferenceFileMapper.getProjectReferenceFromOutputDts(fs.pathKey(file.AsPath()))
 	if source != nil {
+		if !fs.projectReferenceFileMapper.useSourceOfProjectReference {
+			if _, ok := fs.projectReferenceFileMapper.getGeneratedDeclarationText(fs.pathKey(file.AsPath())); ok {
+				return core.TSTrue
+			}
+			if fs.generateDeclaration == nil || !fs.projectReferenceFileMapper.declarationProjects.Has(source.Resolved) {
+				return core.TSFalse
+			}
+			_, ok := fs.generateDeclaration(ast.NewHasFileName(file, fs.pathKey(file.AsPath())))
+			return core.IfElse(ok, core.TSTrue, core.TSFalse)
+		}
 		return core.IfElse(fs.host.FS().FileExists(source.Source), core.TSTrue, core.TSFalse)
 	}
 	return core.TSUnknown

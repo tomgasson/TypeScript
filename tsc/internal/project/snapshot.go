@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"maps"
 	"slices"
+	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
 
 	"github.com/microsoft/TypeScript/tsc/internal/ast"
 	"github.com/microsoft/TypeScript/tsc/internal/collections"
+	"github.com/microsoft/TypeScript/tsc/internal/compiler"
 	"github.com/microsoft/TypeScript/tsc/internal/contentmapper"
 	"github.com/microsoft/TypeScript/tsc/internal/core"
 	"github.com/microsoft/TypeScript/tsc/internal/ls"
@@ -215,18 +217,55 @@ func (s *Snapshot) GetLanguageServiceProjectsContainingFile(uri lsproto.Document
 }
 
 func (s *Snapshot) GetFile(fileName tspath.RootedFilePath) FileHandle {
-	return s.fs.GetFile(fileName)
+	if strings.HasSuffix(fileName.AsString(), ".map") {
+		if generated, ambiguous := s.generatedDeclarationFile(fileName); generated != nil || ambiguous {
+			// Generated declaration maps belong to generated declaration text;
+			// a stale map on disk must not take precedence over that pair.
+			return generated
+		}
+	}
+	if file := s.fs.GetFile(fileName); file != nil {
+		return file
+	}
+	generated, _ := s.generatedDeclarationFile(fileName)
+	return generated
+}
+
+// The second result reports conflicting generated texts at a shared output path.
+func (s *Snapshot) generatedDeclarationFile(fileName tspath.RootedFilePath) (FileHandle, bool) {
+	if s.ProjectCollection == nil {
+		return nil, false
+	}
+	path := s.CaseSensitivity().PathKey(fileName.AsPath())
+	var text string
+	found := false
+	for _, project := range s.ProjectCollection.Projects() {
+		if project.Program == nil {
+			continue
+		}
+		if generated, ok := project.Program.GetGeneratedDeclarationText(path); ok {
+			if found && text != generated {
+				// A snapshot-wide read cannot select one project's representation.
+				return nil, true
+			}
+			text, found = generated, true
+		}
+	}
+	if found {
+		return NewCachedFileHandle(fileName, text), false
+	}
+	return nil, false
 }
 
 func (s *Snapshot) LSPLineMap(fileName tspath.RootedFilePath) *lsconv.LSPLineMap {
-	if file := s.fs.GetFile(fileName); file != nil {
+	if file := s.GetFile(fileName); file != nil {
 		return file.LSPLineMap()
 	}
 	return nil
 }
 
 func (s *Snapshot) GetECMALineInfo(fileName tspath.RootedFilePath) *sourcemap.ECMALineInfo {
-	if file := s.fs.GetFile(fileName); file != nil {
+	if file := s.GetFile(fileName); file != nil {
 		return file.ECMALineInfo()
 	}
 	return nil
@@ -242,6 +281,69 @@ func (s *Snapshot) UserPreferences() lsutil.UserPreferences {
 
 func (s *Snapshot) Converters() *lsconv.Converters {
 	return s.converters
+}
+
+// LanguageServiceHost reads generated output from the requesting Program when
+// projects in the same snapshot have different declarations at the same path.
+// It owns no new cache; the Program already owns the immutable generated text.
+func (s *Snapshot) LanguageServiceHost(program *compiler.Program) ls.Host {
+	if !program.HasGeneratedDeclarations() {
+		return s
+	}
+	host := &programSnapshotHost{Snapshot: s, program: program}
+	host.converters = lsconv.NewConverters(s.host.options.PositionEncoding, func(fileName tspath.RootedFilePath) *lsconv.LSPLineMap {
+		if file := host.getFile(fileName); file != nil {
+			return file.LSPLineMap()
+		}
+		return nil
+	})
+	return host
+}
+
+type programSnapshotHost struct {
+	*Snapshot
+	program    *compiler.Program
+	converters *lsconv.Converters
+}
+
+func (h *programSnapshotHost) getFile(fileName tspath.RootedFilePath) FileHandle {
+	if text, ok := h.program.GetGeneratedDeclarationText(h.CaseSensitivity().PathKey(fileName.AsPath())); ok {
+		return NewCachedFileHandle(fileName, text)
+	}
+	if parent, isMap := strings.CutSuffix(fileName.AsString(), ".map"); isMap {
+		if _, generated := h.program.GetGeneratedDeclarationText(h.CaseSensitivity().PathKey(tspath.RootedPath(parent))); generated {
+			// A generated declaration without a map must not borrow a stale map
+			// from disk or a different project's generated representation.
+			return nil
+		}
+	}
+	return h.Snapshot.GetFile(fileName)
+}
+
+func (h *programSnapshotHost) ReadFile(fileName tspath.RootedFilePath) (string, bool) {
+	if file := h.getFile(fileName); file != nil {
+		return file.Content(), true
+	}
+	return "", false
+}
+
+func (h *programSnapshotHost) FileExists(fileName tspath.RootedFilePath) bool {
+	if h.fs.fs.FileExists(fileName) {
+		return true
+	}
+	_, generated := h.program.GetGeneratedDeclarationText(h.CaseSensitivity().PathKey(fileName.AsPath()))
+	return generated || h.Snapshot.FileExists(fileName)
+}
+
+func (h *programSnapshotHost) Converters() *lsconv.Converters {
+	return h.converters
+}
+
+func (h *programSnapshotHost) GetECMALineInfo(fileName tspath.RootedFilePath) *sourcemap.ECMALineInfo {
+	if file := h.getFile(fileName); file != nil {
+		return file.ECMALineInfo()
+	}
+	return nil
 }
 
 func (s *Snapshot) AutoImportRegistry() *autoimport.Registry {
@@ -294,7 +396,11 @@ func (s *Snapshot) DirectoryExists(path tspath.RootedDirectoryPath) bool {
 }
 
 func (s *Snapshot) FileExists(path tspath.RootedFilePath) bool {
-	return s.fs.fs.FileExists(path)
+	if s.fs.fs.FileExists(path) {
+		return true
+	}
+	generated, _ := s.generatedDeclarationFile(path)
+	return generated != nil
 }
 
 func (s *Snapshot) GetDirectories(path tspath.RootedDirectoryPath) []string {

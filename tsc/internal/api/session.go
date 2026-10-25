@@ -861,7 +861,7 @@ func (s *Session) setupLanguageService(snapshot *project.Snapshot, program *comp
 	if proj == nil {
 		return nil, fmt.Errorf("%w: project %d not found", ErrClientError, projectHandle)
 	}
-	return ls.NewLanguageService(proj.ID(), program, snapshot, activeFile), nil
+	return ls.NewLanguageService(proj.ID(), program, snapshot.LanguageServiceHost(program), activeFile), nil
 }
 
 // HandleRequest implements Handler.
@@ -3290,7 +3290,7 @@ func (s *Session) handleGetImportAdderEdits(ctx context.Context, params *GetImpo
 		sourceFile,
 		view,
 		workingSnapshot.GetPreferences(sourceFile.FileName().AsString()).FormatCodeSettings,
-		workingSnapshot.Converters(),
+		workingSnapshot.LanguageServiceHost(program).Converters(),
 		userPreferences,
 	)
 

@@ -50,6 +50,8 @@ type ProgramConfig struct {
 	// SkipModuleResolution avoids all module and type reference resolution while
 	// still collecting import metadata needed for emit.
 	SkipModuleResolution bool
+	// Temporary declaration producers must not recursively synthesize their own dependencies.
+	skipProjectReferenceDeclarationGeneration bool
 }
 
 type ProgramHosts struct {
@@ -147,7 +149,26 @@ type Program struct {
 
 // FileExists implements checker.Program.
 func (p *Program) FileExists(path tspath.RootedFilePath) bool {
-	return p.Host().FS().FileExists(path)
+	if p.Host().FS().FileExists(path) {
+		return true
+	}
+	_, ok := p.GetGeneratedDeclarationText(p.caseSensitivity.PathKey(path.AsPath()))
+	return ok
+}
+
+// GetGeneratedDeclarationText returns owned text synthesized for a missing project-reference output.
+// It never starts generation and does not retain the producer program or implementation trees.
+func (p *Program) GetGeneratedDeclarationText(path tspath.PathKey) (string, bool) {
+	return p.projectReferenceFileMapper.getGeneratedDeclarationText(path)
+}
+
+func (p *Program) HasGeneratedDeclarations() bool {
+	found := false
+	p.projectReferenceFileMapper.generatedDeclarations.Range(func(tspath.PathKey, string) bool {
+		found = true
+		return false
+	})
+	return found
 }
 
 // BaseDirectory implements checker.Program.
@@ -194,7 +215,7 @@ func (p *Program) PackageJsonCacheEntries(f func(key tspath.PathKey, value *pack
 
 func (p *Program) newResolver() *module.DefaultResolver {
 	host := &compilerResolutionHost{host: p.hosts.Host, baseDirectory: p.BaseDirectory()}
-	return p.resolutionData.NewResolver(p.projectReferenceFileMapper.resolutionHost(host))
+	return p.resolutionData.NewResolver(p.projectReferenceFileMapper.resolutionHost(host, nil))
 }
 
 // GetRedirectTargets returns the list of file paths that redirect to the given path.
@@ -333,7 +354,7 @@ func NewProgram(opts ProgramOptions) *Program {
 // Return an updated program for which it is known that only the file with the given path has changed.
 // In addition to a new program, return a boolean indicating whether the data of the old program was reused.
 // The returned *ast.SourceFile is the changed file as acquired through newHost; it is nil
-// only if the host cannot locate the file (e.g. it was deleted). Callers that manage
+// if no replacement was acquired. Callers that manage
 // host-side parse caches must release this exact pointer when the old program could not be
 // reused, since it was acquired speculatively before that decision was made.
 func (p *Program) UpdateProgram(
@@ -366,6 +387,11 @@ func (p *Program) ReuseProgram(
 	createCheckerPool func(*Program) CheckerPool,
 	createModuleResolver func(module.ResolverOptions) module.Resolver,
 ) (*Program, *ast.SourceFile, bool) {
+	if _, generated := p.GetGeneratedDeclarationText(changedFilePath); generated {
+		// A physical output may have replaced a generated declaration. Recompute
+		// availability and matching maps instead of sharing the old generated text.
+		return nil, nil, false
+	}
 	oldFile := p.filesByPath[changedFilePath]
 	var newFile *ast.SourceFile
 	var oldSupplementalFiles []*ast.SourceFile
