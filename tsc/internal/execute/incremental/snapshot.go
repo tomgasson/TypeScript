@@ -393,7 +393,7 @@ func getTextHandlingSourceMapForSignature(text string, data *compiler.WriteFileD
 	return text
 }
 
-func (s *snapshot) computeSignatureWithDiagnostics(file *ast.SourceFile, text string, data *compiler.WriteFileData) string {
+func (s *snapshot) computeSignatureWithDiagnostics(file ast.HasFileName, text string, data *compiler.WriteFileData) string {
 	var builder strings.Builder
 	builder.WriteString(getTextHandlingSourceMapForSignature(text, data))
 	for _, diag := range data.Diagnostics {
@@ -402,20 +402,20 @@ func (s *snapshot) computeSignatureWithDiagnostics(file *ast.SourceFile, text st
 	return s.computeHash(builder.String())
 }
 
-func diagnosticToStringBuilder(diagnostic *ast.Diagnostic, file *ast.SourceFile, builder *strings.Builder) {
+func diagnosticToStringBuilder(diagnostic *ast.Diagnostic, file ast.HasFileName, builder *strings.Builder) {
 	if diagnostic == nil {
 		return
 	}
 	builder.WriteString("\n")
-	if diagnostic.File() != file {
-		diagnosticFileName := diagnostic.File().FileName()
-		if relativePath, ok := tspath.CaseInsensitive.RelativePathFromFile(file.FileName(), diagnosticFileName); ok {
-			builder.WriteString(relativePath.AsModuleSpecifier().AsString())
-		} else {
-			builder.WriteString(diagnosticFileName.AsString())
+	if diagnosticFile := diagnostic.File(); diagnosticFile != nil {
+		if diagnosticFile.PathKey() != file.PathKey() {
+			diagnosticFileName := diagnosticFile.FileName()
+			if relativePath, ok := tspath.CaseInsensitive.RelativePathFromFile(file.FileName(), diagnosticFileName); ok {
+				builder.WriteString(relativePath.AsModuleSpecifier().AsString())
+			} else {
+				builder.WriteString(diagnosticFileName.AsString())
+			}
 		}
-	}
-	if diagnostic.File() != nil {
 		builder.WriteString(fmt.Sprintf("(%d,%d): ", diagnostic.Pos(), diagnostic.Len()))
 	}
 	builder.WriteString(diagnostic.Category().Name())
