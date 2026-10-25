@@ -104,6 +104,14 @@ func (t *toProgramSnapshot) computeProgramFileChanges() {
 				versionText = file.OriginalText() + "\x00" + file.ContentMapperTransformIdentity()
 			}
 			version := t.snapshot.computeHash(versionText)
+			if t.program.Options().GetIsolatedModules() {
+				if reference := t.program.GetProjectReferenceFromOutputDts(file.PathKey()); reference != nil {
+					// Ambient const-enum access also depends on the producer's
+					// effective preserve setting, even when declaration text is unchanged.
+					preserve := reference.Resolved.CompilerOptions().ShouldPreserveConstEnums()
+					version = t.snapshot.computeHash(version + "\x00preserveConstEnums:" + core.IfElse(preserve, "1", "0"))
+				}
+			}
 			impliedNodeFormat := t.program.GetSourceFileMetaData(file.PathKey()).ImpliedNodeFormat
 			affectsGlobalScope := fileAffectsGlobalScope(file)
 			var signature string
