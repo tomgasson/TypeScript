@@ -362,6 +362,9 @@ func (c *Converters) lineAndCharacterToPosition(script Script, lineAndCharacter 
 	debug.Assert(script.SpanMap() == nil, "raw coordinate conversion requires a non-content-mapped script")
 
 	lineMap := c.getLineMap(script.FileName())
+	if lineMap == nil {
+		lineMap = ComputeLSPLineStarts(script.Text())
+	}
 
 	line := core.TextPos(lineAndCharacter.Line)
 	char := core.TextPos(lineAndCharacter.Character)
@@ -415,6 +418,9 @@ func (c *Converters) positionToLineAndCharacter(script Script, position core.Tex
 	position = max(0, min(position, core.TextPos(len(script.Text()))))
 
 	lineMap := c.getLineMap(script.FileName())
+	if lineMap == nil {
+		lineMap = ComputeLSPLineStarts(script.Text())
+	}
 
 	line, isLineStart := slices.BinarySearch(lineMap.LineStarts, position)
 	if !isLineStart {

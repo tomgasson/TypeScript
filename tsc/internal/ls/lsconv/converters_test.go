@@ -58,6 +58,20 @@ func TestDocumentURIToFileName(t *testing.T) {
 	}
 }
 
+func TestConvertersUseScriptTextWhenHostHasNoLineMap(t *testing.T) {
+	t.Parallel()
+	const text = "// 😀\r\nexport declare const value: number;\n"
+	file := parser.ParseSourceFile(ast.SourceFileParseOptions{FileName: "/virtual/index.d.ts", PathKey: "/virtual/index.d.ts"}, text, core.ScriptKindTS)
+	converters := lsconv.NewConverters(lsproto.PositionEncodingKindUTF16, func(tspath.RootedFilePath) *lsconv.LSPLineMap { return nil })
+	start := strings.Index(text, "value")
+	expected := core.NewTextRange(start, start+len("value"))
+	range_, _ := converters.ToLSPRange(file, expected)
+	assert.DeepEqual(t, range_, lsproto.Range{Start: lsproto.Position{Line: 1, Character: 21}, End: lsproto.Position{Line: 1, Character: 26}})
+	assert.Equal(t, converters.FromLSPRangeToOriginal(file, range_), expected)
+	position, _ := converters.ToLSPPosition(file, core.TextPos(len("// 😀")))
+	assert.DeepEqual(t, position, lsproto.Position{Line: 0, Character: 5})
+}
+
 func TestFileNameToDocumentURI(t *testing.T) {
 	t.Parallel()
 
