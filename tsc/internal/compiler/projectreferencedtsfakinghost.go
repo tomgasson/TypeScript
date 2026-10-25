@@ -75,6 +75,9 @@ func (fs *projectReferenceDtsFakingVfs) FileExists(path tspath.RootedFilePath) b
 
 // ReadFile implements vfs.FS.
 func (fs *projectReferenceDtsFakingVfs) ReadFile(path tspath.RootedFilePath) (contents string, ok bool) {
+	if fs.projectReferenceFileMapper.declarationProjects.Len() == 0 {
+		return fs.host.FS().ReadFile(path)
+	}
 	// A generated declaration's matching map supersedes a stale map left on disk.
 	if text, ok := fs.getGeneratedDeclarationText(path); ok {
 		return text, true
@@ -89,6 +92,9 @@ func (fs *projectReferenceDtsFakingVfs) ReadFile(path tspath.RootedFilePath) (co
 }
 
 func (fs *projectReferenceDtsFakingVfs) getGeneratedDeclarationText(file tspath.RootedFilePath) (string, bool) {
+	if fs.projectReferenceFileMapper.declarationProjects.Len() == 0 {
+		return "", false
+	}
 	if text, ok := fs.projectReferenceFileMapper.getGeneratedDeclarationText(fs.pathKey(file.AsPath())); ok {
 		return text, true
 	}

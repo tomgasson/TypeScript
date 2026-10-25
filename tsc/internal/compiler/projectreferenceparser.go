@@ -76,7 +76,11 @@ func (p *projectReferenceParser) initMapper(tasks []*projectReferenceParseTask) 
 	if p.loader.allowProjectReferenceDeclarationGeneration {
 		p.loader.prepareProjectReferenceDeclarations()
 	}
-	p.loader.projectReferences.host = p.loader.projectReferences.resolutionHost(p.loader.projectReferences.host, p.loader.generateProjectReferenceDeclaration)
+	if p.loader.projectReferences.declarationProjects.Len() == 0 {
+		p.loader.projectReferences.host = p.loader.projectReferences.resolutionHost(p.loader.projectReferences.host, nil)
+	} else {
+		p.loader.projectReferences.host = p.loader.projectReferences.resolutionHost(p.loader.projectReferences.host, p.loader.generateProjectReferenceDeclaration)
+	}
 }
 
 func (p *projectReferenceParser) initMapperWorker(tasks []*projectReferenceParseTask, seen *collections.Set[*projectReferenceParseTask]) []tspath.PathKey {
