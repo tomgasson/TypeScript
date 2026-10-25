@@ -127,6 +127,9 @@ func getParser() *Parser {
 }
 
 func putParser(p *Parser) {
+	if p.scanner != nil {
+		p.scanner.Reset()
+	}
 	*p = Parser{scanner: p.scanner, setParentFromContext: p.setParentFromContext}
 	parserPool.Put(p)
 }
@@ -294,8 +297,6 @@ func (p *Parser) initializeState(opts ast.SourceFileParseOptions, sourceText str
 
 	if p.scanner == nil {
 		p.scanner = scanner.NewScanner()
-	} else {
-		p.scanner.Reset()
 	}
 	p.opts = opts
 	p.sourceText = sourceText
