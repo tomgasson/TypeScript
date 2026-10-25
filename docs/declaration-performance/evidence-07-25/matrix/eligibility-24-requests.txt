@@ -1,0 +1,90 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics         	      54	  22709568 ns/op	 9160611 B/op	   21443 allocs/op
+BenchmarkDeclarationEligibility/JSON/WarmDiagnostics                	24168445	        45.61 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics    	      49	  23046144 ns/op	 9161438 B/op	   21438 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics           	23225103	        46.77 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics         	      51	  23393796 ns/op	 9160550 B/op	   21431 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics                	30740276	        35.40 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/ColdProgramDiagnostics              	      30	  36602300 ns/op	15603521 B/op	   49662 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/WarmDiagnostics                     	24602328	        46.58 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics         	      40	  27092691 ns/op	10810621 B/op	   27707 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics                	24694794	        50.15 ns/op	      16 B/op	       1 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics         	      55	  22931431 ns/op	 9160670 B/op	   21443 allocs/op
+BenchmarkDeclarationEligibility/JSON/WarmDiagnostics                	22282519	        46.19 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics    	      46	  22279621 ns/op	 9161478 B/op	   21439 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics           	25792411	        45.56 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics         	      52	  22504898 ns/op	 9160600 B/op	   21431 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics                	33581035	        33.81 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/ColdProgramDiagnostics              	      33	  35681818 ns/op	15603588 B/op	   49662 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/WarmDiagnostics                     	25237580	        45.97 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics         	      42	  27640676 ns/op	10810486 B/op	   27705 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics                	23541001	        47.41 ns/op	      16 B/op	       1 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics         	      51	  23683579 ns/op	 9160667 B/op	   21443 allocs/op
+BenchmarkDeclarationEligibility/JSON/WarmDiagnostics                	22903194	        50.42 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics    	      42	  24982770 ns/op	 9161494 B/op	   21439 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics           	21880090	        47.25 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics         	      44	  23623471 ns/op	 9160581 B/op	   21431 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics                	30512450	        35.57 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/ColdProgramDiagnostics              	      27	  37074157 ns/op	15603476 B/op	   49662 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/WarmDiagnostics                     	24406938	        45.79 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics         	      42	  26893476 ns/op	10811646 B/op	   27708 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics                	23789182	        46.43 ns/op	      16 B/op	       1 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics         	      52	  22281553 ns/op	 9160607 B/op	   21443 allocs/op
+BenchmarkDeclarationEligibility/JSON/WarmDiagnostics                	25034289	        46.67 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics    	      50	  23699511 ns/op	 9161451 B/op	   21438 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics           	23498546	        46.54 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics         	      50	  23703110 ns/op	 9160402 B/op	   21430 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics                	33281346	        35.81 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/ColdProgramDiagnostics              	      30	  35654591 ns/op	15603518 B/op	   49662 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/WarmDiagnostics                     	24392457	        44.39 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics         	      48	  28435664 ns/op	10811429 B/op	   27708 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics                	23901757	        47.09 ns/op	      16 B/op	       1 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics         	      51	  22825900 ns/op	 9160634 B/op	   21443 allocs/op
+BenchmarkDeclarationEligibility/JSON/WarmDiagnostics                	23867766	        46.85 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics    	      46	  22271596 ns/op	 9161529 B/op	   21439 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics           	22447496	        46.64 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics         	      44	  22772580 ns/op	 9160530 B/op	   21431 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics                	33364051	        33.26 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/ColdProgramDiagnostics              	      34	  36103758 ns/op	15603615 B/op	   49662 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/WarmDiagnostics                     	24293496	        46.87 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics         	      46	  26426228 ns/op	10811752 B/op	   27708 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics                	24617268	        45.44 ns/op	      16 B/op	       1 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics         	      45	  22557679 ns/op	 9160653 B/op	   21443 allocs/op
+BenchmarkDeclarationEligibility/JSON/WarmDiagnostics                	25335019	        45.48 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics    	      48	  22390140 ns/op	 9161411 B/op	   21438 allocs/op
+BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics           	25794463	        45.59 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics         	      54	  21874501 ns/op	 9160535 B/op	   21431 allocs/op
+BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics                	35314352	        32.71 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/ColdProgramDiagnostics              	      36	  34347893 ns/op	15603577 B/op	   49662 allocs/op
+BenchmarkDeclarationEligibility/EligibleTS/WarmDiagnostics                     	25364866	        44.32 ns/op	      16 B/op	       1 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics         	      49	  26141290 ns/op	10811220 B/op	   27707 allocs/op
+BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics                	25381635	        46.94 ns/op	      16 B/op	       1 allocs/op
+PASS

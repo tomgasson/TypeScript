@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReturnedParserScannerRetention 	       1	  11118446 ns/op	      2304 live-B/returned-parser	16781512 B/op	      22 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReturnedParserScannerRetention 	       1	  28532247 ns/op	      2304 live-B/returned-parser	16781512 B/op	      22 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReturnedParserScannerRetention 	       1	  11041094 ns/op	      2304 live-B/returned-parser	16781512 B/op	      22 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReturnedParserScannerRetention 	       1	  10813877 ns/op	      2304 live-B/returned-parser	16781512 B/op	      22 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReturnedParserScannerRetention 	       1	  11463008 ns/op	      2304 live-B/returned-parser	16781512 B/op	      22 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkReturnedParserScannerRetention 	       1	  10922686 ns/op	      2304 live-B/returned-parser	16781512 B/op	      22 allocs/op
+PASS

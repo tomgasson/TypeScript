@@ -1,0 +1,78 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached         	  100111	     11243 ns/op	    7962 B/op	     136 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit                        	   61401	     19456 ns/op	   10744 B/op	     175 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached     	   82842	     14628 ns/op	   10442 B/op	     156 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit                    	   53395	     21957 ns/op	   13211 B/op	     195 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached       	    1266	   1170831 ns/op	  512354 B/op	    9208 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit                      	     589	   2348642 ns/op	  674978 B/op	   10276 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached   	     367	   3216552 ns/op	  948970 B/op	   12148 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit                  	     349	   3484599 ns/op	 1084276 B/op	   13166 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached         	   88053	     11599 ns/op	    7962 B/op	     136 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit                        	   59612	     19320 ns/op	   10743 B/op	     175 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached     	   82317	     14665 ns/op	   10442 B/op	     156 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit                    	   54259	     23437 ns/op	   13212 B/op	     195 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached       	    1263	   1060539 ns/op	  512354 B/op	    9208 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit                      	     745	   1581919 ns/op	  674980 B/op	   10276 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached   	     741	   1674598 ns/op	  948970 B/op	   12148 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit                  	     564	   2156761 ns/op	 1084275 B/op	   13166 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached         	   99468	     11424 ns/op	    7962 B/op	     136 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit                        	   62026	     19363 ns/op	   10744 B/op	     175 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached     	   78086	     15262 ns/op	   10442 B/op	     156 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit                    	   53911	     22122 ns/op	   13211 B/op	     195 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached       	    1116	    986535 ns/op	  512354 B/op	    9208 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit                      	     811	   1521388 ns/op	  674979 B/op	   10276 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached   	     756	   1635487 ns/op	  948970 B/op	   12148 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit                  	     494	   2216676 ns/op	 1084277 B/op	   13166 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached         	   99639	     11344 ns/op	    7962 B/op	     136 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit                        	   56293	     19951 ns/op	   10744 B/op	     175 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached     	   83084	     14553 ns/op	   10442 B/op	     156 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit                    	   46822	     23124 ns/op	   13211 B/op	     195 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached       	    1054	   1045261 ns/op	  512354 B/op	    9208 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit                      	     740	   1611678 ns/op	  674978 B/op	   10276 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached   	     722	   1658560 ns/op	  948970 B/op	   12148 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit                  	     564	   2201089 ns/op	 1084277 B/op	   13166 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached         	  100951	     11356 ns/op	    7962 B/op	     136 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit                        	   63544	     19385 ns/op	   10743 B/op	     175 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached     	   82184	     14970 ns/op	   10442 B/op	     156 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit                    	   51409	     23265 ns/op	   13212 B/op	     195 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached       	    1239	    982586 ns/op	  512354 B/op	    9208 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit                      	     783	   1519834 ns/op	  674978 B/op	   10276 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached   	     748	   1622250 ns/op	  948970 B/op	   12148 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit                  	     505	   2267174 ns/op	 1084277 B/op	   13166 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached         	  102324	     11077 ns/op	    7962 B/op	     136 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit                        	   63399	     19939 ns/op	   10744 B/op	     175 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached     	   80326	     14885 ns/op	   10442 B/op	     156 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit                    	   49130	     22920 ns/op	   13211 B/op	     195 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached       	    1086	   1001261 ns/op	  512354 B/op	    9208 allocs/op
+BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit                      	     763	   1587679 ns/op	  674980 B/op	   10276 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached   	     687	   1657467 ns/op	  948970 B/op	   12148 allocs/op
+BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit                  	     506	   2202864 ns/op	 1084277 B/op	   13166 allocs/op
+PASS

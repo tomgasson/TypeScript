@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit         	   59713	     20761 ns/op	   11472 B/op	     177 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit         	   59515	     19854 ns/op	   11472 B/op	     177 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit         	   53751	     20808 ns/op	   11472 B/op	     177 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit         	   60225	     20059 ns/op	   11473 B/op	     177 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit         	   55650	     21247 ns/op	   11473 B/op	     177 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit         	   57576	     20640 ns/op	   11473 B/op	     177 allocs/op
+PASS

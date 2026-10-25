@@ -1,0 +1,54 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundary/SourceConsumer         	      33	  31484057 ns/op	13487042 B/op	   37277 allocs/op
+BenchmarkDeclarationBoundary/ReusedDeclarations     	     385	   3135411 ns/op	 1402613 B/op	    8720 allocs/op
+BenchmarkDeclarationBoundary/GenerateDeclarations   	      28	  42865751 ns/op	21960967 B/op	  215356 allocs/op
+BenchmarkDeclarationBoundary/GenerateAndCheck       	      25	  48001229 ns/op	23382787 B/op	  224073 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundary/SourceConsumer         	      39	  32492341 ns/op	13487588 B/op	   37279 allocs/op
+BenchmarkDeclarationBoundary/ReusedDeclarations     	     366	   3304464 ns/op	 1402352 B/op	    8720 allocs/op
+BenchmarkDeclarationBoundary/GenerateDeclarations   	      26	  44755599 ns/op	21959100 B/op	  215355 allocs/op
+BenchmarkDeclarationBoundary/GenerateAndCheck       	      21	  48523979 ns/op	23381172 B/op	  224074 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundary/SourceConsumer         	      36	  31286027 ns/op	13487343 B/op	   37278 allocs/op
+BenchmarkDeclarationBoundary/ReusedDeclarations     	     352	   3292429 ns/op	 1401425 B/op	    8720 allocs/op
+BenchmarkDeclarationBoundary/GenerateDeclarations   	      24	  44635563 ns/op	21958954 B/op	  215356 allocs/op
+BenchmarkDeclarationBoundary/GenerateAndCheck       	      27	  48912439 ns/op	23378580 B/op	  224075 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundary/SourceConsumer         	      36	  29320194 ns/op	13487230 B/op	   37277 allocs/op
+BenchmarkDeclarationBoundary/ReusedDeclarations     	     382	   3171514 ns/op	 1402727 B/op	    8719 allocs/op
+BenchmarkDeclarationBoundary/GenerateDeclarations   	      27	  43547656 ns/op	21959573 B/op	  215355 allocs/op
+BenchmarkDeclarationBoundary/GenerateAndCheck       	      25	  48622089 ns/op	23382714 B/op	  224073 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundary/SourceConsumer         	      36	  30165378 ns/op	13487291 B/op	   37278 allocs/op
+BenchmarkDeclarationBoundary/ReusedDeclarations     	     382	   3155957 ns/op	 1402778 B/op	    8720 allocs/op
+BenchmarkDeclarationBoundary/GenerateDeclarations   	      26	  44546585 ns/op	21959500 B/op	  215355 allocs/op
+BenchmarkDeclarationBoundary/GenerateAndCheck       	      21	  49906746 ns/op	23383252 B/op	  224076 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundary/SourceConsumer         	      38	  29528409 ns/op	13487263 B/op	   37277 allocs/op
+BenchmarkDeclarationBoundary/ReusedDeclarations     	     381	   3165848 ns/op	 1402899 B/op	    8720 allocs/op
+BenchmarkDeclarationBoundary/GenerateDeclarations   	      26	  44029110 ns/op	21961329 B/op	  215357 allocs/op
+BenchmarkDeclarationBoundary/GenerateAndCheck       	      24	  49093767 ns/op	23383089 B/op	  224075 allocs/op
+PASS

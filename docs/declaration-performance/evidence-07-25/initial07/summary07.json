@@ -1,0 +1,134 @@
+{
+  "before07": {
+    "BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics": {
+      "ns/op": 39013667.0,
+      "B/op": 15594078.5,
+      "allocs/op": 49530.0
+    },
+    "BenchmarkDeclarationEligibility/JSON/WarmDiagnostics": {
+      "ns/op": 48.805,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics": {
+      "ns/op": 39157551.0,
+      "B/op": 15595448.0,
+      "allocs/op": 49528.0
+    },
+    "BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics": {
+      "ns/op": 48.545,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics": {
+      "ns/op": 24205503.5,
+      "B/op": 9160537.0,
+      "allocs/op": 21431.0
+    },
+    "BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics": {
+      "ns/op": 35.665,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics": {
+      "ns/op": 45741927.0,
+      "B/op": 18241987.5,
+      "allocs/op": 60682.0
+    },
+    "BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics": {
+      "ns/op": 47.71,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/JSON": {
+      "ns/op": 699563645.5,
+      "live-B/program": 14902605.0,
+      "B/op": 249734096.0,
+      "allocs/op": 792457.0
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS": {
+      "ns/op": 644820460.0,
+      "live-B/program": 14904311.0,
+      "B/op": 249755668.0,
+      "allocs/op": 792431.5
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile": {
+      "ns/op": 430146220.5,
+      "live-B/program": 8886504.0,
+      "B/op": 146803572.0,
+      "allocs/op": 342924.5
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource": {
+      "ns/op": 921807904.0,
+      "live-B/program": 17337857.0,
+      "B/op": 292023312.0,
+      "allocs/op": 970781.0
+    }
+  },
+  "after07": {
+    "BenchmarkDeclarationEligibility/JSON/ColdProgramDiagnostics": {
+      "ns/op": 23549819.0,
+      "B/op": 9160409.5,
+      "allocs/op": 21440.0
+    },
+    "BenchmarkDeclarationEligibility/JSON/WarmDiagnostics": {
+      "ns/op": 46.275,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibility/SkippedJS/ColdProgramDiagnostics": {
+      "ns/op": 24044376.5,
+      "B/op": 9161215.5,
+      "allocs/op": 21435.0
+    },
+    "BenchmarkDeclarationEligibility/SkippedJS/WarmDiagnostics": {
+      "ns/op": 38.96,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibility/DeclarationFile/ColdProgramDiagnostics": {
+      "ns/op": 23755749.0,
+      "B/op": 9160572.5,
+      "allocs/op": 21431.0
+    },
+    "BenchmarkDeclarationEligibility/DeclarationFile/WarmDiagnostics": {
+      "ns/op": 38.585,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibility/ReferenceSource/ColdProgramDiagnostics": {
+      "ns/op": 27784166.5,
+      "B/op": 10811494.5,
+      "allocs/op": 27704.5
+    },
+    "BenchmarkDeclarationEligibility/ReferenceSource/WarmDiagnostics": {
+      "ns/op": 47.705,
+      "B/op": 16.0,
+      "allocs/op": 1.0
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/JSON": {
+      "ns/op": 444999967.0,
+      "live-B/program": 8886110.5,
+      "B/op": 146801108.0,
+      "allocs/op": 343068.0
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS": {
+      "ns/op": 454735555.0,
+      "live-B/program": 8887354.0,
+      "B/op": 146814516.0,
+      "allocs/op": 342995.0
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile": {
+      "ns/op": 451864803.5,
+      "live-B/program": 8886499.0,
+      "B/op": 146804264.0,
+      "allocs/op": 342929.5
+    },
+    "BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource": {
+      "ns/op": 531845135.5,
+      "live-B/program": 10394316.5,
+      "B/op": 173161864.0,
+      "allocs/op": 443203.0
+    }
+  }
+}

@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEmitCompletedWorkerRetention 	       1	   7141751 ns/op	   1372608 live-B/paused-emit	        32.00 live-completed-checkers	 3049632 B/op	   42829 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEmitCompletedWorkerRetention 	       1	   6356746 ns/op	   1372608 live-B/paused-emit	        32.00 live-completed-checkers	 3049632 B/op	   42829 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEmitCompletedWorkerRetention 	       1	   6702318 ns/op	   1372656 live-B/paused-emit	        32.00 live-completed-checkers	 3049680 B/op	   42830 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEmitCompletedWorkerRetention 	       1	   7015724 ns/op	   1372608 live-B/paused-emit	        32.00 live-completed-checkers	 3049632 B/op	   42829 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEmitCompletedWorkerRetention 	       1	   6872611 ns/op	   1372624 live-B/paused-emit	        32.00 live-completed-checkers	 3049632 B/op	   42829 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEmitCompletedWorkerRetention 	       1	   6685764 ns/op	   1372608 live-B/paused-emit	        32.00 live-completed-checkers	 3049632 B/op	   42829 allocs/op
+PASS

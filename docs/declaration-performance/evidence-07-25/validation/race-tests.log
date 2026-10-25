@@ -1,0 +1,24 @@
+ok  	github.com/microsoft/TypeScript/tsc/internal/compiler	1.274s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project	12.347s
+# github.com/microsoft/TypeScript/tsc/internal/transformers/inliners [github.com/microsoft/TypeScript/tsc/internal/parser.test]
+compile: writing output: write $WORK/b270/_pkg_.a: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/transformers/moduletransforms: mkdir /tmp/go-build2666662408/b272/: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/transformers/tstransforms: mkdir /tmp/go-build2666662408/b273/: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/testutil/parsetestutil: mkdir /tmp/go-build2666662408/b282/: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/parser: write /tmp/go-build2666662408/b256/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/contentmapper: write /tmp/go-build2666662408/b263/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/tsoptions: write /tmp/go-build2666662408/b262/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/modulespecifiers: write /tmp/go-build2666662408/b261/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/printer: write /tmp/go-build2666662408/b264/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/checker: write /tmp/go-build2666662408/b260/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/transformers: write /tmp/go-build2666662408/b267/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/transformers/declarations: write /tmp/go-build2666662408/b268/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/transformers/estransforms: write /tmp/go-build2666662408/b269/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/testutil/contentmappertest: write /tmp/go-build2666662408/b275/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/tsoptions/tsoptionstest: write /tmp/go-build2666662408/b278/vet.cfg: no space left on device
+github.com/microsoft/TypeScript/tsc/internal/execute/incremental: mkdir /tmp/go-build2666662408/b284/: no space left on device
+# github.com/microsoft/TypeScript/tsc/internal/transformers/jsxtransforms [github.com/microsoft/TypeScript/tsc/internal/parser.test]
+compile: writing output: write $WORK/b271/_pkg_.a: no space left on device
+FAIL	github.com/microsoft/TypeScript/tsc/internal/parser [build failed]
+FAIL	github.com/microsoft/TypeScript/tsc/internal/execute/incremental [build failed]
+FAIL

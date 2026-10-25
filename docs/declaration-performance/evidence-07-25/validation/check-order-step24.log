@@ -1,0 +1,19 @@
+=== RUN   TestDeclarationEmitAndSemanticCheckOrder
+=== PAUSE TestDeclarationEmitAndSemanticCheckOrder
+=== CONT  TestDeclarationEmitAndSemanticCheckOrder
+=== RUN   TestDeclarationEmitAndSemanticCheckOrder/generic_class_methods
+    declaration_check_order_test.go:173: matching TS2322 at /src/index.ts [131,137): Type 'string' is not assignable to type 'number'.
+=== RUN   TestDeclarationEmitAndSemanticCheckOrder/JSDoc_full_signatures_and_overloads
+    declaration_check_order_test.go:173: matching TS7006 at /src/index.js [172,177): Parameter 'value' implicitly has an 'any' type.
+    declaration_check_order_test.go:173: matching TS2339 at /src/index.js [461,468): Property 'missing' does not exist on type '1'.
+=== RUN   TestDeclarationEmitAndSemanticCheckOrder/computed_overloads_and_merged_namespace
+    declaration_check_order_test.go:173: matching TS2322 at /src/index.ts [338,343): Type 'string' is not assignable to type 'number'.
+=== RUN   TestDeclarationEmitAndSemanticCheckOrder/invalid_isolated_return_inference
+    declaration_check_order_test.go:173: matching TS9013 at /src/index.ts [75,85): Expression type can't be inferred with --isolatedDeclarations.
+--- PASS: TestDeclarationEmitAndSemanticCheckOrder (0.00s)
+    --- PASS: TestDeclarationEmitAndSemanticCheckOrder/generic_class_methods (0.00s)
+    --- PASS: TestDeclarationEmitAndSemanticCheckOrder/JSDoc_full_signatures_and_overloads (0.00s)
+    --- PASS: TestDeclarationEmitAndSemanticCheckOrder/computed_overloads_and_merged_namespace (0.00s)
+    --- PASS: TestDeclarationEmitAndSemanticCheckOrder/invalid_isolated_return_inference (0.00s)
+PASS
+ok  	github.com/microsoft/TypeScript/tsc/internal/compiler	0.007s

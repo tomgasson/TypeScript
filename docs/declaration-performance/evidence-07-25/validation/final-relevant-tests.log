@@ -1,0 +1,16 @@
+ok  	github.com/microsoft/TypeScript/tsc/internal/parser	2.027s
+--- FAIL: TestDeclarationEmitAndSemanticCheckOrder (0.02s)
+    --- FAIL: TestDeclarationEmitAndSemanticCheckOrder/JSDoc_full_signatures_and_overloads (0.01s)
+        declaration_check_order_test.go:171: assertion failed: 2 (int) != 1 (int)
+FAIL
+FAIL	github.com/microsoft/TypeScript/tsc/internal/compiler	0.331s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project	3.262s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/build	0.041s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/incremental	0.080s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/tsctests	4.765s
+ok  	github.com/microsoft/TypeScript/tsc/internal/transpile	0.006s
+ok  	github.com/microsoft/TypeScript/tsc/internal/api	0.540s
+ok  	github.com/microsoft/TypeScript/tsc/internal/checker	0.140s
+ok  	github.com/microsoft/TypeScript/tsc/internal/testrunner	64.866s
+ok  	github.com/microsoft/TypeScript/tsc/internal/fourslash/tests	15.935s
+FAIL

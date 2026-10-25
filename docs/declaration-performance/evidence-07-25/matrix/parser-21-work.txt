@@ -1,0 +1,60 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParse/empty.ts         	 1117700	       536.8 ns/op	    1040 B/op	       4 allocs/op
+BenchmarkParse/checker.ts       	      12	  47919807 ns/op	21138330 B/op	   51156 allocs/op
+BenchmarkParse/dom.generated.d.ts         	      30	  17250143 ns/op	 7751088 B/op	   17218 allocs/op
+BenchmarkParse/Herebyfile.mjs             	     777	    790359 ns/op	  314435 B/op	    1494 allocs/op
+BenchmarkParse/jsxComplexSignatureHasApplicabilityError.tsx         	    3216	    197853 ns/op	  105658 B/op	     313 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParse/empty.ts         	 1026213	       590.4 ns/op	    1040 B/op	       4 allocs/op
+BenchmarkParse/checker.ts       	      12	  48808852 ns/op	21138316 B/op	   51156 allocs/op
+BenchmarkParse/dom.generated.d.ts         	      30	  17640198 ns/op	 7751086 B/op	   17218 allocs/op
+BenchmarkParse/Herebyfile.mjs             	     790	    791368 ns/op	  314435 B/op	    1494 allocs/op
+BenchmarkParse/jsxComplexSignatureHasApplicabilityError.tsx         	    3304	    195691 ns/op	  105658 B/op	     313 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParse/empty.ts         	  987060	       552.1 ns/op	    1040 B/op	       4 allocs/op
+BenchmarkParse/checker.ts       	      12	  48505607 ns/op	21138337 B/op	   51156 allocs/op
+BenchmarkParse/dom.generated.d.ts         	      34	  17518211 ns/op	 7750159 B/op	   17217 allocs/op
+BenchmarkParse/Herebyfile.mjs             	     787	    802246 ns/op	  314435 B/op	    1494 allocs/op
+BenchmarkParse/jsxComplexSignatureHasApplicabilityError.tsx         	    3289	    203207 ns/op	  105658 B/op	     313 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParse/empty.ts         	 1000000	       532.1 ns/op	    1040 B/op	       4 allocs/op
+BenchmarkParse/checker.ts       	      12	  47169776 ns/op	21138350 B/op	   51157 allocs/op
+BenchmarkParse/dom.generated.d.ts         	      34	  17591204 ns/op	 7750156 B/op	   17217 allocs/op
+BenchmarkParse/Herebyfile.mjs             	     765	    795991 ns/op	  314435 B/op	    1494 allocs/op
+BenchmarkParse/jsxComplexSignatureHasApplicabilityError.tsx         	    3242	    196255 ns/op	  105657 B/op	     313 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParse/empty.ts         	 1081324	       552.1 ns/op	    1040 B/op	       4 allocs/op
+BenchmarkParse/checker.ts       	      12	  49051965 ns/op	21138324 B/op	   51156 allocs/op
+BenchmarkParse/dom.generated.d.ts         	      32	  17697577 ns/op	 7750583 B/op	   17217 allocs/op
+BenchmarkParse/Herebyfile.mjs             	     740	    799579 ns/op	  314435 B/op	    1494 allocs/op
+BenchmarkParse/jsxComplexSignatureHasApplicabilityError.tsx         	    3178	    210367 ns/op	  105658 B/op	     313 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/parser
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkParse/empty.ts         	  992902	       599.3 ns/op	    1040 B/op	       4 allocs/op
+BenchmarkParse/checker.ts       	      10	  50388871 ns/op	21138416 B/op	   51156 allocs/op
+BenchmarkParse/dom.generated.d.ts         	      28	  19443214 ns/op	 7751658 B/op	   17218 allocs/op
+BenchmarkParse/Herebyfile.mjs             	     718	    878110 ns/op	  314436 B/op	    1494 allocs/op
+BenchmarkParse/jsxComplexSignatureHasApplicabilityError.tsx         	    2620	    249944 ns/op	  105658 B/op	     313 allocs/op
+PASS

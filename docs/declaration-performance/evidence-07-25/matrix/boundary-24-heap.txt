@@ -1,0 +1,42 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundaryRetainedHeap/SourceConsumer         	       1	 307556186 ns/op	  98761048 live-B/batch	  12345131 live-B/consumer	         0 shared-declaration-B	107925192 B/op	  298234 allocs/op
+BenchmarkDeclarationBoundaryRetainedHeap/Declarations           	       1	  72675858 ns/op	   6254856 live-B/batch	    781857 live-B/consumer	      6296 shared-declaration-B	33055384 B/op	  285135 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundaryRetainedHeap/SourceConsumer         	       1	 272115010 ns/op	  98760936 live-B/batch	  12345117 live-B/consumer	         0 shared-declaration-B	107922040 B/op	  298214 allocs/op
+BenchmarkDeclarationBoundaryRetainedHeap/Declarations           	       1	  71801684 ns/op	   6255160 live-B/batch	    781895 live-B/consumer	      6296 shared-declaration-B	33058600 B/op	  285155 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundaryRetainedHeap/SourceConsumer         	       1	 328028574 ns/op	  98761144 live-B/batch	  12345143 live-B/consumer	         0 shared-declaration-B	107923208 B/op	  298224 allocs/op
+BenchmarkDeclarationBoundaryRetainedHeap/Declarations           	       1	  69857928 ns/op	   6255176 live-B/batch	    781897 live-B/consumer	      6296 shared-declaration-B	33057600 B/op	  285152 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundaryRetainedHeap/SourceConsumer         	       1	 295636442 ns/op	  98760936 live-B/batch	  12345117 live-B/consumer	         0 shared-declaration-B	107927640 B/op	  298251 allocs/op
+BenchmarkDeclarationBoundaryRetainedHeap/Declarations           	       1	  73848230 ns/op	   6255480 live-B/batch	    781935 live-B/consumer	      6296 shared-declaration-B	33056928 B/op	  285148 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundaryRetainedHeap/SourceConsumer         	       1	 273086547 ns/op	  98760568 live-B/batch	  12345071 live-B/consumer	         0 shared-declaration-B	107925856 B/op	  298236 allocs/op
+BenchmarkDeclarationBoundaryRetainedHeap/Declarations           	       1	  73023983 ns/op	   6255752 live-B/batch	    781969 live-B/consumer	      6296 shared-declaration-B	33056768 B/op	  285146 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationBoundaryRetainedHeap/SourceConsumer         	       1	 267001151 ns/op	  98761000 live-B/batch	  12345125 live-B/consumer	         0 shared-declaration-B	107925928 B/op	  298239 allocs/op
+BenchmarkDeclarationBoundaryRetainedHeap/Declarations           	       1	  66178280 ns/op	   6255224 live-B/batch	    781903 live-B/consumer	      6296 shared-declaration-B	33059368 B/op	  285163 allocs/op
+PASS

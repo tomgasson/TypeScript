@@ -1,0 +1,54 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibilityRetainedHeap/JSON         	       1	 689733582 ns/op	  14902614 live-B/program	249733936 B/op	  792456 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS    	       1	 646357870 ns/op	  14904312 live-B/program	249756504 B/op	  792437 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile         	       1	 421332189 ns/op	   8886498 live-B/program	146803144 B/op	  342923 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource         	       1	 973316632 ns/op	  17337891 live-B/program	292023680 B/op	  970783 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibilityRetainedHeap/JSON         	       1	 716288486 ns/op	  14902596 live-B/program	249736176 B/op	  792471 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS    	       1	 643283050 ns/op	  14904313 live-B/program	249756816 B/op	  792442 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile         	       1	 462123619 ns/op	   8886509 live-B/program	146806200 B/op	  342942 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource         	       1	 944370885 ns/op	  17337842 live-B/program	292019696 B/op	  970758 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibilityRetainedHeap/JSON         	       1	 662930589 ns/op	  14902620 live-B/program	249733208 B/op	  792454 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS    	       1	 640593726 ns/op	  14904308 live-B/program	249755824 B/op	  792433 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile         	       1	 419005316 ns/op	   8886510 live-B/program	146803824 B/op	  342925 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource         	       1	 895884046 ns/op	  17337853 live-B/program	292023408 B/op	  970782 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibilityRetainedHeap/JSON         	       1	 671251072 ns/op	  14902636 live-B/program	249734912 B/op	  792463 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS    	       1	 622240526 ns/op	  14904321 live-B/program	249752840 B/op	  792412 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile         	       1	 438960252 ns/op	   8886509 live-B/program	146802504 B/op	  342919 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource         	       1	 939648411 ns/op	  17337870 live-B/program	292027040 B/op	  970804 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibilityRetainedHeap/JSON         	       1	 817460767 ns/op	  14902596 live-B/program	249732832 B/op	  792450 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS    	       1	 674655254 ns/op	  14904300 live-B/program	249755064 B/op	  792428 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile         	       1	 455139589 ns/op	   8886499 live-B/program	146803320 B/op	  342924 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource         	       1	 849743292 ns/op	  17337851 live-B/program	292017776 B/op	  970746 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationEligibilityRetainedHeap/JSON         	       1	 709393709 ns/op	  14902594 live-B/program	249734256 B/op	  792458 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/SkippedJS    	       1	 695342443 ns/op	  14904310 live-B/program	249755512 B/op	  792430 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/DeclarationFile         	       1	 420392979 ns/op	   8886488 live-B/program	146804904 B/op	  342934 allocs/op
+BenchmarkDeclarationEligibilityRetainedHeap/ReferenceSource         	       1	 903967397 ns/op	  17337861 live-B/program	292023216 B/op	  970780 allocs/op
+PASS

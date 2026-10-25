@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 282682261 ns/op	        51.00 cache-entries/session	  49737392 live-B/batch	  12434348 live-B/session	         0 shared-declaration-B	85189472 B/op	  316001 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 266754343 ns/op	        51.00 cache-entries/session	  49737616 live-B/batch	  12434404 live-B/session	         0 shared-declaration-B	85186320 B/op	  315980 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 255644930 ns/op	        51.00 cache-entries/session	  49737344 live-B/batch	  12434336 live-B/session	         0 shared-declaration-B	85184464 B/op	  315969 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 311260009 ns/op	        51.00 cache-entries/session	  49737136 live-B/batch	  12434284 live-B/session	         0 shared-declaration-B	85184576 B/op	  315969 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 267536713 ns/op	        51.00 cache-entries/session	  49735376 live-B/batch	  12433844 live-B/session	         0 shared-declaration-B	85185056 B/op	  315972 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 291695511 ns/op	        51.00 cache-entries/session	  49736112 live-B/batch	  12434028 live-B/session	         0 shared-declaration-B	85179872 B/op	  315941 allocs/op
+PASS

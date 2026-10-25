@@ -1,0 +1,40 @@
+{
+  "purpose": "Additional non-Go runtime fixtures and dependency lockfiles; files are already tracked in the repository and are not duplicated in this evidence bundle.",
+  "inputs": [
+    {
+      "file": "tsc/go.mod",
+      "sha256": "1e0963224f3096e3e8215acea83c033392c8135e7453b8a9680261baa5c18b25",
+      "bytes": 748
+    },
+    {
+      "file": "tsc/go.sum",
+      "sha256": "00f7fee0307755fa8b871cd25a68b8c478341bc2b2af8731b2f2fc4da3739eee",
+      "bytes": 2867
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "52b6c9bd0a26ef1b0fc27dfbfaa00df6a047cdddd587d07c4f6c1c3345faf5cf",
+      "bytes": 143844
+    },
+    {
+      "file": "tsc/testdata/fixtures/compiler/checker.ts",
+      "sha256": "ffe288edd0eae68f65e4b81b5bbfd4fe5fbed62b55246dc140813078555050fb",
+      "bytes": 3151774
+    },
+    {
+      "file": "tsc/testdata/fixtures/lib/dom.generated.d.ts",
+      "sha256": "056acdb4168b9fde08093fa6917ff5e26cfe067c003c0a4c55d05a8a94d54b1c",
+      "bytes": 2348669
+    },
+    {
+      "file": "tsc/testdata/fixtures/typescript/Herebyfile.mjs",
+      "sha256": "e0fa650f9c35a256ffd5c97db1a0588d7df5293b638e1f179a8231c4251c6e5d",
+      "bytes": 37354
+    },
+    {
+      "file": "tsc/testdata/fixtures/testcases/compiler/jsxComplexSignatureHasApplicabilityError.tsx",
+      "sha256": "e2d2d8d47230600f5fb59d5417399b1fde427877e7ac3bddd963b2cfff25fba0",
+      "bytes": 19275
+    }
+  ]
+}

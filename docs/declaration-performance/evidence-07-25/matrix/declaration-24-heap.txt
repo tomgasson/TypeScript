@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 782568360 ns/op	  15765556 live-B/program	273796904 B/op	 1000840 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 882023972 ns/op	  15765548 live-B/program	273796904 B/op	 1000840 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 726018266 ns/op	  15765548 live-B/program	273797400 B/op	 1000841 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 686937695 ns/op	  15765570 live-B/program	273798096 B/op	 1000845 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 738086678 ns/op	  15765556 live-B/program	273799624 B/op	 1000857 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 812516300 ns/op	  15765546 live-B/program	273800248 B/op	 1000861 allocs/op
+PASS

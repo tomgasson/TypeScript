@@ -1,0 +1,11 @@
+{
+  "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/project25.test",
+  "binary_sha256": "537013b2ac3133098486d8dd5c83f839ef4e53c34b06b5a3b278ac98a3a76aaa",
+  "runtime_tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3",
+  "GOMAXPROCS": 1,
+  "GOGC": 100,
+  "rounds": 6,
+  "work_benchtime": "1s",
+  "heap_benchtime": "1x",
+  "order": "alternating arms in separate processes"
+}

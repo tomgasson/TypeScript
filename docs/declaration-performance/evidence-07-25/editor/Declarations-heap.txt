@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/Declarations         	       1	 181926104 ns/op	        51.00 cache-entries/session	   3805168 live-B/batch	    951292 live-B/session	      6296 shared-declaration-B	58005128 B/op	  433904 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/Declarations         	       1	 166315331 ns/op	        51.00 cache-entries/session	   3805424 live-B/batch	    951356 live-B/session	      6296 shared-declaration-B	58001288 B/op	  433883 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/Declarations         	       1	 165533982 ns/op	        51.00 cache-entries/session	   3803872 live-B/batch	    950968 live-B/session	      6296 shared-declaration-B	57999976 B/op	  433882 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/Declarations         	       1	 173075631 ns/op	        51.00 cache-entries/session	   3805184 live-B/batch	    951296 live-B/session	      6296 shared-declaration-B	57999440 B/op	  433864 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/Declarations         	       1	 168733523 ns/op	        51.00 cache-entries/session	   3805360 live-B/batch	    951340 live-B/session	      6296 shared-declaration-B	58003392 B/op	  433901 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/Declarations         	       1	 170532103 ns/op	        51.00 cache-entries/session	   3806768 live-B/batch	    951692 live-B/session	      6296 shared-declaration-B	58001312 B/op	  433885 allocs/op
+PASS

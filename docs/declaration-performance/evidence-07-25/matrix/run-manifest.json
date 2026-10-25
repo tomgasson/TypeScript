@@ -1,0 +1,259 @@
+{
+  "rounds": 6,
+  "environment": {
+    "GOMAXPROCS": "1",
+    "GOGC": "100"
+  },
+  "runs": [
+    {
+      "group": "eligibility",
+      "variant": "06",
+      "workload": "requests",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant06.test",
+      "binary_sha256": "9783687d7f3a64301e6a0f9cd6ea8ce7c6150867a11b006dfd016c7b4b794839",
+      "pattern": "^BenchmarkDeclarationEligibility$",
+      "benchtime": "1s",
+      "file": "eligibility-06-requests.txt"
+    },
+    {
+      "group": "eligibility",
+      "variant": "06",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant06.test",
+      "binary_sha256": "9783687d7f3a64301e6a0f9cd6ea8ce7c6150867a11b006dfd016c7b4b794839",
+      "pattern": "^BenchmarkDeclarationEligibilityRetainedHeap$",
+      "benchtime": "1x",
+      "file": "eligibility-06-heap.txt"
+    },
+    {
+      "group": "eligibility",
+      "variant": "24",
+      "workload": "requests",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclarationEligibility$",
+      "benchtime": "1s",
+      "file": "eligibility-24-requests.txt"
+    },
+    {
+      "group": "eligibility",
+      "variant": "24",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclarationEligibilityRetainedHeap$",
+      "benchtime": "1x",
+      "file": "eligibility-24-heap.txt"
+    },
+    {
+      "group": "declaration",
+      "variant": "06",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant06.test",
+      "binary_sha256": "9783687d7f3a64301e6a0f9cd6ea8ce7c6150867a11b006dfd016c7b4b794839",
+      "pattern": "^BenchmarkDeclaration$",
+      "benchtime": "1s",
+      "file": "declaration-06-work.txt"
+    },
+    {
+      "group": "declaration",
+      "variant": "06",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant06.test",
+      "binary_sha256": "9783687d7f3a64301e6a0f9cd6ea8ce7c6150867a11b006dfd016c7b4b794839",
+      "pattern": "^BenchmarkDeclarationRetainedHeap$",
+      "benchtime": "1x",
+      "file": "declaration-06-heap.txt"
+    },
+    {
+      "group": "declaration",
+      "variant": "24",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclaration$",
+      "benchtime": "1s",
+      "file": "declaration-24-work.txt"
+    },
+    {
+      "group": "declaration",
+      "variant": "24",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclarationRetainedHeap$",
+      "benchtime": "1x",
+      "file": "declaration-24-heap.txt"
+    },
+    {
+      "group": "classes",
+      "variant": "22",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant22.test",
+      "binary_sha256": "c5014d84f687f5f01f8339ccea43aaa7fbaf2f0f81b736d5617f8eafd743a432",
+      "pattern": "^BenchmarkDeclarationClasses$",
+      "benchtime": "1s",
+      "file": "classes-22-work.txt"
+    },
+    {
+      "group": "classes",
+      "variant": "23",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant23.test",
+      "binary_sha256": "907a6de771288b7f19bf165ab39a5e62311345817ad284b370eca0859e8245ed",
+      "pattern": "^BenchmarkDeclarationClasses$",
+      "benchtime": "1s",
+      "file": "classes-23-work.txt"
+    },
+    {
+      "group": "classes",
+      "variant": "24",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclarationClasses$",
+      "benchtime": "1s",
+      "file": "classes-24-work.txt"
+    },
+    {
+      "group": "emitter-retention",
+      "variant": "12",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant12.test",
+      "binary_sha256": "d1ec6f7690fcf19ec12a465089ac1bca1f4586fe5677fb9f8d9ca420f4ff778b",
+      "pattern": "^BenchmarkEmitCompletedWorkerRetention$",
+      "benchtime": "1x",
+      "file": "emitter-retention-12-heap.txt"
+    },
+    {
+      "group": "emitter-retention",
+      "variant": "13",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant13.test",
+      "binary_sha256": "03f8b9344ffa8f6f862210fb3032cf45ec947e92a9f6c233db32f72b6448df3e",
+      "pattern": "^BenchmarkEmitCompletedWorkerRetention$",
+      "benchtime": "1x",
+      "file": "emitter-retention-13-heap.txt"
+    },
+    {
+      "group": "metadata",
+      "variant": "14",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant14.test",
+      "binary_sha256": "03f8b9344ffa8f6f862210fb3032cf45ec947e92a9f6c233db32f72b6448df3e",
+      "pattern": "^BenchmarkDeclaration$/AnnotatedTS_1/WarmEmit$",
+      "benchtime": "1s",
+      "file": "metadata-14-work.txt"
+    },
+    {
+      "group": "metadata",
+      "variant": "15",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant15.test",
+      "binary_sha256": "1ab7aaf45bf835550b7e2fc8f306d94e18cd777e77d0593294fe8a4148e8f81e",
+      "pattern": "^BenchmarkDeclaration$/AnnotatedTS_1/WarmEmit$",
+      "benchtime": "1s",
+      "file": "metadata-15-work.txt"
+    },
+    {
+      "group": "checker-lease",
+      "variant": "19",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant19.test",
+      "binary_sha256": "59cd06a24bb1b3854ec4b4b7a51e29213ffee70503e1fc08398dd086172ac534",
+      "pattern": "^BenchmarkDeclaration$/AnnotatedTS_1/WarmEmit$",
+      "benchtime": "1s",
+      "file": "checker-lease-19-work.txt"
+    },
+    {
+      "group": "checker-lease",
+      "variant": "20",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant20.test",
+      "binary_sha256": "3951b5919bc869addf683cbe22290e3a48eb3b78b47a9388f09b9c45d039bf3f",
+      "pattern": "^BenchmarkDeclaration$/AnnotatedTS_1/WarmEmit$",
+      "benchtime": "1s",
+      "file": "checker-lease-20-work.txt"
+    },
+    {
+      "group": "parameters",
+      "variant": "10",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant10.test",
+      "binary_sha256": "522833ffbac803439860e02117c064e43dfb7f8baf3a9545288b18c980004ebe",
+      "pattern": "^BenchmarkDeclaration$/(AnnotatedTS_200|JSCommonJS)/(WarmDiagnosticsUncached|WarmEmit)$",
+      "benchtime": "1s",
+      "file": "parameters-10-work.txt"
+    },
+    {
+      "group": "parameters",
+      "variant": "11",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants/variant11.test",
+      "binary_sha256": "cb5ec495ea54763b2f5f7add0a0c1a76b62416dc0c6767ff0f8ebb1bcd04e436",
+      "pattern": "^BenchmarkDeclaration$/(AnnotatedTS_200|JSCommonJS)/(WarmDiagnosticsUncached|WarmEmit)$",
+      "benchtime": "1s",
+      "file": "parameters-11-work.txt"
+    },
+    {
+      "group": "parser",
+      "variant": "20",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-parser/variant20.test",
+      "binary_sha256": "ae5d5185387d1602e0dd148180867e6a3cd56c82a8a8926e16598c92ea6455d6",
+      "pattern": "^BenchmarkParse$",
+      "benchtime": "500ms",
+      "file": "parser-20-work.txt"
+    },
+    {
+      "group": "parser",
+      "variant": "20",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-parser/variant20.test",
+      "binary_sha256": "ae5d5185387d1602e0dd148180867e6a3cd56c82a8a8926e16598c92ea6455d6",
+      "pattern": "^BenchmarkReturnedParserScannerRetention$",
+      "benchtime": "1x",
+      "file": "parser-20-heap.txt"
+    },
+    {
+      "group": "parser",
+      "variant": "21",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-parser/variant21.test",
+      "binary_sha256": "313a32bfd8909a9204392bbc9ca0a90971fddfd9bc4627cc24365bb03176791f",
+      "pattern": "^BenchmarkParse$",
+      "benchtime": "500ms",
+      "file": "parser-21-work.txt"
+    },
+    {
+      "group": "parser",
+      "variant": "21",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-parser/variant21.test",
+      "binary_sha256": "313a32bfd8909a9204392bbc9ca0a90971fddfd9bc4627cc24365bb03176791f",
+      "pattern": "^BenchmarkReturnedParserScannerRetention$",
+      "benchtime": "1x",
+      "file": "parser-21-heap.txt"
+    },
+    {
+      "group": "boundary",
+      "variant": "24",
+      "workload": "work",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclarationBoundary$",
+      "benchtime": "1s",
+      "file": "boundary-24-work.txt"
+    },
+    {
+      "group": "boundary",
+      "variant": "24",
+      "workload": "heap",
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-07-plus/variants-22-24/variant24.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "pattern": "^BenchmarkDeclarationBoundaryRetainedHeap$",
+      "benchtime": "1x",
+      "file": "boundary-24-heap.txt"
+    }
+  ]
+}

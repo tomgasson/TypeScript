@@ -1,0 +1,662 @@
+go: downloading golang.org/x/term v0.46.0
+ok  	github.com/microsoft/TypeScript/tsc/cmd/tsc	1.009s
+ok  	github.com/microsoft/TypeScript/tsc/internal/api	0.540s
+ok  	github.com/microsoft/TypeScript/tsc/internal/api/encoder	0.008s
+ok  	github.com/microsoft/TypeScript/tsc/internal/api/requestfilesystem	0.121s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ast	0.035s
+--- FAIL: TestFindPrecedingToken (0.13s)
+    --- FAIL: TestFindPrecedingToken/baseline (0.12s)
+        tokens_test.go:620: assertion failed: error is not nil: failed to run node: exit status 1
+            node:internal/modules/esm/resolve:272
+                throw new ERR_MODULE_NOT_FOUND(
+                      ^
+            
+            Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/workspace/scratch/610fb4329ae2/ts-small/node_modules/typescript/lib/typescript.js' imported from /tmp/TestFindPrecedingTokenbaseline1156634876/001/loader.mjs
+                at finalizeResolution (node:internal/modules/esm/resolve:272:11)
+                at moduleResolve (node:internal/modules/esm/resolve:879:10)
+                at defaultResolve (node:internal/modules/esm/resolve:1006:11)
+                at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)
+                at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)
+                at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)
+                at #resolve (node:internal/modules/esm/loader:687:17)
+                at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)
+                at ModuleJob.syncLink (node:internal/modules/esm/module_job:276:33)
+                at ModuleJob.link (node:internal/modules/esm/module_job:381:17) {
+              code: 'ERR_MODULE_NOT_FOUND',
+              url: 'file:///workspace/scratch/610fb4329ae2/ts-small/node_modules/typescript/lib/typescript.js'
+            }
+            
+            Node.js v24.22.1
+            
+        --- FAIL: TestFindPrecedingToken/baseline/mapCode.ts (0.12s)
+panic: test executed panic(nil) or runtime.Goexit
+
+goroutine 8 [running]:
+testing.tRunner.func1.2({0x1c7e920, 0x1d6f8f0})
+	/workspace/scratch/610fb4329ae2/toolchain/go/src/testing/testing.go:2125 +0x232
+testing.tRunner.func1()
+	/workspace/scratch/610fb4329ae2/toolchain/go/src/testing/testing.go:2128 +0x329
+runtime.Goexit()
+	/workspace/scratch/610fb4329ae2/toolchain/go/src/runtime/panic.go:694 +0x54
+testing.(*common).FailNow(0x1441507c4248)
+	/workspace/scratch/610fb4329ae2/toolchain/go/src/testing/testing.go:1106 +0x4a
+gotest.tools/v3/assert.NilError({0x1d43f70, 0x1441507c4248}, {0x1d42740, 0x14415118c020}, {0x0, 0x0, 0x0})
+	/root/go/pkg/mod/gotest.tools/v3@v3.5.2/assert/assert.go:177 +0xec
+github.com/microsoft/TypeScript/tsc/internal/astnav_test.tsFindPrecedingTokens(0x1441507c4248, {0x1441507dc800, 0x262c}, {0x1441507e6000, 0x262d, 0x262d})
+	/workspace/scratch/610fb4329ae2/ts-small/tsc/internal/astnav/tokens_test.go:620 +0x2cb
+github.com/microsoft/TypeScript/tsc/internal/astnav_test.TestFindPrecedingToken.func1.1({0x1441507dc800?, 0x1441507da000?}, {0x1441507e6000?, 0x0?, 0x0?})
+	/workspace/scratch/610fb4329ae2/ts-small/tsc/internal/astnav/tokens_test.go:469 +0x33
+github.com/microsoft/TypeScript/tsc/internal/astnav_test.baselineTokens.func1(0x1441507c46c8)
+	/workspace/scratch/610fb4329ae2/ts-small/tsc/internal/astnav/tokens_test.go:148 +0x146
+testing.tRunner(0x1441507c46c8, 0x1441507400c0)
+	/workspace/scratch/610fb4329ae2/toolchain/go/src/testing/testing.go:2195 +0xea
+created by testing.(*T).Run in goroutine 6
+	/workspace/scratch/610fb4329ae2/toolchain/go/src/testing/testing.go:2260 +0x4d4
+FAIL	github.com/microsoft/TypeScript/tsc/internal/astnav	0.134s
+ok  	github.com/microsoft/TypeScript/tsc/internal/binder	0.004s [no tests to run]
+ok  	github.com/microsoft/TypeScript/tsc/internal/bundled	0.004s
+ok  	github.com/microsoft/TypeScript/tsc/internal/checker	0.144s
+ok  	github.com/microsoft/TypeScript/tsc/internal/collections	0.010s
+ok  	github.com/microsoft/TypeScript/tsc/internal/compiler	0.306s
+ok  	github.com/microsoft/TypeScript/tsc/internal/contentmapper	5.011s
+ok  	github.com/microsoft/TypeScript/tsc/internal/core	0.010s
+ok  	github.com/microsoft/TypeScript/tsc/internal/debug	0.002s
+ok  	github.com/microsoft/TypeScript/tsc/internal/diagnostics	12.804s
+?   	github.com/microsoft/TypeScript/tsc/internal/diagnosticwriter	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/evaluator	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/execute	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/build	0.015s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/incremental	0.084s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/tsc	0.007s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/tsctests	2.368s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/watchmanager	0.004s
+ok  	github.com/microsoft/TypeScript/tsc/internal/format	0.368s
+?   	github.com/microsoft/TypeScript/tsc/internal/fourslash	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/fourslash/tests	11.545s
+?   	github.com/microsoft/TypeScript/tsc/internal/fourslash/tests/util	[no test files]
+--- FAIL: TestSubscribeNoGoroutineLeak (0.25s)
+    --- FAIL: TestSubscribeNoGoroutineLeak/fanotify-no-rename (0.00s)
+        watcher_test.go:1972: fanotify_mark on '/tmp/TestSubscribeNoGoroutineLeakfanotify-no-rename1424511420/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+--- FAIL: TestFileWatchMultipleSameDir (0.00s)
+    --- FAIL: TestFileWatchMultipleSameDir/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchMultipleSameDirfanotify-no-rename3194183112/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchMultipleSameDirfanotify-no-rename3194183112/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchMultipleSameDirfanotify-no-rename3194183112/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestFileWatchDeleteAndRecreate (0.00s)
+    --- FAIL: TestFileWatchDeleteAndRecreate/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchDeleteAndRecreatefanotify-no-rename3357340100/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchDeleteAndRecreatefanotify-no-rename3357340100/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchDeleteAndRecreatefanotify-no-rename3357340100/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeAppendToFile (0.00s)
+    --- FAIL: TestSubscribeAppendToFile/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeAppendToFilefanotify-no-rename195940861/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeAppendToFilefanotify-no-rename195940861/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeAppendToFilefanotify-no-rename195940861/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeReplaceFileWithDir (0.00s)
+    --- FAIL: TestSubscribeReplaceFileWithDir/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeReplaceFileWithDirfanotify-no-rename1679525414/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeReplaceFileWithDirfanotify-no-rename1679525414/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeReplaceFileWithDirfanotify-no-rename1679525414/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeUnsubscribeIdempotent (0.00s)
+    --- FAIL: TestSubscribeUnsubscribeIdempotent/fanotify-no-rename (0.00s)
+        watcher_test.go:1897: fanotify_mark on '/tmp/TestSubscribeUnsubscribeIdempotentfanotify-no-rename2820834520/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:1897: fanotify_mark on '/tmp/TestSubscribeUnsubscribeIdempotentfanotify-no-rename2820834520/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:1897: fanotify_mark on '/tmp/TestSubscribeUnsubscribeIdempotentfanotify-no-rename2820834520/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeRenameDir (0.00s)
+    --- FAIL: TestSubscribeRenameDir/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeRenameDirfanotify-no-rename2937993374/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeRenameDirfanotify-no-rename2937993374/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeRenameDirfanotify-no-rename2937993374/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeTruncateFile (0.00s)
+    --- FAIL: TestSubscribeTruncateFile/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeTruncateFilefanotify-no-rename437216070/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeTruncateFilefanotify-no-rename437216070/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeTruncateFilefanotify-no-rename437216070/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeManyFilesAtOnce (0.00s)
+    --- FAIL: TestSubscribeManyFilesAtOnce/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeManyFilesAtOncefanotify-no-rename4253459832/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeManyFilesAtOncefanotify-no-rename4253459832/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeManyFilesAtOncefanotify-no-rename4253459832/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeNoEventsAfterUnsubscribe (0.00s)
+    --- FAIL: TestSubscribeNoEventsAfterUnsubscribe/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNoEventsAfterUnsubscribefanotify-no-rename1201965561/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNoEventsAfterUnsubscribefanotify-no-rename1201965561/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNoEventsAfterUnsubscribefanotify-no-rename1201965561/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestWatchDirectoriesBatch (0.00s)
+    --- FAIL: TestWatchDirectoriesBatch/fanotify-no-rename (0.00s)
+        watcher_test.go:1508: fanotify_mark on '/tmp/TestWatchDirectoriesBatchfanotify-no-rename3069950899/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:1508: fanotify_mark on '/tmp/TestWatchDirectoriesBatchfanotify-no-rename3069950899/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:1508: fanotify_mark on '/tmp/TestWatchDirectoriesBatchfanotify-no-rename3069950899/005' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeDeepNestedCreate (0.00s)
+    --- FAIL: TestSubscribeDeepNestedCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDeepNestedCreatefanotify-no-rename1340297784/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDeepNestedCreatefanotify-no-rename1340297784/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDeepNestedCreatefanotify-no-rename1340297784/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestRoundTripRename (0.00s)
+    --- FAIL: TestRoundTripRename/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRoundTripRenamefanotify-no-rename2248696515/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRoundTripRenamefanotify-no-rename2248696515/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRoundTripRenamefanotify-no-rename2248696515/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeCoalesceDeleteCreateAsUpdate (0.00s)
+    --- FAIL: TestSubscribeCoalesceDeleteCreateAsUpdate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceDeleteCreateAsUpdatefanotify-no-rename3678984737/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceDeleteCreateAsUpdatefanotify-no-rename3678984737/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceDeleteCreateAsUpdatefanotify-no-rename3678984737/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeCloseThenReSubscribe (0.00s)
+    --- FAIL: TestSubscribeCloseThenReSubscribe/fanotify-no-rename (0.00s)
+        watcher_test.go:1925: fanotify_mark on '/tmp/TestSubscribeCloseThenReSubscribefanotify-no-rename3046693610/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:1925: fanotify_mark on '/tmp/TestSubscribeCloseThenReSubscribefanotify-no-rename3046693610/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:1925: fanotify_mark on '/tmp/TestSubscribeCloseThenReSubscribefanotify-no-rename3046693610/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestAtomicSave (0.00s)
+    --- FAIL: TestAtomicSave/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestAtomicSavefanotify-no-rename1364106627/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestAtomicSavefanotify-no-rename1364106627/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestAtomicSavefanotify-no-rename1364106627/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestReplaceParentDirWithDifferent (0.00s)
+    --- FAIL: TestReplaceParentDirWithDifferent/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestReplaceParentDirWithDifferentfanotify-no-rename1275001843/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestReplaceParentDirWithDifferentfanotify-no-rename1275001843/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestReplaceParentDirWithDifferentfanotify-no-rename1275001843/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestRecursiveWithDeniedSubdir (0.00s)
+    --- FAIL: TestRecursiveWithDeniedSubdir/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveWithDeniedSubdirfanotify-no-rename2036719006/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveWithDeniedSubdirfanotify-no-rename2036719006/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveWithDeniedSubdirfanotify-no-rename2036719006/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveWithDeniedSubdir (0.00s)
+    --- FAIL: TestNonRecursiveWithDeniedSubdir/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveWithDeniedSubdirfanotify-no-rename3502416292/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveWithDeniedSubdirfanotify-no-rename3502416292/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveWithDeniedSubdirfanotify-no-rename3502416292/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestReplaceDirWithFile (0.00s)
+    --- FAIL: TestReplaceDirWithFile/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestReplaceDirWithFilefanotify-no-rename3885712611/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestReplaceDirWithFilefanotify-no-rename3885712611/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestReplaceDirWithFilefanotify-no-rename3885712611/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestRecreateSubdirAndModify (0.00s)
+    --- FAIL: TestRecreateSubdirAndModify/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecreateSubdirAndModifyfanotify-no-rename1685914211/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecreateSubdirAndModifyfanotify-no-rename1685914211/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecreateSubdirAndModifyfanotify-no-rename1685914211/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeCoalesceCreateThenDelete (0.00s)
+    --- FAIL: TestSubscribeCoalesceCreateThenDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceCreateThenDeletefanotify-no-rename2273079232/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceCreateThenDeletefanotify-no-rename2273079232/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceCreateThenDeletefanotify-no-rename2273079232/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestFileWatchIgnoresSiblings (0.00s)
+    --- FAIL: TestFileWatchIgnoresSiblings/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchIgnoresSiblingsfanotify-no-rename797661916/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchIgnoresSiblingsfanotify-no-rename797661916/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchIgnoresSiblingsfanotify-no-rename797661916/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestFileWatchNonExistentTarget (0.00s)
+    --- FAIL: TestFileWatchNonExistentTarget/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchNonExistentTargetfanotify-no-rename2016463136/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchNonExistentTargetfanotify-no-rename2016463136/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchNonExistentTargetfanotify-no-rename2016463136/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestAtomicSaveFileWatch (0.00s)
+    --- FAIL: TestAtomicSaveFileWatch/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestAtomicSaveFileWatchfanotify-no-rename750412637/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestAtomicSaveFileWatchfanotify-no-rename750412637/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestAtomicSaveFileWatchfanotify-no-rename750412637/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestFileWatchUpdate (0.00s)
+    --- FAIL: TestFileWatchUpdate/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchUpdatefanotify-no-rename627923794/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchUpdatefanotify-no-rename627923794/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchUpdatefanotify-no-rename627923794/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestFileWatchCreate (0.00s)
+    --- FAIL: TestFileWatchCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchCreatefanotify-no-rename250815016/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchCreatefanotify-no-rename250815016/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchCreatefanotify-no-rename250815016/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSymlinkCreate (0.00s)
+    --- FAIL: TestSubscribeSymlinkCreate/fanotify-no-rename (0.01s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkCreatefanotify-no-rename2995859971/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkCreatefanotify-no-rename2995859971/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkCreatefanotify-no-rename2995859971/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestFileWatchDelete (0.00s)
+    --- FAIL: TestFileWatchDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchDeletefanotify-no-rename1966515499/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchDeletefanotify-no-rename1966515499/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:194: subscribeFile: fanotify_mark on '/tmp/TestFileWatchDeletefanotify-no-rename1966515499/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestRecursiveMoveInPrePopulated (0.00s)
+    --- FAIL: TestRecursiveMoveInPrePopulated/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveMoveInPrePopulatedfanotify-no-rename3108203339/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveMoveInPrePopulatedfanotify-no-rename3108203339/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveMoveInPrePopulatedfanotify-no-rename3108203339/005' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSubdirCreate (0.00s)
+    --- FAIL: TestSubscribeSubdirCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubdirCreatefanotify-no-rename261296/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubdirCreatefanotify-no-rename261296/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubdirCreatefanotify-no-rename261296/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSymlinkedDirectoryRebasesTargetEvents (0.00s)
+    --- FAIL: TestSubscribeSymlinkedDirectoryRebasesTargetEvents/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkedDirectoryRebasesTargetEventsfanotify-no-r2780892113/001/link' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkedDirectoryRebasesTargetEventsfanotify-no-r2780892113/002/link' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkedDirectoryRebasesTargetEventsfanotify-no-r2780892113/003/link' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSubfileRename (0.00s)
+    --- FAIL: TestSubscribeSubfileRename/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileRenamefanotify-no-rename17974910/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileRenamefanotify-no-rename17974910/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileRenamefanotify-no-rename17974910/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSubdirDeleteWithFiles (0.00s)
+    --- FAIL: TestSubscribeSubdirDeleteWithFiles/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubdirDeleteWithFilesfanotify-no-rename2261342315/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubdirDeleteWithFilesfanotify-no-rename2261342315/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubdirDeleteWithFilesfanotify-no-rename2261342315/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSubfileDelete (0.00s)
+    --- FAIL: TestSubscribeSubfileDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileDeletefanotify-no-rename3448540548/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileDeletefanotify-no-rename3448540548/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileDeletefanotify-no-rename3448540548/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSubfileCreate (0.00s)
+    --- FAIL: TestSubscribeSubfileCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileCreatefanotify-no-rename3964925105/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileCreatefanotify-no-rename3964925105/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileCreatefanotify-no-rename3964925105/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeDirCreate (0.00s)
+    --- FAIL: TestSubscribeDirCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirCreatefanotify-no-rename224223267/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirCreatefanotify-no-rename224223267/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirCreatefanotify-no-rename224223267/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeNonASCIIPath (0.00s)
+    --- FAIL: TestSubscribeNonASCIIPath/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNonASCIIPathfanotify-no-rename442114415/001/café-dir' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNonASCIIPathfanotify-no-rename442114415/002/café-dir' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNonASCIIPathfanotify-no-rename442114415/003/café-dir' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestRecursiveSubscribeSymlinkedDirectoryDoesNotFollowDescendantSymlink (0.00s)
+    --- FAIL: TestRecursiveSubscribeSymlinkedDirectoryDoesNotFollowDescendantSymlink/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveSubscribeSymlinkedDirectoryDoesNotFollowDescendantS343224855/001/link' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveSubscribeSymlinkedDirectoryDoesNotFollowDescendantS343224855/002/link' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRecursiveSubscribeSymlinkedDirectoryDoesNotFollowDescendantS343224855/003/link' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeWatchedDirDeleted (0.00s)
+    --- FAIL: TestSubscribeWatchedDirDeleted/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeWatchedDirDeletedfanotify-no-rename421684350/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeWatchedDirDeletedfanotify-no-rename421684350/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeWatchedDirDeletedfanotify-no-rename421684350/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestWatchFileRename (0.00s)
+    --- FAIL: TestWatchFileRename/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileRenamefanotify-no-rename3834835200/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileRenamefanotify-no-rename3834835200/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileRenamefanotify-no-rename3834835200/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestWatchFileDelete (0.00s)
+    --- FAIL: TestWatchFileDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileDeletefanotify-no-rename3432294996/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileDeletefanotify-no-rename3432294996/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileDeletefanotify-no-rename3432294996/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestWatchFileRenameExisting (0.00s)
+    --- FAIL: TestWatchFileRenameExisting/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileRenameExistingfanotify-no-rename334567424/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileRenameExistingfanotify-no-rename334567424/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileRenameExistingfanotify-no-rename334567424/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestWatchFileCreate (0.00s)
+    --- FAIL: TestWatchFileCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileCreatefanotify-no-rename517282788/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileCreatefanotify-no-rename517282788/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileCreatefanotify-no-rename517282788/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSymlinkDelete (0.00s)
+    --- FAIL: TestSubscribeSymlinkDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkDeletefanotify-no-rename3870412657/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkDeletefanotify-no-rename3870412657/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSymlinkDeletefanotify-no-rename3870412657/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeSubfileUpdate (0.00s)
+    --- FAIL: TestSubscribeSubfileUpdate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileUpdatefanotify-no-rename1374460211/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileUpdatefanotify-no-rename1374460211/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeSubfileUpdatefanotify-no-rename1374460211/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestWatchFileUpdate (0.00s)
+    --- FAIL: TestWatchFileUpdate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileUpdatefanotify-no-rename1893746272/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileUpdatefanotify-no-rename1893746272/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestWatchFileUpdatefanotify-no-rename1893746272/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeDirDelete (0.00s)
+    --- FAIL: TestSubscribeDirDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirDeletefanotify-no-rename977944927/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirDeletefanotify-no-rename977944927/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirDeletefanotify-no-rename977944927/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeDirRename (0.00s)
+    --- FAIL: TestSubscribeDirRename/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirRenamefanotify-no-rename2728779578/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirRenamefanotify-no-rename2728779578/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeDirRenamefanotify-no-rename2728779578/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeMultipleDifferentDirs (0.00s)
+    --- FAIL: TestSubscribeMultipleDifferentDirs/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeMultipleDifferentDirsfanotify-no-rename2860901985/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeMultipleDifferentDirsfanotify-no-rename2860901985/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeMultipleDifferentDirsfanotify-no-rename2860901985/005' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeMultipleSameDir (0.00s)
+    --- FAIL: TestSubscribeMultipleSameDir/fanotify-no-rename (0.15s)
+        watcher_test.go:1450: fanotify_mark on '/tmp/TestSubscribeMultipleSameDirfanotify-no-rename2518650436/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:1450: fanotify_mark on '/tmp/TestSubscribeMultipleSameDirfanotify-no-rename2518650436/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:1450: fanotify_mark on '/tmp/TestSubscribeMultipleSameDirfanotify-no-rename2518650436/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeCoalesceCreateUpdate (0.00s)
+    --- FAIL: TestSubscribeCoalesceCreateUpdate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceCreateUpdatefanotify-no-rename462819352/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceCreateUpdatefanotify-no-rename462819352/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceCreateUpdatefanotify-no-rename462819352/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveFileCreate (0.00s)
+    --- FAIL: TestNonRecursiveFileCreate/fanotify-no-rename (0.01s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileCreatefanotify-no-rename3203930253/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileCreatefanotify-no-rename3203930253/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileCreatefanotify-no-rename3203930253/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveDirCreate (0.00s)
+    --- FAIL: TestNonRecursiveDirCreate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveDirCreatefanotify-no-rename21607318/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveDirCreatefanotify-no-rename21607318/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveDirCreatefanotify-no-rename21607318/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveAndRecursiveSameDir (0.00s)
+    --- FAIL: TestNonRecursiveAndRecursiveSameDir/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveAndRecursiveSameDirfanotify-no-rename1818982496/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveAndRecursiveSameDirfanotify-no-rename1818982496/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveAndRecursiveSameDirfanotify-no-rename1818982496/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveFileDelete (0.00s)
+    --- FAIL: TestNonRecursiveFileDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileDeletefanotify-no-rename1713937902/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileDeletefanotify-no-rename1713937902/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileDeletefanotify-no-rename1713937902/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveGrandchildIgnored (0.00s)
+    --- FAIL: TestNonRecursiveGrandchildIgnored/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveGrandchildIgnoredfanotify-no-rename1817017333/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveGrandchildIgnoredfanotify-no-rename1817017333/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveGrandchildIgnoredfanotify-no-rename1817017333/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveFileUpdate (0.00s)
+    --- FAIL: TestNonRecursiveFileUpdate/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileUpdatefanotify-no-rename889902430/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileUpdatefanotify-no-rename889902430/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveFileUpdatefanotify-no-rename889902430/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeCoalesceUpdateDelete (0.00s)
+    --- FAIL: TestSubscribeCoalesceUpdateDelete/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceUpdateDeletefanotify-no-rename1300522600/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceUpdateDeletefanotify-no-rename1300522600/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceUpdateDeletefanotify-no-rename1300522600/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeNestedDirDeletionCleansDescendants (0.00s)
+    --- FAIL: TestSubscribeNestedDirDeletionCleansDescendants/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNestedDirDeletionCleansDescendantsfanotify-no-rena2201688841/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNestedDirDeletionCleansDescendantsfanotify-no-rena2201688841/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeNestedDirDeletionCleansDescendantsfanotify-no-rena2201688841/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestSubscribeCoalesceMultipleUpdates (0.00s)
+    --- FAIL: TestSubscribeCoalesceMultipleUpdates/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceMultipleUpdatesfanotify-no-rename2029145478/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceMultipleUpdatesfanotify-no-rename2029145478/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestSubscribeCoalesceMultipleUpdatesfanotify-no-rename2029145478/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestNonRecursiveNewSubdirContentIgnored (0.00s)
+    --- FAIL: TestNonRecursiveNewSubdirContentIgnored/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveNewSubdirContentIgnoredfanotify-no-rename2599964454/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveNewSubdirContentIgnoredfanotify-no-rename2599964454/002' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestNonRecursiveNewSubdirContentIgnoredfanotify-no-rename2599964454/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+--- FAIL: TestRenameDirOutOfTreeNoStaleEvents (0.00s)
+    --- FAIL: TestRenameDirOutOfTreeNoStaleEvents/fanotify-no-rename (0.00s)
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRenameDirOutOfTreeNoStaleEventsfanotify-no-rename4123174317/001' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 1/3 failed, retrying with 5× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRenameDirOutOfTreeNoStaleEventsfanotify-no-rename4123174317/003' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: attempt 2/3 failed, retrying with 15× timeout scale
+        watcher_test.go:211: subscribe: fanotify_mark on '/tmp/TestRenameDirOutOfTreeNoStaleEventsfanotify-no-rename4123174317/005' failed: name_to_handle_at: operation not supported: fswatch: watcher backend unsupported on this filesystem
+        watcher_test.go:102: retry: gave up after 3 attempts
+FAIL
+FAIL	github.com/microsoft/TypeScript/tsc/internal/fswatch	7.660s
+?   	github.com/microsoft/TypeScript/tsc/internal/glob	[no test files]
+--- FAIL: TestPipeTransportClosePreservesReplacement (0.00s)
+    transport_unix_test.go:24: listen on private socket: listen unix /tmp/tsgo-api-2826849422/socket: socket: operation not permitted
+--- FAIL: TestPipeTransportPermissions (0.00s)
+    transport_unix_test.go:58: helper process failed: exit status 1
+        --- FAIL: TestPipeTransportPermissions (0.00s)
+            transport_unix_test.go:67: listen on private socket: listen unix /tmp/tsgo-api-3006451820/socket: socket: operation not permitted
+        FAIL
+FAIL
+FAIL	github.com/microsoft/TypeScript/tsc/internal/ipc	0.105s
+ok  	github.com/microsoft/TypeScript/tsc/internal/jsnum	0.161s
+?   	github.com/microsoft/TypeScript/tsc/internal/json	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/jsonrpc	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/locale	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls	0.219s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls/autoimport	0.469s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls/change	0.003s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls/lsconv	0.063s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls/lsutil	0.006s
+ok  	github.com/microsoft/TypeScript/tsc/internal/lsp	0.508s
+ok  	github.com/microsoft/TypeScript/tsc/internal/lsp/lsproto	0.005s
+ok  	github.com/microsoft/TypeScript/tsc/internal/lsp/lspwatcher	0.425s
+ok  	github.com/microsoft/TypeScript/tsc/internal/module	0.007s
+ok  	github.com/microsoft/TypeScript/tsc/internal/modulespecifiers	0.004s
+ok  	github.com/microsoft/TypeScript/tsc/internal/nativepath	0.002s
+?   	github.com/microsoft/TypeScript/tsc/internal/nodebuilder	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/osutil	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/outputpaths	0.005s
+ok  	github.com/microsoft/TypeScript/tsc/internal/packagejson	0.004s
+ok  	github.com/microsoft/TypeScript/tsc/internal/parser	3.189s
+?   	github.com/microsoft/TypeScript/tsc/internal/pprof	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/printer	0.017s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project	3.347s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project/ata	0.414s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project/background	0.103s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project/dirty	0.003s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project/logging	0.002s
+?   	github.com/microsoft/TypeScript/tsc/internal/pseudochecker	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/repo	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/scanner	0.003s
+ok  	github.com/microsoft/TypeScript/tsc/internal/semver	0.014s
+ok  	github.com/microsoft/TypeScript/tsc/internal/sourcemap	0.004s
+ok  	github.com/microsoft/TypeScript/tsc/internal/spanmap	0.003s
+ok  	github.com/microsoft/TypeScript/tsc/internal/stringutil	0.002s
+ok  	github.com/microsoft/TypeScript/tsc/internal/symlinks	0.003s
+ok  	github.com/microsoft/TypeScript/tsc/internal/testrunner	56.417s
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/autoimporttestutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/baseline	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/testutil/contentmappertest	0.018s
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/emittestutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/filefixture	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/fixtures	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/fsbaselineutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/harnessutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/jstest	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/lsptestutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/parsetestutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/projecttestutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/race	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/stringtestutil	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/testutil/tsbaseline	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/tracing	0.008s
+?   	github.com/microsoft/TypeScript/tsc/internal/transformers	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/transformers/declarations	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/transformers/estransforms	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/transformers/inliners	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/transformers/jsxtransforms	[no test files]
+?   	github.com/microsoft/TypeScript/tsc/internal/transformers/moduletransforms	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/transformers/tstransforms	0.015s
+ok  	github.com/microsoft/TypeScript/tsc/internal/transpile	0.009s
+ok  	github.com/microsoft/TypeScript/tsc/internal/tsoptions	0.146s
+?   	github.com/microsoft/TypeScript/tsc/internal/tsoptions/tsoptionstest	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/tspath	0.007s
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs	0.006s
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs/cachedvfs	0.003s
+?   	github.com/microsoft/TypeScript/tsc/internal/vfs/internal	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs/iovfs	0.004s
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs/osvfs	0.005s
+?   	github.com/microsoft/TypeScript/tsc/internal/vfs/trackingvfs	[no test files]
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs/vfsmatch	0.012s
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs/vfsmock	0.003s
+ok  	github.com/microsoft/TypeScript/tsc/internal/vfs/vfstest	0.051s
+?   	github.com/microsoft/TypeScript/tsc/internal/vfs/wrapvfs	[no test files]
+FAIL

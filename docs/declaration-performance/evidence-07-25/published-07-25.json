@@ -1,0 +1,455 @@
+{
+  "repository": "https://github.com/tomgasson/TypeScript",
+  "equivalence": "Each mapped local revision and published commit was independently resolved with git rev-parse <revision>^{tree>; equal complete Git tree objects establish source-tree equality. Commit identities and binary hashes need not match.",
+  "step06": "Included as the measured cumulative comparator; steps 07\u201325 are the new stack.",
+  "build_manifests": [
+    {
+      "file": "variants/build-variants.json",
+      "sha256": "46e51edc178ef9bafa718bf75029aac783f7fc67ac8307d97fb7dadf897674d1"
+    },
+    {
+      "file": "variants/build-variants-06-10-11.json",
+      "sha256": "77b4dbeea1301ae53a67bc1810551b7c63c886788d85b7af45511b8a84274a51"
+    },
+    {
+      "file": "variants-22-24/build-variants.json",
+      "sha256": "45b53a9d00e46722e3b3125476095789a437baa2d0c8530ef29ac39f694edd89"
+    },
+    {
+      "file": "variants-parser/build-variants.json",
+      "sha256": "c933ff1cf05e206012b4e708bdf84ceef941ee4ea1fc078b7b339b8ed72572e0"
+    }
+  ],
+  "editor_manifest": {
+    "file": "editor/run-manifest.json",
+    "runtime_tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+  },
+  "revisions": [
+    {
+      "step": "06",
+      "branch": "refactor/06-skip-inactive-commonjs-scan",
+      "published_commit": "039e511ea7160763bb59a142d54bb27d64be6252",
+      "tree": "48341e6a4291c4cb5073708e1050e808eeb43edc",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/039e511ea7160763bb59a142d54bb27d64be6252",
+      "local_revisions": [
+        {
+          "revision": "8e4a38642c7623b02cfea5a85cf34fe8db2fbd3a",
+          "archive_ref": "archive/local/refactor/06-skip-inactive-commonjs-scan"
+        },
+        {
+          "revision": "039e511ea7160763bb59a142d54bb27d64be6252",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "06",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "07",
+      "branch": "refactor/07-declaration-diagnostic-preflight",
+      "published_commit": "9184b77cdb6d6482373c0d88b738d83081cd21e6",
+      "tree": "67a8291897048f60dd85a80a14eda7cae530b3d5",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/9184b77cdb6d6482373c0d88b738d83081cd21e6",
+      "local_revisions": [
+        {
+          "revision": "eb3cfe5c1d487437c92a4132d88380ac47c4ff52",
+          "archive_ref": "archive/local/refactor/07-declaration-diagnostic-preflight"
+        }
+      ]
+    },
+    {
+      "step": "08",
+      "branch": "refactor/08-declaration-host-boundary",
+      "published_commit": "cec35df685b669f317ef20a5186363368f0f8232",
+      "tree": "98fb220d691e0a1a5d637101d0cd8321c9368803",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/cec35df685b669f317ef20a5186363368f0f8232",
+      "local_revisions": [
+        {
+          "revision": "6e4a082380ce8878a0b230789fda3919057c8b13",
+          "archive_ref": "archive/local/refactor/08-declaration-host-boundary"
+        }
+      ]
+    },
+    {
+      "step": "09",
+      "branch": "refactor/09-clear-declaration-fallback-stack",
+      "published_commit": "ff64b6ba8593388cf95aaf4604d32972e9dddada",
+      "tree": "3c70ba819f87e305db1077c5dbebdab2ae66e5e7",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/ff64b6ba8593388cf95aaf4604d32972e9dddada",
+      "local_revisions": [
+        {
+          "revision": "df19985602ee298d2bdb1c88678bf69792208a15",
+          "archive_ref": "archive/local/refactor/09-clear-declaration-fallback-stack"
+        }
+      ]
+    },
+    {
+      "step": "10",
+      "branch": "refactor/10-clear-nodebuilder-context-stack",
+      "published_commit": "f5585f5fb29c3cd9dcc91e5a8e7c503bd3beff3d",
+      "tree": "a646191ed8a00a5d3f46e81fcb123fe3605eb108",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/f5585f5fb29c3cd9dcc91e5a8e7c503bd3beff3d",
+      "local_revisions": [
+        {
+          "revision": "a8e6de781e9d577bdbf1b26ae32ed80476a50ee1",
+          "archive_ref": "archive/local/refactor/10-clear-nodebuilder-context-stack",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "10",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "11",
+      "branch": "refactor/11-skip-absent-declaration-parameters",
+      "published_commit": "5e9a9d7babc331f33a683e7a0b4625a08f9bf8ba",
+      "tree": "76a109e29efba9e4541e1eee678527dc4f720cba",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/5e9a9d7babc331f33a683e7a0b4625a08f9bf8ba",
+      "local_revisions": [
+        {
+          "revision": "ed9123561eb1f8414ec3f4bf43c8e0edf237cbc7",
+          "archive_ref": "archive/local/refactor/11-skip-absent-declaration-parameters",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "11",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "12",
+      "branch": "refactor/12-project-reference-provenance",
+      "published_commit": "e1ca629810ef4dfc09894d4f167df4fbb761c726",
+      "tree": "d3a512ae511ec544095fcb4a2d9f4186c1457685",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/e1ca629810ef4dfc09894d4f167df4fbb761c726",
+      "local_revisions": [
+        {
+          "revision": "feb35f040e0a50a72780f884b21dc182206a1afb",
+          "archive_ref": "archive/local/refactor/12-project-reference-provenance",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "production",
+              "variant": "12",
+              "status": "built"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "12",
+              "status": "prepared"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "13",
+      "branch": "refactor/13-release-completed-emitters",
+      "published_commit": "ae7d2ebe3455346402f2dafa4ee8f5b606577736",
+      "tree": "db957b4d9ac2b044fe582bb64651a999c0ae8615",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/ae7d2ebe3455346402f2dafa4ee8f5b606577736",
+      "local_revisions": [
+        {
+          "revision": "4b52750093d905ff06723960424c0dd3dd305290",
+          "archive_ref": "archive/local/refactor/13-release-completed-emitters",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "production",
+              "variant": "13",
+              "status": "built"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "13",
+              "status": "prepared"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "14",
+      "branch": "refactor/14-stable-diagnostic-signatures",
+      "published_commit": "101d52f79c1a646da37c9cf93d186b33734645ed",
+      "tree": "063bb0dc2ae002e8fa95f7b97dd64b6eecb370c9",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/101d52f79c1a646da37c9cf93d186b33734645ed",
+      "local_revisions": [
+        {
+          "revision": "fcae1ef8d03954d51bf49caa424a16d1aba6f81f",
+          "archive_ref": "archive/local/refactor/14-stable-diagnostic-signatures",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "production",
+              "variant": "14",
+              "status": "built"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "14",
+              "status": "prepared"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "15",
+      "branch": "refactor/15-emitted-source-identity",
+      "published_commit": "79762476c7f5ae6cc855752fd4257b3fc49e2347",
+      "tree": "08602e422be54122dbe6aea870a326e029bf8c6c",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/79762476c7f5ae6cc855752fd4257b3fc49e2347",
+      "local_revisions": [
+        {
+          "revision": "927913afdbf95c1558bccd5dad6964e3932dacc1",
+          "archive_ref": "archive/local/refactor/15-emitted-source-identity",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "production",
+              "variant": "15",
+              "status": "built"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "15",
+              "status": "prepared"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "16",
+      "branch": "refactor/16-preserve-diagnostic-cache-fast-paths",
+      "published_commit": "a27f883c6fcec5ff0a4781435de2b12b5b5713ad",
+      "tree": "e34ae6514958a32cba82ead14079b014caef94cd",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/a27f883c6fcec5ff0a4781435de2b12b5b5713ad",
+      "local_revisions": [
+        {
+          "revision": "c26b8539c48caa53aaad496207018e6062b152e7",
+          "archive_ref": "archive/local/refactor/16-preserve-diagnostic-cache-fast-paths"
+        }
+      ]
+    },
+    {
+      "step": "17",
+      "branch": "refactor/17-producer-declaration-contract",
+      "published_commit": "4ec7e359a13686f05d80979312d49c364bc1cda8",
+      "tree": "956625b4b6d5055a40bff2ba9742f59b00423331",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/4ec7e359a13686f05d80979312d49c364bc1cda8",
+      "local_revisions": [
+        {
+          "revision": "0f7eae2d14dadcad602fa836d181149a66f130cc",
+          "archive_ref": "archive/local/refactor/17-producer-declaration-contract"
+        }
+      ]
+    },
+    {
+      "step": "18",
+      "branch": "refactor/18-emit-output-preflight",
+      "published_commit": "5e0e4c11ab6ab51143a9eb9f1e659420349291fb",
+      "tree": "ad0a9938f0749426388e2234bb1a30adf03495c5",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/5e0e4c11ab6ab51143a9eb9f1e659420349291fb",
+      "local_revisions": [
+        {
+          "revision": "4f7ae015580bee99dce555bde2f934fe13ff5ab5",
+          "archive_ref": "archive/local/refactor/18-emit-output-preflight"
+        }
+      ]
+    },
+    {
+      "step": "19",
+      "branch": "refactor/19-declaration-boundary-benchmarks",
+      "published_commit": "ea6268be23d1b235f60b82d8914d660e36e8805f",
+      "tree": "7353a9f7e514be2ebb8435668852b68be8087899",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/ea6268be23d1b235f60b82d8914d660e36e8805f",
+      "local_revisions": [
+        {
+          "revision": "c1e366ae4d445bd3fcff0eb28d59482ce79f9aa8",
+          "archive_ref": "archive/local/refactor/19-declaration-boundary-benchmarks",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "production",
+              "variant": "19",
+              "status": "built"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "19",
+              "status": "prepared"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "20",
+      "branch": "refactor/20-explicit-emit-checker-lease",
+      "published_commit": "1b89f02ba1fe61a2108e68258364627e72e0ef3d",
+      "tree": "adb2ef2c220d2e0ddb9cc760ea2a4b40c3e16c16",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/1b89f02ba1fe61a2108e68258364627e72e0ef3d",
+      "local_revisions": [
+        {
+          "revision": "c8157033fc62db4a2a7508f4c5d8fd8277471928",
+          "archive_ref": "archive/local/refactor/20-explicit-emit-checker-lease",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "harness"
+            },
+            {
+              "manifest": "variants/build-variants.json",
+              "role": "production",
+              "variant": "20",
+              "status": "built"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "harness"
+            },
+            {
+              "manifest": "variants/build-variants-06-10-11.json",
+              "role": "production",
+              "variant": "20",
+              "status": "prepared"
+            },
+            {
+              "manifest": "variants-parser/build-variants.json",
+              "role": "production",
+              "variant": "20",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "21",
+      "branch": "refactor/21-release-pooled-scanner-inputs",
+      "published_commit": "ab6827bee069ed0d18ce1286c0bfb4cb89151b91",
+      "tree": "ef8421b3c223c2c4d2fbfe5aa617ebaeef9e2682",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/ab6827bee069ed0d18ce1286c0bfb4cb89151b91",
+      "local_revisions": [
+        {
+          "revision": "5d81b20ab8eb5ad82e4607f7502a9b414dc5de57",
+          "archive_ref": "archive/local/refactor/21-release-pooled-scanner-inputs",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants-parser/build-variants.json",
+              "role": "harness"
+            },
+            {
+              "manifest": "variants-parser/build-variants.json",
+              "role": "production",
+              "variant": "21",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "22",
+      "branch": "refactor/22-host-owned-parsing-from-text",
+      "published_commit": "4e315c5038d652e5c83d32110a479e38781158e1",
+      "tree": "47fd5245e5af455f1c997e67d76e8c2493b9e35b",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/4e315c5038d652e5c83d32110a479e38781158e1",
+      "local_revisions": [
+        {
+          "revision": "a8b03da4c1660b1838220f1e424c427ec820c361",
+          "archive_ref": "archive/local/refactor/22-host-owned-parsing-from-text",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants-22-24/build-variants.json",
+              "role": "production",
+              "variant": "22",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "23",
+      "branch": "refactor/23-lazy-index-signature-builder",
+      "published_commit": "e544a93e8a9b06438591051d89b0ae541d62f5b9",
+      "tree": "1bdd0da641e5bef7b8eb7bbd97e123df5f4cd451",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/e544a93e8a9b06438591051d89b0ae541d62f5b9",
+      "local_revisions": [
+        {
+          "revision": "dc1b6bc3421c867b1caaa419baefe20530dec8df",
+          "archive_ref": "archive/local/refactor/23-lazy-index-signature-builder",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants-22-24/build-variants.json",
+              "role": "production",
+              "variant": "23",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "24",
+      "branch": "refactor/24-skip-single-declaration-overload-probes",
+      "published_commit": "a0e4e0e31ec17d16e5da331a1a1cf71fd8c473c5",
+      "tree": "e3d9d36435527a2c68016bb27fc708d7ee165800",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/a0e4e0e31ec17d16e5da331a1a1cf71fd8c473c5",
+      "local_revisions": [
+        {
+          "revision": "dd77adfca2deef7b621b017a3c41b0246676810b",
+          "archive_ref": "archive/local/refactor/24-skip-single-declaration-overload-probes",
+          "build_manifest_uses": [
+            {
+              "manifest": "variants-22-24/build-variants.json",
+              "role": "harness"
+            },
+            {
+              "manifest": "variants-22-24/build-variants.json",
+              "role": "production",
+              "variant": "24",
+              "status": "built"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "step": "25",
+      "branch": "refactor/25-editor-declaration-boundary-benchmarks",
+      "published_commit": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3",
+      "published_url": "https://github.com/tomgasson/TypeScript/commit/19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "local_revisions": [
+        {
+          "revision": "ac4dc991fae7c160cd90a761c0db314cd2b488d3",
+          "archive_ref": "archive/local/refactor/25-editor-declaration-boundary-benchmarks",
+          "editor_run_manifest": "editor/run-manifest.json"
+        }
+      ]
+    }
+  ]
+}
