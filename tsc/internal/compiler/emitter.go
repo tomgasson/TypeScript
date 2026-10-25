@@ -59,9 +59,9 @@ type declarationTransformer interface {
 	GetDiagnostics() []*ast.Diagnostic
 }
 
-func getDeclarationTransformers(emitResolver printer.EmitResolver, host EmitHost, sourceFile *ast.SourceFile, declarationFilePath tspath.RootedFilePath, forceDtsEmit bool) []declarationTransformer {
+func getDeclarationTransformers(emitResolver printer.EmitResolver, host declarations.DeclarationEmitHost, options *core.CompilerOptions, sourceFile *ast.SourceFile, declarationFilePath tspath.RootedFilePath, forceDtsEmit bool) []declarationTransformer {
 	return []declarationTransformer{
-		declarations.NewDeclarationTransformer(host, emitResolver, host.Options(), declarationFilePath),
+		declarations.NewDeclarationTransformer(host, emitResolver, options, declarationFilePath),
 		declarations.NewSupplementalReferencesTransformer(host, sourceFile, declarationFilePath, forceDtsEmit),
 	}
 }
@@ -82,7 +82,7 @@ func (e *emitter) runDeclarationTransformers(emitResolver printer.EmitResolver, 
 	}
 	var diags []*ast.Diagnostic
 	forceDtsEmit := e.emitOnly == EmitOnlyBuilderSignature || e.forceEmit && e.emitOnly == EmitOnlyDts
-	for _, transformer := range getDeclarationTransformers(emitResolver, e.host, sourceFile, declarationFilePath, forceDtsEmit) {
+	for _, transformer := range getDeclarationTransformers(emitResolver, e.host, e.host.Options(), sourceFile, declarationFilePath, forceDtsEmit) {
 		sourceFile = transformer.TransformSourceFile(sourceFile)
 		diags = append(diags, transformer.GetDiagnostics()...)
 	}
