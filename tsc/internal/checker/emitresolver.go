@@ -220,6 +220,9 @@ func (r *EmitResolver) IsImplementationOfOverload(node *ast.SignatureDeclaration
 		r.checkerMu.Lock()
 		defer r.checkerMu.Unlock()
 		symbol := r.checker.getSymbolOfDeclaration(node)
+		if symbol != nil && len(symbol.Declarations()) == 1 && symbol.Declarations()[0] == node {
+			return false
+		}
 		signaturesOfSymbol := r.checker.getSignaturesOfSymbol(symbol)
 		// If this function body corresponds to function with multiple signature, it is implementation of overload
 		// e.g.: function foo(a: string): string;
