@@ -5,6 +5,7 @@ package api
 import (
 	"errors"
 	"fmt"
+	"strings"
 	"sync/atomic"
 
 	"github.com/microsoft/TypeScript/tsc/internal/api/requestfilesystem"
@@ -1977,7 +1978,8 @@ func diagnosticSourceLines(file diagnosticwriter.FileLike, firstLine int, lastLi
 		if line+1 < len(lineMap) {
 			end = int(lineMap[line+1])
 		}
-		result = append(result, &DiagnosticSourceLineResponse{Line: line, Text: text[start:end]})
+		// A retained response must not keep the entire source text through a short context line.
+		result = append(result, &DiagnosticSourceLineResponse{Line: line, Text: strings.Clone(text[start:end])})
 	}
 	return result
 }
