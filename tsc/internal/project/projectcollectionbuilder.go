@@ -1543,6 +1543,8 @@ func (b *ProjectCollectionBuilder) updateProgram(entry dirty.Value[*Project], lo
 				}
 				if result.UpdateKind == ProgramUpdateKindNewFiles {
 					filesChanged = true
+				}
+				if result.UpdateKind != ProgramUpdateKindCloned {
 					project.programFilesWatch = project.CloneWatchers()
 				}
 				project.dirty = false
