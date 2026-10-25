@@ -291,9 +291,9 @@ func (tx *DeclarationTransformer) visitSourceFile(node *ast.SourceFile) *ast.Nod
 	tx.suppressNewDiagnosticContexts = false
 	tx.state.lateMarkedStatements = make([]*ast.Node, 0)
 	tx.lateStatementReplacementMap = make(map[ast.NodeId]*ast.Node)
-	tx.expandoHosts = make(map[ast.NodeId]*ast.Node)
-	tx.expandoMembers = make(map[ast.NodeId][]*ast.Node)
-	tx.deferredExpandoAssignments = make(map[ast.NodeId][]*ast.BinaryExpression)
+	tx.expandoHosts = nil
+	tx.expandoMembers = nil
+	tx.deferredExpandoAssignments = nil
 	tx.rawReferencedFiles = make([]ReferencedFilePair, 0)
 	tx.rawTypeReferenceDirectives = make([]*ast.FileReference, 0)
 	tx.rawLibReferenceDirectives = make([]*ast.FileReference, 0)
@@ -2799,6 +2799,9 @@ func (tx *DeclarationTransformer) transformExpandoAssignment(node *ast.BinaryExp
 		// The host isn't visible (yet) - printing the type of a visible declaration may still
 		// late-mark it as visible (e.g. an exported variable whose type prints as `typeof host`),
 		// so defer the assignment to be processed if and when that happens.
+		if tx.deferredExpandoAssignments == nil {
+			tx.deferredExpandoAssignments = make(map[ast.NodeId][]*ast.BinaryExpression)
+		}
 		tx.deferredExpandoAssignments[hostId] = append(tx.deferredExpandoAssignments[hostId], node)
 		return
 	}
@@ -2808,6 +2811,9 @@ func (tx *DeclarationTransformer) transformExpandoAssignment(node *ast.BinaryExp
 	}
 
 	tx.transformExpandoHost(name, declaration)
+	if tx.expandoMembers == nil {
+		tx.expandoMembers = make(map[ast.NodeId][]*ast.Node)
+	}
 
 	exportName := tx.Factory().NewIdentifier(property)
 	localName := tx.tryGetNameOfAssignedExpression(node.AsNode())
@@ -2904,6 +2910,9 @@ func (tx *DeclarationTransformer) transformExpandoHost(name *ast.Node, declarati
 
 	if _, ok := tx.expandoHosts[id]; ok {
 		return
+	}
+	if tx.expandoHosts == nil {
+		tx.expandoHosts = make(map[ast.NodeId]*ast.Node)
 	}
 
 	saveNeedsDeclare := tx.needsDeclare
