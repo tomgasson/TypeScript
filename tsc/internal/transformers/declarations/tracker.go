@@ -13,7 +13,7 @@ type SymbolTrackerImpl struct {
 	resolver      printer.EmitResolver
 	state         *SymbolTrackerSharedState
 	host          DeclarationEmitHost
-	fallbackStack []*ast.Node
+	fallbackStack core.Stack[*ast.Node]
 
 	// For detecting class expression self-references during member serialization.
 	// When set, TrackSymbol will record usage without reporting accessibility errors.
@@ -25,12 +25,12 @@ type SymbolTrackerImpl struct {
 
 // PopErrorFallbackNode implements checker.SymbolTracker.
 func (s *SymbolTrackerImpl) PopErrorFallbackNode() {
-	s.fallbackStack = s.fallbackStack[:len(s.fallbackStack)-1]
+	s.fallbackStack.Pop()
 }
 
 // PushErrorFallbackNode implements checker.SymbolTracker.
 func (s *SymbolTrackerImpl) PushErrorFallbackNode(node *ast.Node) {
-	s.fallbackStack = append(s.fallbackStack, node)
+	s.fallbackStack.Push(node)
 }
 
 // ReportCyclicStructureError implements checker.SymbolTracker.
@@ -155,8 +155,8 @@ func (s *SymbolTrackerImpl) ReportTruncationError() {
 }
 
 func (s *SymbolTrackerImpl) errorFallbackNode() *ast.Node {
-	if len(s.fallbackStack) >= 1 {
-		return s.fallbackStack[len(s.fallbackStack)-1]
+	if s.fallbackStack.Len() != 0 {
+		return s.fallbackStack.Peek()
 	}
 	return nil
 }
