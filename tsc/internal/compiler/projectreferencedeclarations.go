@@ -126,22 +126,7 @@ func (p *fileLoader) generateProjectReferenceDeclarations(config *tsoptions.Pars
 			SingleThreaded: core.TSTrue,
 			skipProjectReferenceDeclarationGeneration: true,
 		})
-		ctx := context.Background()
-		if len(program.GetConfigFileParsingDiagnostics()) != 0 || len(program.GetProgramDiagnostics()) != 0 ||
-			len(program.GetSyntacticDiagnostics(ctx, nil)) != 0 {
-			return
-		}
-		outputs := make(map[tspath.RootedFilePath]string)
-		result := program.Emit(ctx, EmitOptions{
-			EmitOnly: EmitOnlyDts,
-			WriteFile: func(path tspath.RootedFilePath, text string, _ *WriteFileData) error {
-				outputs[path] = text
-				return nil
-			},
-		})
-		if result.EmitSkipped || len(result.Diagnostics) != 0 {
-			return
-		}
+		outputs := emitProjectReferenceDeclarations(program)
 		// Publish only owned text after the entire producer emit succeeds.
 		// Neither diagnostics nor producer AST/checker objects escape this scope.
 		for fileName, text := range outputs {
@@ -160,4 +145,29 @@ func (p *fileLoader) generateProjectReferenceDeclarations(config *tsoptions.Pars
 			}
 		}
 	})
+}
+
+// Keep producer diagnostics and emit metadata inside this scope. Only owned
+// declaration and map text can be retained by the consuming program.
+func emitProjectReferenceDeclarations(program *Program) map[tspath.RootedFilePath]string {
+	if !program.SingleThreaded() {
+		panic("project-reference declaration capture requires a single-threaded program")
+	}
+	ctx := context.Background()
+	if len(program.GetConfigFileParsingDiagnostics()) != 0 || len(program.GetProgramDiagnostics()) != 0 ||
+		len(program.GetSyntacticDiagnostics(ctx, nil)) != 0 {
+		return nil
+	}
+	outputs := make(map[tspath.RootedFilePath]string)
+	result := program.Emit(ctx, EmitOptions{
+		EmitOnly: EmitOnlyDts,
+		WriteFile: func(path tspath.RootedFilePath, text string, _ *WriteFileData) error {
+			outputs[path] = text
+			return nil
+		},
+	})
+	if result.EmitSkipped || len(result.Diagnostics) != 0 {
+		return nil
+	}
+	return outputs
 }
