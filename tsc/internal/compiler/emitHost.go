@@ -1,8 +1,6 @@
 package compiler
 
 import (
-	"context"
-
 	"github.com/microsoft/TypeScript/tsc/internal/ast"
 	"github.com/microsoft/TypeScript/tsc/internal/checker"
 	"github.com/microsoft/TypeScript/tsc/internal/core"
@@ -32,16 +30,16 @@ var _ EmitHost = (*emitHost)(nil)
 
 // NOTE: emitHost operations must be thread-safe
 type emitHost struct {
-	program         *Program
-	newEmitResolver func(*printer.EmitContext) *checker.EmitResolver
+	program *Program
+	checker *checker.Checker
 }
 
-func newEmitHost(ctx context.Context, program *Program, file *ast.SourceFile) (*emitHost, func()) {
-	checker, done := program.GetTypeCheckerForFile(ctx, file)
+// The caller owns the checker lease and must keep it until emission completes.
+func newEmitHost(program *Program, checker *checker.Checker) *emitHost {
 	return &emitHost{
-		program:         program,
-		newEmitResolver: checker.NewEmitResolver,
-	}, done
+		program: program,
+		checker: checker,
+	}
 }
 
 func (host *emitHost) GetModeForUsageLocation(file ast.HasFileName, moduleSpecifier *ast.StringLiteralLike) core.ResolutionMode {
@@ -132,7 +130,7 @@ func (host *emitHost) WriteFile(fileName tspath.RootedFilePath, text string) err
 }
 
 func (host *emitHost) NewEmitResolver(emitContext *printer.EmitContext) printer.EmitResolver {
-	return host.newEmitResolver(emitContext)
+	return host.checker.NewEmitResolver(emitContext)
 }
 
 func (host *emitHost) IsSourceFileFromExternalLibrary(file *ast.SourceFile) bool {

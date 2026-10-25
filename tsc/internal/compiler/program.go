@@ -1666,8 +1666,9 @@ func (p *Program) getDeclarationDiagnosticsForFile(ctx context.Context, sourceFi
 
 	diagnostics := []*ast.Diagnostic{}
 	if sourceFileMayHaveDeclarationDiagnostics(sourceFile, p) {
-		host, done := newEmitHost(ctx, p, sourceFile)
+		checker, done := p.GetTypeCheckerForFile(ctx, sourceFile)
 		defer done()
+		host := newEmitHost(p, checker)
 		diagnostics = getDeclarationDiagnostics(host, sourceFile)
 	}
 	diagnostics, _ = p.declarationDiagnosticCache.LoadOrStore(sourceFile, diagnostics)
@@ -1948,8 +1949,9 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 			if !emitsJs && !emitsDts {
 				return
 			}
-			host, done := newEmitHost(ctx, p, sourceFile)
+			checker, done := p.GetTypeCheckerForFile(ctx, sourceFile)
 			defer done()
+			host := newEmitHost(p, checker)
 			emitter := &emitter{
 				host:       host,
 				paths:      paths,

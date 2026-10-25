@@ -127,8 +127,9 @@ func BenchmarkDeclaration(b *testing.B) {
 				if file == nil {
 					b.Fatal("benchmark source was not loaded")
 				}
-				host, done := newEmitHost(ctx, p, file)
+				checker, done := p.GetTypeCheckerForFile(ctx, file)
 				defer done()
+				host := newEmitHost(p, checker)
 				if diags := getDeclarationDiagnostics(host, file); len(diags) != 0 {
 					b.Fatalf("unexpected declaration diagnostics: %v", diags)
 				}
