@@ -220,6 +220,15 @@ func (w *Watcher) computeDesiredWatches(seenFilePaths []tspath.RootedPath) map[t
 			desiredDirs[realDir] = recursive
 		}
 	}
+	w.program.GetProgram().RangeResolvedProjectReference(func(_ tspath.PathKey, config *tsoptions.ParsedCommandLine, _ *tsoptions.ParsedCommandLine, _ int) bool {
+		if config != nil && config.CompilerOptions().IsolatedDeclarations.IsTrue() {
+			for dir, recursive := range config.WildcardDirectories() {
+				realDir := tspath.RootedDirectoryPathFromPath(w.sys.FS().Realpath(dir.AsPath()))
+				desiredDirs[realDir] = desiredDirs[realDir] || recursive
+			}
+		}
+		return true
+	})
 
 	// For no-config CLI mode, ensure CWD is watched
 	if w.config.ConfigFile == nil && len(desiredDirs) == 0 {
@@ -257,20 +266,36 @@ func (w *Watcher) computeDesiredWatches(seenFilePaths []tspath.RootedPath) map[t
 	}
 	programFiles := w.program.GetProgram().FilesByPath()
 	caseSensitivity := w.caseSensitivity()
-	rootFiles := collections.NewSetFromItems(core.Map(w.config.FileNames(), func(fileName tspath.RootedFilePath) tspath.PathKey {
+	explicitInputs := collections.NewSetFromItems(core.Map(w.config.FileNames(), func(fileName tspath.RootedFilePath) tspath.PathKey {
 		return caseSensitivity.PathKey(fileName.AsPath())
 	})...)
+	w.program.GetProgram().RangeResolvedProjectReference(func(path tspath.PathKey, config *tsoptions.ParsedCommandLine, _ *tsoptions.ParsedCommandLine, _ int) bool {
+		explicitInputs.Add(path)
+		if config != nil {
+			for _, fileName := range config.ExtendedSourceFiles() {
+				explicitInputs.Add(caseSensitivity.PathKey(fileName.AsPath()))
+			}
+			for _, fileName := range config.FileNames() {
+				explicitInputs.Add(caseSensitivity.PathKey(fileName.AsPath()))
+			}
+		}
+		return true
+	})
 	for _, filePath := range seenFilePaths {
 		dir := filePath.Directory()
 		if coverage.Covered(dir) {
 			continue
 		}
 		// Seen files mix program files with lookup locations. Only lookups keep the depth check, so an imported
-		// file outside the tsconfig directory (say /shared next to /app) is still watched. A root file is not in
-		// the program while it is missing, but its directory stays watched so that recreating it rebuilds.
+		// file outside the tsconfig directory (say /shared next to /app) is still watched. Explicit inputs
+		// include referenced config/source files used by declaration generation, whose trees are not in
+		// this program. Keep their watches after generation fails so a repair can rebuild the consumer.
+		// Other existing shallow inputs can also affect generation; absent speculative lookups remain
+		// subject to the depth check. Preserve existing coverage for still-seen deleted inputs.
 		p := caseSensitivity.PathKey(filePath)
 		_, isProgramFile := programFiles[p]
-		if isProgramFile || rootFiles.Has(p) || watchmanager.CanWatchDirectory(dir) {
+		if isProgramFile || explicitInputs.Has(p) || watchmanager.CanWatchDirectory(dir) ||
+			len(w.config.ProjectReferences()) > 0 && (w.sys.FS().FileExists(tspath.RootedFilePathFromPath(filePath)) || w.wm.IsPathUnderWatch(dir.AsPath())) {
 			coverage.Set(dir, false)
 		}
 	}
@@ -314,9 +339,19 @@ func (w *Watcher) DoCycle() {
 					// A watched directory changed: the wildcard file set may have
 					// changed, so reload file names on the next build.
 					w.watchSetDirty = true
+					if len(w.config.ProjectReferences()) > 0 {
+						// Producer changes may arrive as directory events without
+						// changing the consumer's roots, including repairs after a
+						// failed generation. Rebuild referenced declarations.
+						w.forceFullRebuild = true
+					}
 					continue
 				}
 				p := w.caseSensitivity().PathKey(eventPath)
+				if w.matchesDeclarationProducer(eventPath) {
+					// A new wildcard producer root is not in the previous seen set.
+					w.forceFullRebuild = true
+				}
 				if contentMapperWatchedFiles.Has(p) {
 					contentMapperConfigChanged = true
 					w.forceFullRebuild = true
@@ -401,6 +436,9 @@ func (w *Watcher) isRelevantChange(changedPaths map[tspath.RootedPath]fswatch.Ev
 		if w.seenFiles.Has(p) {
 			return true
 		}
+		if w.matchesDeclarationProducer(eventPath) {
+			return true
+		}
 		if w.config.ConfigFile != nil && w.config.PossiblyMatchesFileName(tspath.RootedFilePathFromPath(eventPath)) {
 			return true
 		}
@@ -414,6 +452,17 @@ func (w *Watcher) isRelevantChange(changedPaths map[tspath.RootedPath]fswatch.Ev
 		}
 	}
 	return false
+}
+
+func (w *Watcher) matchesDeclarationProducer(path tspath.RootedPath) bool {
+	matched := false
+	w.program.GetProgram().RangeResolvedProjectReference(func(_ tspath.PathKey, config *tsoptions.ParsedCommandLine, _ *tsoptions.ParsedCommandLine, _ int) bool {
+		if config != nil && config.CompilerOptions().IsolatedDeclarations.IsTrue() {
+			matched = config.PossiblyMatchesFileName(tspath.RootedFilePathFromPath(path)) || config.PossiblyMatchesDirectoryName(w.caseSensitivity().PathKey(path))
+		}
+		return !matched
+	})
+	return matched
 }
 
 func (w *Watcher) doBuild() error {
@@ -478,6 +527,9 @@ func (w *Watcher) doBuild() error {
 
 	cached := cachedvfs.From(w.sys.FS())
 	tfs := &trackingvfs.FS{Inner: cached}
+	// Referenced configs are reparsed on full builds. Their extended configs
+	// must also be fresh, and all reads must enter this build's dependency set.
+	w.extendedConfigCache = &tsc.ExtendedConfigCache{}
 	innerHost := compiler.NewCompilerHost(
 		tfs,
 		w.sys.DefaultLibraryPath(),
