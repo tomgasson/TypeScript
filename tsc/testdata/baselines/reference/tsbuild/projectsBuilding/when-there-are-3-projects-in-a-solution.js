@@ -243,7 +243,7 @@ export const pkg2 = 2;
   "size": 1111
 }
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[[2,4]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n","4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n"],"options":{"composite":true},"resolvedRoot":[[2,5],[3,6],[4,7]]}
+{"version":"FakeTSVersion","root":[[2,4]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n","signature":"cc53ef3a3757ddba71dd403e48943fa8-c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","signature":"5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n","signature":"b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1}],"options":{"composite":true},"resolvedRoot":[[2,5],[3,6],[4,7]]}
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -285,20 +285,35 @@ export const pkg2 = 2;
     {
       "fileName": "./pkg0/index.d.ts",
       "version": "c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n",
-      "signature": "c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "cc53ef3a3757ddba71dd403e48943fa8-c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n",
+        "signature": "cc53ef3a3757ddba71dd403e48943fa8-c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg1/index.d.ts",
       "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "signature": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
+        "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg2/index.d.ts",
       "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "signature": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
+        "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     }
   ],
   "options": {
@@ -318,7 +333,7 @@ export const pkg2 = 2;
       "./pkg2/index.ts"
     ]
   ],
-  "size": 1245
+  "size": 1887
 }
 
 pkg0/tsconfig.json::
@@ -558,7 +573,7 @@ export const someConst = 10;
 //// [/user/username/projects/myproject/pkg1/tsconfig.tsbuildinfo] *mTime changed*
 //// [/user/username/projects/myproject/pkg2/tsconfig.tsbuildinfo] *mTime changed*
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo] *modified* 
-{"version":"FakeTSVersion","root":[[2,4]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n","4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n"],"options":{"composite":true},"resolvedRoot":[[2,5],[3,6],[4,7]]}
+{"version":"FakeTSVersion","root":[[2,4]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n","signature":"c3a269f099e66b78b60c0c7f40a47e1d-cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","signature":"5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n","signature":"b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1}],"options":{"composite":true},"resolvedRoot":[[2,5],[3,6],[4,7]]}
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo.readable.baseline.txt] *modified* 
 {
   "version": "FakeTSVersion",
@@ -600,20 +615,35 @@ export const someConst = 10;
     {
       "fileName": "./pkg0/index.d.ts",
       "version": "cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n",
-      "signature": "cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "c3a269f099e66b78b60c0c7f40a47e1d-cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n",
+        "signature": "c3a269f099e66b78b60c0c7f40a47e1d-cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg1/index.d.ts",
       "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "signature": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
+        "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg2/index.d.ts",
       "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "signature": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
+        "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     }
   ],
   "options": {
@@ -633,7 +663,7 @@ export const someConst = 10;
       "./pkg2/index.ts"
     ]
   ],
-  "size": 1283
+  "size": 1963
 }
 
 pkg0/tsconfig.json::

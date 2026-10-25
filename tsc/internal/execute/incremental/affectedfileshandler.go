@@ -103,9 +103,12 @@ func (h *affectedFilesHandler) updateShapeSignature(file *ast.SourceFile, useFil
 	if !file.IsDeclarationFile && !ast.IsJsonSourceFile(file) && !useFileVersionAsSignature {
 		update.signature = h.computeDtsSignature(file)
 	}
-	// Default is to use file version as signature
+	// Default is to use file version as signature, including any declaration context.
 	if update.signature == "" {
 		update.signature = info.version
+		if file.IsDeclarationFile {
+			update.signature = h.program.snapshot.declarationSignature(h.program.program, file, info.version)
+		}
 		update.kind = SignatureUpdateKindUsedVersion
 	}
 	return update.signature != prevSignature

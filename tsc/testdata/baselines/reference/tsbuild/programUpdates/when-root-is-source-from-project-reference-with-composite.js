@@ -108,7 +108,7 @@ export const FOO = 'THEFOOEXPORT';
   "size": 1145
 }
 //// [/home/src/workspaces/project/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[[2,3]],"fileNames":["lib.es2026.full.d.ts","./lib/dist/foo.d.ts","./index.ts","./lib/foo.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n",{"version":"e7dbb9e054d23568235510c49ab58ce3-import { FOO } from \"./lib/foo\";","signature":"abe7d9981d6018efb6b2b794f40a1607-export {};\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true},"referencedMap":[[3,1]],"latestChangedDtsFile":"./index.d.ts","resolvedRoot":[[2,4]]}
+{"version":"FakeTSVersion","root":[[2,3]],"fileNames":["lib.es2026.full.d.ts","./lib/dist/foo.d.ts","./index.ts","./lib/foo.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n","signature":"e6872f9ca06e069a4a04f4c3492ecd29-4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"e7dbb9e054d23568235510c49ab58ce3-import { FOO } from \"./lib/foo\";","signature":"abe7d9981d6018efb6b2b794f40a1607-export {};\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true},"referencedMap":[[3,1]],"latestChangedDtsFile":"./index.d.ts","resolvedRoot":[[2,4]]}
 //// [/home/src/workspaces/project/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -146,8 +146,13 @@ export const FOO = 'THEFOOEXPORT';
     {
       "fileName": "./lib/dist/foo.d.ts",
       "version": "4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n",
-      "signature": "4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "e6872f9ca06e069a4a04f4c3492ecd29-4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n",
+        "signature": "e6872f9ca06e069a4a04f4c3492ecd29-4ea8c248dd335c2208c4fdcf4812cc6f-export declare const FOO: string;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./index.ts",
@@ -181,7 +186,7 @@ export const FOO = 'THEFOOEXPORT';
       "./lib/foo.ts"
     ]
   ],
-  "size": 1282
+  "size": 1499
 }
 
 lib/tsconfig.json::

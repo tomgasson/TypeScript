@@ -188,7 +188,7 @@ export function main() {
 }
 
 //// [/home/src/workspaces/solution/main/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[3],"fileNames":["lib.es2026.full.d.ts","../child/child.d.ts","./main.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n",{"version":"d75ecee856a9674923c51d13bc094a97-import { child } from \"../child/child\";\nexport function main() {\n    child();\n}","signature":"c59caa3814ee834e4ffefaf173a2be2a-export declare function main(): void;\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true},"referencedMap":[[3,1]],"latestChangedDtsFile":"./main.d.ts"}
+{"version":"FakeTSVersion","root":[3],"fileNames":["lib.es2026.full.d.ts","../child/child.d.ts","./main.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n","signature":"f42aaf6491e2bf229b51fdedea4a0134-3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"d75ecee856a9674923c51d13bc094a97-import { child } from \"../child/child\";\nexport function main() {\n    child();\n}","signature":"c59caa3814ee834e4ffefaf173a2be2a-export declare function main(): void;\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true},"referencedMap":[[3,1]],"latestChangedDtsFile":"./main.d.ts"}
 //// [/home/src/workspaces/solution/main/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -221,8 +221,13 @@ export function main() {
     {
       "fileName": "../child/child.d.ts",
       "version": "3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n",
-      "signature": "3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "f42aaf6491e2bf229b51fdedea4a0134-3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n",
+        "signature": "f42aaf6491e2bf229b51fdedea4a0134-3a48d078ac909d932ed914f17038d634-export declare function child(): void;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./main.ts",
@@ -250,7 +255,7 @@ export function main() {
     ]
   },
   "latestChangedDtsFile": "./main.d.ts",
-  "size": 1320
+  "size": 1542
 }
 
 child/tsconfig.json::

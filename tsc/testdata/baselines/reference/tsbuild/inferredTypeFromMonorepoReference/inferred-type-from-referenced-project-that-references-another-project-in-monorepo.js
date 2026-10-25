@@ -178,7 +178,7 @@ declare class MyClass {
 export { MyClass };
 
 //// [/home/src/workspaces/solution/packages/package-a/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[4],"packageJsons":["./package.json","../package-b/package.json","../package-c/package.json"],"fileNames":["lib.es2022.full.d.ts","../package-c/out/index.d.ts","../package-b/out/index.d.ts","./src/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n","c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n",{"version":"1b8e37ecd837c2f357c793c86828b133-import { createThing } from \"package-b\";\n\nclass MyClass {\n    public thing = createThing({ id: \"1\", name: \"test\", enabled: true });\n}\n\nexport { MyClass };","signature":"f0d3d8e75bf995728f62a7d715cdf8a8-declare class MyClass {\n    thing: import(\"package-c\").MyType;\n}\nexport { MyClass };\n","impliedNodeFormat":1}],"fileIdsList":[[3],[2]],"options":{"composite":true,"emitDeclarationOnly":true,"declaration":true,"module":99,"outDir":"./out","rootDir":"./src","target":9},"referencedMap":[[4,1],[3,2]],"latestChangedDtsFile":"./out/index.d.ts"}
+{"version":"FakeTSVersion","root":[4],"packageJsons":["./package.json","../package-b/package.json","../package-c/package.json"],"fileNames":["lib.es2022.full.d.ts","../package-c/out/index.d.ts","../package-b/out/index.d.ts","./src/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n","signature":"b60908d06b6bb28f94c112f5e5c6adc2-fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n","signature":"efd7c90d79f5f1b2c14af34e91e81126-c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"1b8e37ecd837c2f357c793c86828b133-import { createThing } from \"package-b\";\n\nclass MyClass {\n    public thing = createThing({ id: \"1\", name: \"test\", enabled: true });\n}\n\nexport { MyClass };","signature":"f0d3d8e75bf995728f62a7d715cdf8a8-declare class MyClass {\n    thing: import(\"package-c\").MyType;\n}\nexport { MyClass };\n","impliedNodeFormat":1}],"fileIdsList":[[3],[2]],"options":{"composite":true,"emitDeclarationOnly":true,"declaration":true,"module":99,"outDir":"./out","rootDir":"./src","target":9},"referencedMap":[[4,1],[3,2]],"latestChangedDtsFile":"./out/index.d.ts"}
 //// [/home/src/workspaces/solution/packages/package-a/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -217,14 +217,24 @@ export { MyClass };
     {
       "fileName": "../package-c/out/index.d.ts",
       "version": "fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",
-      "signature": "fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b60908d06b6bb28f94c112f5e5c6adc2-fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",
+        "signature": "b60908d06b6bb28f94c112f5e5c6adc2-fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "../package-b/out/index.d.ts",
       "version": "c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n",
-      "signature": "c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "efd7c90d79f5f1b2c14af34e91e81126-c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n",
+        "signature": "efd7c90d79f5f1b2c14af34e91e81126-c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./src/index.ts",
@@ -264,14 +274,14 @@ export { MyClass };
     ]
   },
   "latestChangedDtsFile": "./out/index.d.ts",
-  "size": 1896
+  "size": 2456
 }
 //// [/home/src/workspaces/solution/packages/package-b/out/index.d.ts] *new* 
 import type { MyType } from "package-c";
 export declare function createThing(input: MyType): MyType;
 
 //// [/home/src/workspaces/solution/packages/package-b/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[3],"packageJsons":["./package.json","../package-c/package.json"],"fileNames":["lib.es2022.full.d.ts","../package-c/out/index.d.ts","./src/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",{"version":"fbb82e716b8d6d09c2f530e11f7c8614-import type { MyType } from \"package-c\";\n\nexport function createThing(input: MyType): MyType {\n    return { ...input };\n}","signature":"c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true,"emitDeclarationOnly":true,"declaration":true,"module":99,"outDir":"./out","rootDir":"./src","target":9},"referencedMap":[[3,1]],"latestChangedDtsFile":"./out/index.d.ts"}
+{"version":"FakeTSVersion","root":[3],"packageJsons":["./package.json","../package-c/package.json"],"fileNames":["lib.es2022.full.d.ts","../package-c/out/index.d.ts","./src/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n","signature":"b60908d06b6bb28f94c112f5e5c6adc2-fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"fbb82e716b8d6d09c2f530e11f7c8614-import type { MyType } from \"package-c\";\n\nexport function createThing(input: MyType): MyType {\n    return { ...input };\n}","signature":"c244312b1cf9f2fd4ddd2d16bb44d0b9-import type { MyType } from \"package-c\";\nexport declare function createThing(input: MyType): MyType;\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true,"emitDeclarationOnly":true,"declaration":true,"module":99,"outDir":"./out","rootDir":"./src","target":9},"referencedMap":[[3,1]],"latestChangedDtsFile":"./out/index.d.ts"}
 //// [/home/src/workspaces/solution/packages/package-b/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -308,8 +318,13 @@ export declare function createThing(input: MyType): MyType;
     {
       "fileName": "../package-c/out/index.d.ts",
       "version": "fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",
-      "signature": "fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b60908d06b6bb28f94c112f5e5c6adc2-fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n",
+        "signature": "b60908d06b6bb28f94c112f5e5c6adc2-fda98a6734eab276b5c9c8694ee117da-export interface MyType {\n    id: string;\n    name: string;\n    enabled: boolean;\n}\n\u0000projectReferenceModule:99\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./src/index.ts",
@@ -343,7 +358,7 @@ export declare function createThing(input: MyType): MyType;
     ]
   },
   "latestChangedDtsFile": "./out/index.d.ts",
-  "size": 1662
+  "size": 1934
 }
 //// [/home/src/workspaces/solution/packages/package-c/out/index.d.ts] *new* 
 export interface MyType {

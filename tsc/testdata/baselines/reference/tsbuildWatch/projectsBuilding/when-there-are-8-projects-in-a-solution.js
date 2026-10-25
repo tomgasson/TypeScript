@@ -582,7 +582,7 @@ export const pkg7 = 7;
   "size": 1111
 }
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[[2,9]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg3/index.d.ts","./pkg4/index.d.ts","./pkg5/index.d.ts","./pkg6/index.d.ts","./pkg7/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts","./pkg3/index.ts","./pkg4/index.ts","./pkg5/index.ts","./pkg6/index.ts","./pkg7/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n","4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n","0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n","7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n","77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n","579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n","5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n"],"options":{"composite":true},"resolvedRoot":[[2,10],[3,11],[4,12],[5,13],[6,14],[7,15],[8,16],[9,17]]}
+{"version":"FakeTSVersion","root":[[2,9]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg3/index.d.ts","./pkg4/index.d.ts","./pkg5/index.d.ts","./pkg6/index.d.ts","./pkg7/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts","./pkg3/index.ts","./pkg4/index.ts","./pkg5/index.ts","./pkg6/index.ts","./pkg7/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n","signature":"cc53ef3a3757ddba71dd403e48943fa8-c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","signature":"5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n","signature":"b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n","signature":"a12c9a0a114e4efc41fbcc703dba5f63-0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n","signature":"55be90ba4b8c91cdbe7d18ee681cae27-7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n","signature":"b1c15ab280d338a471e3d76ec1ba1b8d-77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n","signature":"9950cfcb1d29d0ff308cff345b57d81c-579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n","signature":"77151f7d8259afe64f7b72f84ee8784d-5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1}],"options":{"composite":true},"resolvedRoot":[[2,10],[3,11],[4,12],[5,13],[6,14],[7,15],[8,16],[9,17]]}
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -639,50 +639,90 @@ export const pkg7 = 7;
     {
       "fileName": "./pkg0/index.d.ts",
       "version": "c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n",
-      "signature": "c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "cc53ef3a3757ddba71dd403e48943fa8-c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n",
+        "signature": "cc53ef3a3757ddba71dd403e48943fa8-c0fd585e07a3ab6bf19209ced748ff46-export declare const pkg0 = 0;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg1/index.d.ts",
       "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "signature": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
+        "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg2/index.d.ts",
       "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "signature": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
+        "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg3/index.d.ts",
       "version": "0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n",
-      "signature": "0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "a12c9a0a114e4efc41fbcc703dba5f63-0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n",
+        "signature": "a12c9a0a114e4efc41fbcc703dba5f63-0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg4/index.d.ts",
       "version": "7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n",
-      "signature": "7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "55be90ba4b8c91cdbe7d18ee681cae27-7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n",
+        "signature": "55be90ba4b8c91cdbe7d18ee681cae27-7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg5/index.d.ts",
       "version": "77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n",
-      "signature": "77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b1c15ab280d338a471e3d76ec1ba1b8d-77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n",
+        "signature": "b1c15ab280d338a471e3d76ec1ba1b8d-77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg6/index.d.ts",
       "version": "579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n",
-      "signature": "579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "9950cfcb1d29d0ff308cff345b57d81c-579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n",
+        "signature": "9950cfcb1d29d0ff308cff345b57d81c-579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg7/index.d.ts",
       "version": "5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n",
-      "signature": "5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "77151f7d8259afe64f7b72f84ee8784d-5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n",
+        "signature": "77151f7d8259afe64f7b72f84ee8784d-5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     }
   ],
   "options": {
@@ -722,7 +762,7 @@ export const pkg7 = 7;
       "./pkg7/index.ts"
     ]
   ],
-  "size": 1813
+  "size": 3525
 }
 
 Watch Registrations::
@@ -1099,7 +1139,7 @@ export const someConst = 10;
 //// [/user/username/projects/myproject/pkg6/tsconfig.tsbuildinfo] *mTime changed*
 //// [/user/username/projects/myproject/pkg7/tsconfig.tsbuildinfo] *mTime changed*
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo] *modified* 
-{"version":"FakeTSVersion","root":[[2,9]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg3/index.d.ts","./pkg4/index.d.ts","./pkg5/index.d.ts","./pkg6/index.d.ts","./pkg7/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts","./pkg3/index.ts","./pkg4/index.ts","./pkg5/index.ts","./pkg6/index.ts","./pkg7/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n","4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n","0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n","7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n","77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n","579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n","5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n"],"options":{"composite":true},"resolvedRoot":[[2,10],[3,11],[4,12],[5,13],[6,14],[7,15],[8,16],[9,17]]}
+{"version":"FakeTSVersion","root":[[2,9]],"fileNames":["lib.es2026.full.d.ts","./pkg0/index.d.ts","./pkg1/index.d.ts","./pkg2/index.d.ts","./pkg3/index.d.ts","./pkg4/index.d.ts","./pkg5/index.d.ts","./pkg6/index.d.ts","./pkg7/index.d.ts","./pkg0/index.ts","./pkg1/index.ts","./pkg2/index.ts","./pkg3/index.ts","./pkg4/index.ts","./pkg5/index.ts","./pkg6/index.ts","./pkg7/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n","signature":"c3a269f099e66b78b60c0c7f40a47e1d-cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n","signature":"5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n","signature":"b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n","signature":"a12c9a0a114e4efc41fbcc703dba5f63-0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n","signature":"55be90ba4b8c91cdbe7d18ee681cae27-7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n","signature":"b1c15ab280d338a471e3d76ec1ba1b8d-77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n","signature":"9950cfcb1d29d0ff308cff345b57d81c-579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n","signature":"77151f7d8259afe64f7b72f84ee8784d-5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1}],"options":{"composite":true},"resolvedRoot":[[2,10],[3,11],[4,12],[5,13],[6,14],[7,15],[8,16],[9,17]]}
 //// [/user/username/projects/myproject/tsconfig.tsbuildinfo.readable.baseline.txt] *modified* 
 {
   "version": "FakeTSVersion",
@@ -1156,50 +1196,90 @@ export const someConst = 10;
     {
       "fileName": "./pkg0/index.d.ts",
       "version": "cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n",
-      "signature": "cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "c3a269f099e66b78b60c0c7f40a47e1d-cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n",
+        "signature": "c3a269f099e66b78b60c0c7f40a47e1d-cfd6b1b95a6527c0a282a7e259475a73-export declare const pkg0 = 0;\nexport declare const someConst = 10;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg1/index.d.ts",
       "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "signature": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n",
+        "signature": "5c8c38b2346e929314349bb7a233f50e-4591f2e8d39387573c792e55fafa8bc7-export declare const pkg1 = 1;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg2/index.d.ts",
       "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "signature": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n",
+        "signature": "b733c6f9a3d470269fecdb5dbbad2f91-adada4e37046e37638a0d78040557b79-export declare const pkg2 = 2;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg3/index.d.ts",
       "version": "0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n",
-      "signature": "0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "a12c9a0a114e4efc41fbcc703dba5f63-0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n",
+        "signature": "a12c9a0a114e4efc41fbcc703dba5f63-0cda22bbedbd7219c42c3eae52fc90b9-export declare const pkg3 = 3;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg4/index.d.ts",
       "version": "7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n",
-      "signature": "7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "55be90ba4b8c91cdbe7d18ee681cae27-7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n",
+        "signature": "55be90ba4b8c91cdbe7d18ee681cae27-7bf24fc1c537ab4cb909f04b2d31fc04-export declare const pkg4 = 4;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg5/index.d.ts",
       "version": "77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n",
-      "signature": "77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "b1c15ab280d338a471e3d76ec1ba1b8d-77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n",
+        "signature": "b1c15ab280d338a471e3d76ec1ba1b8d-77e3d5618d46b9e6699466d447b624c1-export declare const pkg5 = 5;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg6/index.d.ts",
       "version": "579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n",
-      "signature": "579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "9950cfcb1d29d0ff308cff345b57d81c-579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n",
+        "signature": "9950cfcb1d29d0ff308cff345b57d81c-579e596cadd02c6d565300617fc4469f-export declare const pkg6 = 6;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./pkg7/index.d.ts",
       "version": "5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n",
-      "signature": "5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "77151f7d8259afe64f7b72f84ee8784d-5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n",
+        "signature": "77151f7d8259afe64f7b72f84ee8784d-5b1f76dfc41dd8ff6fccda80f3eebda1-export declare const pkg7 = 7;\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     }
   ],
   "options": {
@@ -1239,7 +1319,7 @@ export const someConst = 10;
       "./pkg7/index.ts"
     ]
   ],
-  "size": 1851
+  "size": 3601
 }
 
 Watch Registrations::

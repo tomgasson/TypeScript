@@ -58,7 +58,7 @@ declare const console: { log(msg: any): void; };
 let value;
 
 //// [/home/src/workspaces/solution/project/tsconfig.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[3],"fileNames":["lib.es2026.full.d.ts","../utils/index.d.ts","./src/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"cd59f5200ebb904bc554ded19d2b8819-/// <reference path=\"../../utils/index.ts\" />\nlet value: ReferencedType;","affectsGlobalScope":true,"impliedNodeFormat":1}],"fileIdsList":[[2]],"referencedMap":[[3,1]]}
+{"version":"FakeTSVersion","root":[3],"fileNames":["lib.es2026.full.d.ts","../utils/index.d.ts","./src/index.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}","signature":"ab651061b0e1e8ccd078854e27177193-98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"cd59f5200ebb904bc554ded19d2b8819-/// <reference path=\"../../utils/index.ts\" />\nlet value: ReferencedType;","affectsGlobalScope":true,"impliedNodeFormat":1}],"fileIdsList":[[2]],"referencedMap":[[3,1]]}
 //// [/home/src/workspaces/solution/project/tsconfig.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -91,11 +91,12 @@ let value;
     {
       "fileName": "../utils/index.d.ts",
       "version": "98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}",
-      "signature": "98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}",
+      "signature": "ab651061b0e1e8ccd078854e27177193-98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
       "affectsGlobalScope": true,
       "impliedNodeFormat": "CommonJS",
       "original": {
         "version": "98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}",
+        "signature": "ab651061b0e1e8ccd078854e27177193-98e0103cd57a2112d05357fbeede0d9a-interface ReferencedType {}\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
         "affectsGlobalScope": true,
         "impliedNodeFormat": 1
       }
@@ -123,7 +124,7 @@ let value;
       "../utils/index.d.ts"
     ]
   },
-  "size": 1236
+  "size": 1411
 }
 
 project/tsconfig.json::

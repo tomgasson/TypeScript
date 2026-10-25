@@ -104,14 +104,6 @@ func (t *toProgramSnapshot) computeProgramFileChanges() {
 				versionText = file.OriginalText() + "\x00" + file.ContentMapperTransformIdentity()
 			}
 			version := t.snapshot.computeHash(versionText)
-			if t.program.Options().GetIsolatedModules() {
-				if reference := t.program.GetProjectReferenceFromOutputDts(file.PathKey()); reference != nil {
-					// Ambient const-enum access also depends on the producer's
-					// effective preserve setting, even when declaration text is unchanged.
-					preserve := reference.Resolved.CompilerOptions().ShouldPreserveConstEnums()
-					version = t.snapshot.computeHash(version + "\x00preserveConstEnums:" + core.IfElse(preserve, "1", "0"))
-				}
-			}
 			impliedNodeFormat := t.program.GetSourceFileMetaData(file.PathKey()).ImpliedNodeFormat
 			affectsGlobalScope := fileAffectsGlobalScope(file)
 			var signature string
@@ -122,7 +114,8 @@ func (t *toProgramSnapshot) computeProgramFileChanges() {
 			if t.oldProgram != nil {
 				if oldFileInfo, ok := t.oldProgram.snapshot.fileInfos.Load(file.PathKey()); ok {
 					signature = oldFileInfo.signature
-					if oldFileInfo.version != version || oldFileInfo.affectsGlobalScope != affectsGlobalScope || oldFileInfo.impliedNodeFormat != impliedNodeFormat {
+					if oldFileInfo.version != version || oldFileInfo.affectsGlobalScope != affectsGlobalScope || oldFileInfo.impliedNodeFormat != impliedNodeFormat ||
+						(file.IsDeclarationFile && oldFileInfo.signature != t.snapshot.declarationSignature(t.program, file, version)) {
 						t.snapshot.addFileToChangeSet(file.PathKey())
 					} else if oldReferences, _ := t.oldProgram.snapshot.referencedMap.getReferences(file.PathKey()); !newReferences.Equals(oldReferences) {
 						// Referenced files changed
@@ -163,6 +156,9 @@ func (t *toProgramSnapshot) computeProgramFileChanges() {
 			} else {
 				t.snapshot.addFileToAffectedFilesPendingEmit(file.PathKey(), GetFileEmitKind(t.snapshot.options))
 				signature = version
+				if file.IsDeclarationFile {
+					signature = t.snapshot.declarationSignature(t.program, file, version)
+				}
 			}
 			t.snapshot.fileInfos.Store(file.PathKey(), &FileInfo{
 				version:            version,

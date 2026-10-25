@@ -3,6 +3,7 @@ package incremental
 import (
 	"encoding/hex"
 	"fmt"
+	"strconv"
 	"strings"
 	"sync"
 	"sync/atomic"
@@ -432,6 +433,26 @@ func diagnosticToStringBuilder(diagnostic *ast.Diagnostic, file ast.HasFileName,
 	for _, info := range diagnostic.RelatedInformation() {
 		diagnosticToStringBuilder(info, file, builder)
 	}
+}
+
+// declarationSignature includes producer options that affect the meaning of an
+// unchanged referenced declaration. Keep this separate from the content version:
+// solution-build timestamp checks compare file versions directly with text hashes.
+func (s *snapshot) declarationSignature(program *compiler.Program, file *ast.SourceFile, version string) string {
+	reference := program.GetProjectReferenceFromOutputDts(file.PathKey())
+	if reference == nil && program.GetRedirectForResolution(file) == nil {
+		return version
+	}
+	// Synthetic default imports consult both effective formats, including for
+	// handwritten declarations mapped to a producer's source files.
+	referenceContext := "\x00projectReferenceModule:" + strconv.Itoa(int(program.GetEmitModuleFormatOfFile(file))) +
+		"\x00projectReferenceImpliedFormat:" + strconv.Itoa(int(program.GetImpliedNodeFormatForEmit(file)))
+	if reference != nil && program.Options().GetIsolatedModules() {
+		// Ambient const-enum access also consults the producer's effective preserve setting.
+		preserve := reference.Resolved.CompilerOptions().ShouldPreserveConstEnums()
+		referenceContext += "\x00preserveConstEnums:" + core.IfElse(preserve, "1", "0")
+	}
+	return s.computeHash(version + referenceContext)
 }
 
 func (s *snapshot) computeHash(text string) string {

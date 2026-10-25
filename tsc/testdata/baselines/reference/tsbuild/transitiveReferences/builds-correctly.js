@@ -150,7 +150,7 @@ X;
   "size": 1095
 }
 //// [/user/username/projects/transitiveReferences/tsconfig.b.tsbuildinfo] *new* 
-{"version":"FakeTSVersion","root":[3],"fileNames":["lib.es2026.full.d.ts","./a.d.ts","./b.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},"0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n",{"version":"22b83bc3eaf6d7b067d7a6659b0b318f-import {A} from '@ref/a';\nexport const b = new A();","signature":"92d534c2dbda627a55a8cdaeb4843b7a-import { A } from '@ref/a';\nexport declare const b: A;\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true},"referencedMap":[[3,1]],"latestChangedDtsFile":"./b.d.ts"}
+{"version":"FakeTSVersion","root":[3],"fileNames":["lib.es2026.full.d.ts","./a.d.ts","./b.ts"],"fileInfos":[{"version":"8859c12c614ce56ba9a18e58384a198f-/// <reference no-default-lib=\"true\"/>\ninterface Boolean {}\ninterface Function {}\ninterface CallableFunction {}\ninterface NewableFunction {}\ninterface IArguments {}\ninterface Number { toExponential: any; }\ninterface Object {}\ninterface RegExp {}\ninterface String { charAt: any; }\ninterface Array<T> { length: number; [n: number]: T; }\ninterface ReadonlyArray<T> {}\ninterface SymbolConstructor {\n    (desc?: string | number): symbol;\n    for(name: string): symbol;\n    readonly toStringTag: symbol;\n}\ndeclare var Symbol: SymbolConstructor;\ninterface Symbol {\n    readonly [Symbol.toStringTag]: string;\n}\ndeclare const console: { log(msg: any): void; };","affectsGlobalScope":true,"impliedNodeFormat":1},{"version":"0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n","signature":"fd33ccf4b3f1776a71c5ed8decba31c2-0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0","impliedNodeFormat":1},{"version":"22b83bc3eaf6d7b067d7a6659b0b318f-import {A} from '@ref/a';\nexport const b = new A();","signature":"92d534c2dbda627a55a8cdaeb4843b7a-import { A } from '@ref/a';\nexport declare const b: A;\n","impliedNodeFormat":1}],"fileIdsList":[[2]],"options":{"composite":true},"referencedMap":[[3,1]],"latestChangedDtsFile":"./b.d.ts"}
 //// [/user/username/projects/transitiveReferences/tsconfig.b.tsbuildinfo.readable.baseline.txt] *new* 
 {
   "version": "FakeTSVersion",
@@ -183,8 +183,13 @@ X;
     {
       "fileName": "./a.d.ts",
       "version": "0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n",
-      "signature": "0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n",
-      "impliedNodeFormat": "CommonJS"
+      "signature": "fd33ccf4b3f1776a71c5ed8decba31c2-0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+      "impliedNodeFormat": "CommonJS",
+      "original": {
+        "version": "0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n",
+        "signature": "fd33ccf4b3f1776a71c5ed8decba31c2-0ccee316fe0e81d05228833d759a8fea-export declare class A {\n}\n\u0000projectReferenceModule:7\u0000projectReferenceImpliedFormat:0",
+        "impliedNodeFormat": 1
+      }
     },
     {
       "fileName": "./b.ts",
@@ -212,7 +217,7 @@ X;
     ]
   },
   "latestChangedDtsFile": "./b.d.ts",
-  "size": 1278
+  "size": 1489
 }
 //// [/user/username/projects/transitiveReferences/tsconfig.c.tsbuildinfo] *new* 
 {"version":"FakeTSVersion","root":["./c.ts"]}

@@ -71,13 +71,21 @@ func TestProjectReferenceConfigChangeInvalidatesDiagnostics(t *testing.T) {
 							assert.Equal(t, text, old.program.GetSourceFile("/producer/dist/index.d.ts").Text(), "only producer configuration changed")
 							info, ok := current.snapshot.fileInfos.Load("/producer/dist/index.d.ts")
 							assert.Assert(t, ok)
-							assert.Equal(t, info.version == ComputeHash(text, false), flag == "", "context tagging is limited to consumers that enforce the const-enum restriction")
+							assert.Equal(t, info.version, ComputeHash(text, false), "content versions must remain compatible with solution-build timestamp checks")
+							oldInfo, ok := old.snapshot.fileInfos.Load("/producer/dist/index.d.ts")
+							assert.Assert(t, ok)
+							assert.Equal(t, info.signature, oldInfo.signature, "retain the old signature until affected-file propagation")
+							assert.Equal(t, current.snapshot.changedFilesSet.Has("/producer/dist/index.d.ts"), flag != "", "preserve-only changes affect consumers enforcing the const-enum restriction")
 							expected := fresh.GetSemanticDiagnostics(t.Context(), nil)
 							assert.Equal(t, len(expected) != 0, preserveInitially && flag != "")
 							for _, diagnostic := range expected {
 								assert.Equal(t, diagnostic.Code(), int32(2748))
 							}
 							actual := current.GetSemanticDiagnostics(t.Context(), nil)
+							assert.Equal(t, info.signature == oldInfo.signature, flag == "", "semantic context belongs in the declaration signature")
+							freshInfo, ok := fresh.snapshot.fileInfos.Load("/producer/dist/index.d.ts")
+							assert.Assert(t, ok)
+							assert.Equal(t, info.signature, freshInfo.signature, "incremental and cold signatures must converge")
 							assert.Equal(t, len(actual), len(expected), "incremental diagnostics must reflect changed producer configuration: incremental=%v fresh=%v", actual, expected)
 							for i, diagnostic := range actual {
 								assert.Equal(t, diagnostic.Code(), expected[i].Code())
