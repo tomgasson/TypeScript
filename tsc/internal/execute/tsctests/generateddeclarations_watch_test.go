@@ -85,6 +85,26 @@ func assertGeneratedWatchDiagnostics(t *testing.T, sys *generatedDeclarationWatc
 	}
 }
 
+func TestWatcherGeneratedDeclarationsConsumerEdit(t *testing.T) {
+	w, sys := newGeneratedDeclarationWatcher(t)
+	oldProgram := sys.program.GetProgram()
+	declaration := oldProgram.GetSourceFile(watchDeclarationOutput)
+	reads := sys.reads.producerReads.Load()
+	for edit := 1; edit <= 2; edit++ {
+		fast, full := w.FastPathBuilds(), w.FullBuilds()
+		sys.writeFileNoError("/home/src/workspaces/project/consumer/index.ts", fmt.Sprintf(watchDeclarationConsumer, edit))
+		sys.mockWatchBackend.SendEvents([]fswatch.Event{{Kind: fswatch.EventUpdate, Path: "/home/src/workspaces/project/consumer/index.ts"}})
+		w.DoCycle()
+		assert.Equal(t, w.FastPathBuilds(), fast+1, "consumer edit should reuse the generated declaration")
+		assert.Equal(t, w.FullBuilds(), full)
+		assert.Assert(t, sys.program.GetProgram() != oldProgram)
+		assert.Equal(t, sys.program.GetProgram().GetSourceFile(watchDeclarationOutput), declaration)
+		assert.Equal(t, sys.reads.producerReads.Load(), reads, "consumer edit must not reread the producer implementation")
+		assertGeneratedWatchDiagnostics(t, sys, 0)
+		oldProgram = sys.program.GetProgram()
+	}
+}
+
 func TestWatcherGeneratedDeclarationsProducerChange(t *testing.T) {
 	for _, c := range []struct {
 		name string

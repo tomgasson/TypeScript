@@ -617,6 +617,15 @@ func (w *Watcher) tryUpdateProgram(host *watchCompilerHost) bool {
 			continue
 		}
 		if _, ok := w.sourceFileCache.Load(path); !ok {
+			if _, generated := oldProgram.GetGeneratedDeclarationText(path); generated {
+				// Generated declarations have no physical source-cache entry. Reuse
+				// them until a disk output appears, which must replace the virtual
+				// declaration and its map through a full program rebuild.
+				if host.FS().FileExists(file.FileName()) {
+					return false
+				}
+				continue
+			}
 			changedPath = path
 			changedCount++
 			if changedCount > 1 {
