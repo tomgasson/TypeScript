@@ -153,6 +153,7 @@ func transpileWorker(ctx context.Context, input string, options Options, declara
 	program := compiler.NewProgram(compiler.ProgramOptions{
 		Config:               tsoptions.NewParsedCommandLine(opts, []tspath.RootedFilePath{inputFileName}, nil, inputDirectory, programFS.CaseSensitivity()),
 		Host:                 host,
+		SingleThreaded:       core.TSTrue,
 		SkipModuleResolution: true,
 	})
 
