@@ -4,6 +4,7 @@ import (
 	"github.com/microsoft/TypeScript/tsc/internal/ast"
 	"github.com/microsoft/TypeScript/tsc/internal/compiler"
 	"github.com/microsoft/TypeScript/tsc/internal/contentmapper"
+	"github.com/microsoft/TypeScript/tsc/internal/core"
 	"github.com/microsoft/TypeScript/tsc/internal/diagnostics"
 	"github.com/microsoft/TypeScript/tsc/internal/tsoptions"
 	"github.com/microsoft/TypeScript/tsc/internal/tspath"
@@ -32,6 +33,10 @@ func (h *compilerHost) Trace(msg *diagnostics.Message, args ...any) {
 
 func (h *compilerHost) GetSourceFile(opts ast.SourceFileParseOptions) *ast.SourceFile {
 	return h.host.GetSourceFile(opts)
+}
+
+func (h *compilerHost) GetSourceFileFromText(opts ast.SourceFileParseOptions, text string, scriptKind core.ScriptKind) *ast.SourceFile {
+	return h.host.GetSourceFileFromText(opts, text, scriptKind)
 }
 
 func (h *compilerHost) GetContentMappedSourceFiles(parseOptions ast.SourceFileParseOptions, mapper *contentmapper.Mapper) (contentmapper.SourceFiles, error) {

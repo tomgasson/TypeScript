@@ -7,6 +7,7 @@ import (
 	"github.com/microsoft/TypeScript/tsc/internal/binder"
 	"github.com/microsoft/TypeScript/tsc/internal/compiler"
 	"github.com/microsoft/TypeScript/tsc/internal/contentmapper"
+	"github.com/microsoft/TypeScript/tsc/internal/core"
 	"github.com/microsoft/TypeScript/tsc/internal/diagnostics"
 	"github.com/microsoft/TypeScript/tsc/internal/locale"
 	"github.com/microsoft/TypeScript/tsc/internal/project/logging"
@@ -95,10 +96,19 @@ func (c *compilerHost) GetResolvedProjectReference(fileName tspath.RootedFilePat
 func (c *compilerHost) GetSourceFile(opts ast.SourceFileParseOptions) *ast.SourceFile {
 	c.ensureAlive()
 	if fh := c.sourceFS.GetFileByPath(opts.FileName, opts.PathKey); fh != nil {
-		key := NewParseCacheKey(opts, fh.Hash(), fh.Kind())
-		return c.builder.parseCache.Acquire(key, fh)
+		return c.acquireSourceFile(opts, fh, fh.Kind())
 	}
 	return nil
+}
+
+func (c *compilerHost) GetSourceFileFromText(opts ast.SourceFileParseOptions, text string, scriptKind core.ScriptKind) *ast.SourceFile {
+	c.ensureAlive()
+	return c.acquireSourceFile(opts, NewCachedFileHandle(opts.FileName, text), scriptKind)
+}
+
+func (c *compilerHost) acquireSourceFile(opts ast.SourceFileParseOptions, fh FileHandle, scriptKind core.ScriptKind) *ast.SourceFile {
+	key := NewParseCacheKey(opts, fh.Hash(), scriptKind)
+	return c.builder.parseCache.Acquire(key, fh)
 }
 
 // GetContentMappedSourceFile implements compiler.CompilerHost.

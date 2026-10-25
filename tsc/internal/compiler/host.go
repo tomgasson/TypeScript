@@ -17,6 +17,10 @@ type CompilerHost interface {
 	DefaultLibraryPath() tspath.RootedDirectoryPath
 	Trace(msg *diagnostics.Message, args ...any)
 	GetSourceFile(opts ast.SourceFileParseOptions) *ast.SourceFile
+	// GetSourceFileFromText uses supplied content without reading the filesystem. The returned
+	// file has the same ownership and cache lifetime as a file acquired through GetSourceFile.
+	// ScriptKindUnknown infers the script kind from the filename.
+	GetSourceFileFromText(opts ast.SourceFileParseOptions, text string, scriptKind core.ScriptKind) *ast.SourceFile
 	// GetContentMappedSourceFile produces the source file for a content-mapped (foreign) file by running
 	// the given mapper's transform on the file's content. The caller resolves the mapper (and owns the
 	// failure accounting), so implementations must use it as-is. It returns nil if the file cannot be read,
@@ -85,7 +89,14 @@ func (h *compilerHost) GetSourceFile(opts ast.SourceFileParseOptions) *ast.Sourc
 	if !ok {
 		return nil
 	}
-	return parser.ParseSourceFile(opts, text, core.EnsureScriptKindFromFileName(opts.FileName))
+	return h.GetSourceFileFromText(opts, text, core.ScriptKindUnknown)
+}
+
+func (h *compilerHost) GetSourceFileFromText(opts ast.SourceFileParseOptions, text string, scriptKind core.ScriptKind) *ast.SourceFile {
+	if scriptKind == core.ScriptKindUnknown {
+		scriptKind = core.EnsureScriptKindFromFileName(opts.FileName)
+	}
+	return parser.ParseSourceFile(opts, text, scriptKind)
 }
 
 func (h *compilerHost) GetContentMappedSourceFiles(parseOptions ast.SourceFileParseOptions, mapper *contentmapper.Mapper) (contentmapper.SourceFiles, error) {

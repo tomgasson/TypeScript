@@ -7,6 +7,7 @@ import (
 	"github.com/microsoft/TypeScript/tsc/internal/collections"
 	"github.com/microsoft/TypeScript/tsc/internal/compiler"
 	"github.com/microsoft/TypeScript/tsc/internal/contentmapper"
+	"github.com/microsoft/TypeScript/tsc/internal/core"
 	"github.com/microsoft/TypeScript/tsc/internal/diagnostics"
 	"github.com/microsoft/TypeScript/tsc/internal/execute/incremental"
 	"github.com/microsoft/TypeScript/tsc/internal/execute/tsc"
@@ -53,6 +54,11 @@ func (h *host) GetSourceFile(opts ast.SourceFileParseOptions) *ast.SourceFile {
 		return h.sourceFiles.loadOrStore(opts, h.host.GetSourceFile, false /* allowZero */)
 	}
 	return h.host.GetSourceFile(opts)
+}
+
+func (h *host) GetSourceFileFromText(opts ast.SourceFileParseOptions, text string, scriptKind core.ScriptKind) *ast.SourceFile {
+	// The disk cache is keyed only by parse options, so it cannot cache supplied content.
+	return h.host.GetSourceFileFromText(opts, text, scriptKind)
 }
 
 func (h *host) GetContentMappedSourceFiles(parseOptions ast.SourceFileParseOptions, mapper *contentmapper.Mapper) (contentmapper.SourceFiles, error) {

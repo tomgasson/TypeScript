@@ -488,7 +488,13 @@ func (h *cachedCompilerHost) GetSourceFile(opts ast.SourceFileParseOptions) *ast
 	if scriptKind == core.ScriptKindUnknown {
 		panic("Unknown script kind for file  " + opts.FileName.AsString())
 	}
+	return h.GetSourceFileFromText(opts, text, scriptKind)
+}
 
+func (h *cachedCompilerHost) GetSourceFileFromText(opts ast.SourceFileParseOptions, text string, scriptKind core.ScriptKind) *ast.SourceFile {
+	if scriptKind == core.ScriptKindUnknown {
+		scriptKind = core.EnsureScriptKindFromFileName(opts.FileName)
+	}
 	key := GetSourceFileCacheKey(opts, text, scriptKind)
 
 	if cached, ok := sourceFileCache.Load(key); ok {
