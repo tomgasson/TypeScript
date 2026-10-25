@@ -546,8 +546,12 @@ func getSourceFilesToEmit(host SourceFileMayBeEmittedHost, targetSourceFiles []*
 	})
 }
 
+func sourceFileMayHaveDeclarationDiagnostics(file *ast.SourceFile, host SourceFileMayBeEmittedHost) bool {
+	return file != nil && sourceFileMayBeEmitted(file, host, false, false) && !ast.IsJsonSourceFile(file)
+}
+
 func getDeclarationDiagnostics(host EmitHost, file *ast.SourceFile) []*ast.Diagnostic {
-	if file == nil || !sourceFileMayBeEmitted(file, host, false, false) || ast.IsJsonSourceFile(file) {
+	if !sourceFileMayHaveDeclarationDiagnostics(file, host) {
 		return []*ast.Diagnostic{}
 	}
 	options := host.Options()

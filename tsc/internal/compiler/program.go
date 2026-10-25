@@ -1656,7 +1656,7 @@ func (p *Program) getDiagnosticsWithPrecedingDirectives(sourceFile *ast.SourceFi
 }
 
 func (p *Program) getDeclarationDiagnosticsForFile(ctx context.Context, sourceFile *ast.SourceFile) []*ast.Diagnostic {
-	if sourceFile.IsDeclarationFile {
+	if !sourceFileMayHaveDeclarationDiagnostics(sourceFile, p) {
 		return []*ast.Diagnostic{}
 	}
 
