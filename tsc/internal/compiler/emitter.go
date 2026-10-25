@@ -59,11 +59,10 @@ type declarationTransformer interface {
 	GetDiagnostics() []*ast.Diagnostic
 }
 
-func (e *emitter) getDeclarationTransformers(emitResolver printer.EmitResolver, sourceFile *ast.SourceFile, declarationFilePath tspath.RootedFilePath) []declarationTransformer {
-	forceDtsEmit := e.emitOnly == EmitOnlyBuilderSignature || e.forceEmit && e.emitOnly == EmitOnlyDts
+func getDeclarationTransformers(emitResolver printer.EmitResolver, host EmitHost, sourceFile *ast.SourceFile, declarationFilePath tspath.RootedFilePath, forceDtsEmit bool) []declarationTransformer {
 	return []declarationTransformer{
-		declarations.NewDeclarationTransformer(e.host, emitResolver, e.host.Options(), declarationFilePath),
-		declarations.NewSupplementalReferencesTransformer(e.host, sourceFile, declarationFilePath, forceDtsEmit),
+		declarations.NewDeclarationTransformer(host, emitResolver, host.Options(), declarationFilePath),
+		declarations.NewSupplementalReferencesTransformer(host, sourceFile, declarationFilePath, forceDtsEmit),
 	}
 }
 
@@ -82,7 +81,8 @@ func (e *emitter) runDeclarationTransformers(emitResolver printer.EmitResolver, 
 		defer e.tr.Push(tracing.PhaseEmit, "transformNodes", map[string]any{"path": string(sourceFile.PathKey())}, false)()
 	}
 	var diags []*ast.Diagnostic
-	for _, transformer := range e.getDeclarationTransformers(emitResolver, sourceFile, declarationFilePath) {
+	forceDtsEmit := e.emitOnly == EmitOnlyBuilderSignature || e.forceEmit && e.emitOnly == EmitOnlyDts
+	for _, transformer := range getDeclarationTransformers(emitResolver, e.host, sourceFile, declarationFilePath, forceDtsEmit) {
 		sourceFile = transformer.TransformSourceFile(sourceFile)
 		diags = append(diags, transformer.GetDiagnostics()...)
 	}
