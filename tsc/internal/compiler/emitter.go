@@ -330,6 +330,7 @@ func (e *emitter) printSourceFile(emitContext *printer.EmitContext, jsFilePath t
 	printer_.Write(sourceFile.AsNode(), sourceFile, e.writer, sourceMapGenerator)
 	emitContext.Factory.ReleaseArenas()
 
+	sourceFileIdentity := ast.NewHasFileName(e.sourceFile.FileName(), e.sourceFile.PathKey())
 	sourceMapUrlPos := -1
 	if sourceMapGenerator != nil {
 		if mapOptions.SourceMap.IsTrue() || mapOptions.InlineSourceMap.IsTrue() {
@@ -360,7 +361,7 @@ func (e *emitter) printSourceFile(emitContext *printer.EmitContext, jsFilePath t
 		// Write the source map
 		if sourceMapFilePath != "" {
 			sourceMap := sourceMapGenerator.String()
-			err := e.writeText(sourceMapFilePath, sourceMap, &WriteFileData{SourceFile: e.sourceFile})
+			err := e.writeText(sourceMapFilePath, sourceMap, &WriteFileData{SourceFile: sourceFileIdentity})
 			if err != nil {
 				e.emitterDiagnostics.Add(ast.NewCompilerDiagnostic(diagnostics.Could_not_write_file_0_Colon_1, jsFilePath, err.Error()))
 			} else {
@@ -379,7 +380,7 @@ func (e *emitter) printSourceFile(emitContext *printer.EmitContext, jsFilePath t
 	data := &WriteFileData{
 		SourceMapUrlPos: sourceMapUrlPos,
 		Diagnostics:     e.emitterDiagnostics.GetDiagnostics(),
-		SourceFile:      e.sourceFile,
+		SourceFile:      sourceFileIdentity,
 	}
 	err := e.writeText(jsFilePath, text, data)
 	skippedDtsWrite := data.SkippedDtsWrite

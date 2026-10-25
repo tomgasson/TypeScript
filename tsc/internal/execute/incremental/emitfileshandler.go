@@ -222,7 +222,7 @@ func (h *emitFilesHandler) getEmitOptions(options compiler.EmitOptions) compiler
 					// Store d.ts emit hash so later can be compared to check if d.ts has changed.
 					// Currently we do this only for composite projects since these are the only projects that can be referenced by other projects
 					// and would need their d.ts change time in --build mode
-					if h.skipDtsOutputOfComposite(data.SourceFile, fileName, text, data, emitSignature, &differsOnlyInMap) {
+					if h.skipDtsOutputOfComposite(data.SourceFile.PathKey(), fileName, text, data, emitSignature, &differsOnlyInMap) {
 						return nil
 					}
 				}
@@ -249,12 +249,12 @@ func (h *emitFilesHandler) getEmitOptions(options compiler.EmitOptions) compiler
 
 // Compare to existing computed signature and store it or handle the changes in d.ts map option from before
 // returning undefined means that, we dont need to emit this d.ts file since its contents didnt change
-func (h *emitFilesHandler) skipDtsOutputOfComposite(file *ast.SourceFile, outputFileName tspath.RootedFilePath, text string, data *compiler.WriteFileData, newSignature string, differsOnlyInMap *bool) bool {
+func (h *emitFilesHandler) skipDtsOutputOfComposite(path tspath.PathKey, outputFileName tspath.RootedFilePath, text string, data *compiler.WriteFileData, newSignature string, differsOnlyInMap *bool) bool {
 	if !h.program.snapshot.options.Composite.IsTrue() {
 		return false
 	}
 	var oldSignature string
-	oldSignatureFormat, ok := h.program.snapshot.emitSignatures.Load(file.PathKey())
+	oldSignatureFormat, ok := h.program.snapshot.emitSignatures.Load(path)
 	if ok {
 		if oldSignatureFormat.signature != "" {
 			oldSignature = oldSignatureFormat.signature
@@ -277,9 +277,9 @@ func (h *emitFilesHandler) skipDtsOutputOfComposite(file *ast.SourceFile, output
 			*differsOnlyInMap = h.program.Options().Build.IsTrue()
 		}
 	} else {
-		h.latestChangedDtsFiles.Store(file.PathKey(), outputFileName)
+		h.latestChangedDtsFiles.Store(path, outputFileName)
 	}
-	h.emitSignatures.Store(file.PathKey(), &emitSignature{signature: newSignature})
+	h.emitSignatures.Store(path, &emitSignature{signature: newSignature})
 	return false
 }
 

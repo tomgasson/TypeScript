@@ -1878,7 +1878,8 @@ type WriteFileData struct {
 	BuildInfo       any
 	Diagnostics     []*ast.Diagnostic
 	SkippedDtsWrite bool
-	SourceFile      *ast.SourceFile
+	// SourceFile identifies the original input without retaining its implementation tree.
+	SourceFile ast.HasFileName
 }
 
 type WriteFile func(fileName tspath.RootedFilePath, text string, data *WriteFileData) error
