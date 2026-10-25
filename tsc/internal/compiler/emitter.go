@@ -77,7 +77,7 @@ func (e *emitter) runScriptTransformers(emitResolver printer.EmitResolver, sourc
 	return sourceFile
 }
 
-func (e *emitter) runDeclarationTransformers(emitResolver printer.EmitResolver, sourceFile *ast.SourceFile, declarationFilePath, declarationMapPath tspath.RootedFilePath) (*ast.SourceFile, []*ast.Diagnostic) {
+func (e *emitter) runDeclarationTransformers(emitResolver printer.EmitResolver, sourceFile *ast.SourceFile, declarationFilePath tspath.RootedFilePath) (*ast.SourceFile, []*ast.Diagnostic) {
 	if e.tr != nil {
 		defer e.tr.Push(tracing.PhaseEmit, "transformNodes", map[string]any{"path": string(sourceFile.PathKey())}, false)()
 	}
@@ -236,7 +236,7 @@ func (e *emitter) emitDeclarationFile(emitResolver printer.EmitResolver, sourceF
 		defer e.tr.Push(tracing.PhaseEmit, "emitDeclarationFileOrBundle", map[string]any{"declarationFilePath": declarationFilePath}, true)()
 	}
 
-	sourceFile, diags := e.runDeclarationTransformers(emitResolver, sourceFile, declarationFilePath, declarationMapPath)
+	sourceFile, diags := e.runDeclarationTransformers(emitResolver, sourceFile, declarationFilePath)
 
 	for _, elem := range diags {
 		// Add declaration transform diagnostics to emit diagnostics
