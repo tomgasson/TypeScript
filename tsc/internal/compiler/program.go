@@ -1950,7 +1950,10 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 			return result
 		}
 	}
+	return p.emitWorker(ctx, options)
+}
 
+func (p *Program) emitWorker(ctx context.Context, options EmitOptions) *EmitResult {
 	newLine := p.Options().NewLine.GetNewLineCharacter()
 	writerPool := &sync.Pool{
 		New: func() any {
