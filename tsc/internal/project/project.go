@@ -535,13 +535,13 @@ func (p *Project) CreateProgram() CreateProgramResult {
 		return newCheckerPool(p.host.sessionOptions.CheckerPoolOptions, program, p.log)
 	}
 	var cleanupModuleResolver func()
-	createModuleResolver := func(options module.ResolverOptions) module.Resolver {
-		if p.moduleResolverFactory == nil {
-			return module.NewResolver(options)
+	var createModuleResolver func(module.ResolverOptions) module.Resolver
+	if p.moduleResolverFactory != nil {
+		createModuleResolver = func(options module.ResolverOptions) module.Resolver {
+			resolver, cleanup := p.moduleResolverFactory.NewResolver(p.host.builder.ctx, options)
+			cleanupModuleResolver = cleanup
+			return resolver
 		}
-		resolver, cleanup := p.moduleResolverFactory.NewResolver(p.host.builder.ctx, options)
-		cleanupModuleResolver = cleanup
-		return resolver
 	}
 	defer func() {
 		if cleanupModuleResolver != nil {
