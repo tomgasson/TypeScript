@@ -976,7 +976,7 @@ Output::
 
 [[90mHH:MM:SS AM[0m] Building project 'logic/tsconfig.json'...
 
-[[90mHH:MM:SS AM[0m] Project 'tests/tsconfig.json' is out of date because output 'tests/tsconfig.tsbuildinfo' is older than input 'logic'
+[[90mHH:MM:SS AM[0m] Project 'tests/tsconfig.json' is out of date because output 'tests/tsconfig.tsbuildinfo' is older than input 'logic/tsconfig.json'
 
 [[90mHH:MM:SS AM[0m] Building project 'tests/tsconfig.json'...
 

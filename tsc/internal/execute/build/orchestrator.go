@@ -6,6 +6,7 @@ import (
 	"io"
 	"slices"
 	"strings"
+	"sync"
 	"sync/atomic"
 	"time"
 
@@ -505,6 +506,10 @@ func (o *Orchestrator) updateWatch() {
 
 func (o *Orchestrator) resetCaches() {
 	// Clean out all the caches
+	for _, task := range o.order {
+		task.latestConfigFileTimeOnce = sync.Once{}
+		task.latestConfigFileTime = fileAndTime{}
+	}
 	cachesVfs := o.host.host.FS().(*cachedvfs.FS)
 	cachesVfs.ClearCache()
 	o.host.extendedConfigCache = tsc.ExtendedConfigCache{}

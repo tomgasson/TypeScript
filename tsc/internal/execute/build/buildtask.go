@@ -65,9 +65,11 @@ type BuildTask struct {
 	result *taskResult
 	built  chan struct{} // closed when result is ready to be reported
 
-	buildInfoEntry   *buildInfoEntry
-	buildInfoEntryMu sync.Mutex
-	packageJsons     []tspath.RootedFilePath
+	buildInfoEntry           *buildInfoEntry
+	buildInfoEntryMu         sync.Mutex
+	packageJsons             []tspath.RootedFilePath
+	latestConfigFileTimeOnce sync.Once
+	latestConfigFileTime     fileAndTime
 
 	errors             []*ast.Diagnostic
 	pending            atomic.Bool
@@ -346,6 +348,22 @@ func (t *BuildTask) handleStatusThatDoesntRequireBuild(orchestrator *Orchestrato
 
 func (t *BuildTask) getUpToDateStatus(orchestrator *Orchestrator, configPath tspath.PathKey) *upToDateStatus {
 	if t.status != nil {
+		switch t.status.kind {
+		case upToDateStatusTypeUpToDate,
+			upToDateStatusTypeUpToDateWithUpstreamTypes,
+			upToDateStatusTypeUpToDateWithInputFileText:
+			// Watch builds can retain a downstream status after an upstream build
+			// emits unchanged declaration text. Its configuration can still change
+			// the meaning of those declarations.
+			if t.resolved != nil && len(t.upStream) != 0 {
+				buildInfoPath := t.resolved.GetBuildInfoFileName()
+				if buildInfo, buildInfoTime := t.loadOrStoreBuildInfo(orchestrator, buildInfoPath); buildInfo != nil {
+					if status := t.getReferencedConfigChange(orchestrator, fileAndTime{buildInfoPath, buildInfoTime}); status != nil {
+						return status
+					}
+				}
+			}
+		}
 		return t.status
 	}
 	// Config file not found
@@ -536,6 +554,9 @@ func (t *BuildTask) getUpToDateStatus(orchestrator *Orchestrator, configPath tsp
 		}
 	}
 
+	if status := t.getReferencedConfigChange(orchestrator, oldestOutputFileAndTime); status != nil {
+		return status
+	}
 	var refDtsUnchanged bool
 	for _, upstream := range t.upStream {
 		if upstream.task.status.kind == upToDateStatusTypeSolution {
@@ -617,6 +638,43 @@ func (t *BuildTask) getUpToDateStatus(orchestrator *Orchestrator, configPath tsp
 		),
 		data: &inputOutputFileAndTime{newestInputFileAndTime, oldestOutputFileAndTime},
 	}
+}
+
+// Referenced options participate in declaration checking even when emitted text
+// is unchanged. Check the whole reference graph: a consumer can read declarations
+// from a transitive producer through a direct dependency's exports.
+func (t *BuildTask) getReferencedConfigChange(orchestrator *Orchestrator, output fileAndTime) *upToDateStatus {
+	for _, upstream := range t.upStream {
+		latest := upstream.task.getLatestConfigFileTime(orchestrator)
+		if latest.time.After(output.time) {
+			return &upToDateStatus{kind: upToDateStatusTypeInputFileNewer, data: &inputOutputName{latest.file.AsPath(), output.file}}
+		}
+	}
+	return nil
+}
+
+func (t *BuildTask) getLatestConfigFileTime(orchestrator *Orchestrator) fileAndTime {
+	// Build task edges are acyclic. Share each aggregate across downstream
+	// consumers, then reset it with the filesystem caches after the build cycle.
+	t.latestConfigFileTimeOnce.Do(func() {
+		if t.resolved == nil {
+			return
+		}
+		latest := fileAndTime{t.config, orchestrator.host.GetMTime(t.config)}
+		update := func(candidate fileAndTime) {
+			if candidate.time.After(latest.time) {
+				latest = candidate
+			}
+		}
+		for _, extended := range t.resolved.ExtendedSourceFiles() {
+			update(fileAndTime{extended, orchestrator.host.GetMTime(extended)})
+		}
+		for _, upstream := range t.upStream {
+			update(upstream.task.getLatestConfigFileTime(orchestrator))
+		}
+		t.latestConfigFileTime = latest
+	})
+	return t.latestConfigFileTime
 }
 
 func isContentMapperVirtualFilePath(inputPath tspath.PathKey, roots *incremental.BuildInfoRootInfoReader) bool {
