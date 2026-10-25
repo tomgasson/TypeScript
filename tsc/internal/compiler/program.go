@@ -1938,10 +1938,21 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 
 	for i, sourceFile := range sourceFiles {
 		wg.Queue(func() {
+			paths := outputpaths.GetOutputPathsFor(sourceFile, p.Options(), p, outputpaths.ForceEmitPaths{
+				Dts:            forceDtsEmit,
+				Js:             forceJsEmit,
+				DeclarationMap: options.ForceEmit && options.EmitOnly == EmitOnlyDts,
+			})
+			emitsJs := (options.EmitOnly == EmitAll || options.EmitOnly == EmitOnlyJs) && paths.JsFilePath() != ""
+			emitsDts := options.EmitOnly != EmitOnlyJs && paths.DeclarationFilePath() != ""
+			if !emitsJs && !emitsDts {
+				return
+			}
 			host, done := newEmitHost(ctx, p, sourceFile)
 			defer done()
 			emitter := &emitter{
 				host:       host,
+				paths:      paths,
 				sourceFile: sourceFile,
 				emitOnly:   options.EmitOnly,
 				forceEmit:  options.ForceEmit,
@@ -1955,11 +1966,6 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 
 			// attach writer and perform emit
 			emitter.writer = writer
-			emitter.paths = outputpaths.GetOutputPathsFor(sourceFile, host.Options(), host, outputpaths.ForceEmitPaths{
-				Dts:            forceDtsEmit,
-				Js:             forceJsEmit,
-				DeclarationMap: options.ForceEmit && options.EmitOnly == EmitOnlyDts,
-			})
 			emitter.emit()
 			emitter.writer = nil
 
