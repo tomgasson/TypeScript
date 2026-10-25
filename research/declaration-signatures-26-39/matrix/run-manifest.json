@@ -1,0 +1,2814 @@
+{
+  "rounds": 6,
+  "environment": {
+    "GOMAXPROCS": "1",
+    "GOGC": "100"
+  },
+  "cwd": "/workspace/scratch/610fb4329ae2/ts-small/tsc",
+  "runs": [
+    {
+      "group": "transpile",
+      "arm": "25",
+      "package": "transpile",
+      "variant": "25",
+      "mode": null,
+      "workload": "work",
+      "pattern": "^BenchmarkTranspile$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkTranspile/Declaration/Annotated_1",
+        "BenchmarkTranspile/Declaration/Annotated_200",
+        "BenchmarkTranspile/Module/Annotated_1",
+        "BenchmarkTranspile/Module/Annotated_200"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant25.test",
+      "binary_sha256": "645795c048f6309806b582846b361cb25c02e52fe8f2f26acbb113cc112c473f",
+      "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/build-variants.json",
+      "file": "transpile-25-work.txt"
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "package": "transpile",
+      "variant": "26",
+      "mode": null,
+      "workload": "work",
+      "pattern": "^BenchmarkTranspile$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkTranspile/Declaration/Annotated_1",
+        "BenchmarkTranspile/Declaration/Annotated_200",
+        "BenchmarkTranspile/Module/Annotated_1",
+        "BenchmarkTranspile/Module/Annotated_200"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant26.test",
+      "binary_sha256": "cddc9dfe89db2f70c62ea192cac9d3b032cc1c651babf838ddade2f5cd4165ca",
+      "revision": "cda2c80535c31e0824392816a23f952ad334e545",
+      "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/build-variants.json",
+      "file": "transpile-26-work.txt"
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "package": "compiler",
+      "variant": "27",
+      "mode": null,
+      "workload": "work",
+      "pattern": "^BenchmarkDeclarationClasses$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit",
+        "BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit",
+        "BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit",
+        "BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "revision": "73dfc32cb10de002dba43d76655259ca64315ff4",
+      "tree": "451d438ae0b83548c9881230c135d2495ed88fd3",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/build-variants.json",
+      "file": "modifiers-27-work.txt"
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "package": "compiler",
+      "variant": "28",
+      "mode": null,
+      "workload": "work",
+      "pattern": "^BenchmarkDeclarationClasses$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkDeclarationClasses/AnnotatedTS_1/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/AnnotatedTS_1/WarmEmit",
+        "BenchmarkDeclarationClasses/AnnotatedTS_200/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/AnnotatedTS_200/WarmEmit",
+        "BenchmarkDeclarationClasses/JSFullSignature_1/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/JSFullSignature_1/WarmEmit",
+        "BenchmarkDeclarationClasses/JSFullSignature_200/WarmDiagnosticsUncached",
+        "BenchmarkDeclarationClasses/JSFullSignature_200/WarmEmit"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.test",
+      "binary_sha256": "edc87938af2ccbc6d82bd45c098bb4b2de912fa5acc20263852ce787226078a8",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/build-variants.json",
+      "file": "modifiers-28-work.txt"
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "package": "project",
+      "variant": "25",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationBoundary$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundary/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.test",
+      "binary_sha256": "29c4ca7cd9c2daae3138363649e365eca2549acc7346872f572f0fe597a30718",
+      "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "source-overhead-25-work.txt"
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "package": "project",
+      "variant": "25",
+      "mode": "SourceDependencies",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationBoundaryRetainedHeap$/^SourceDependencies$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.test",
+      "binary_sha256": "29c4ca7cd9c2daae3138363649e365eca2549acc7346872f572f0fe597a30718",
+      "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "source-overhead-25-heap.txt"
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationBoundary$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundary/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "source-overhead-final-work.txt"
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationBoundaryRetainedHeap$/^SourceDependencies$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "source-overhead-final-heap.txt"
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationBoundary$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundary/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "consumer-reuse-SourceDependencies-work.txt"
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationBoundaryRetainedHeap$/^SourceDependencies$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "consumer-reuse-SourceDependencies-heap.txt"
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "PreparedDeclarations",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationBoundary$/^PreparedDeclarations$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundary/PreparedDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "consumer-reuse-PreparedDeclarations-work.txt"
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "PreparedDeclarations",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationBoundaryRetainedHeap$/^PreparedDeclarations$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundaryRetainedHeap/PreparedDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "consumer-reuse-PreparedDeclarations-heap.txt"
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationBoundary$/^AutomaticDeclarations$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundary/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "consumer-reuse-AutomaticDeclarations-work.txt"
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationBoundaryRetainedHeap$/^AutomaticDeclarations$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationBoundaryRetainedHeap/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "consumer-reuse-AutomaticDeclarations-heap.txt"
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^BodyOnly$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-BodyOnly-SourceDependencies-work.txt"
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationProducerRetainedHeap$/^BodyOnly$/^SourceDependencies$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerRetainedHeap/BodyOnly/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-BodyOnly-SourceDependencies-heap.txt"
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^BodyOnly$/^AutomaticDeclarations$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-BodyOnly-AutomaticDeclarations-work.txt"
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationProducerRetainedHeap$/^BodyOnly$/^AutomaticDeclarations$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerRetainedHeap/BodyOnly/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-BodyOnly-AutomaticDeclarations-heap.txt"
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^PublicSignature$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-PublicSignature-SourceDependencies-work.txt"
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationProducerRetainedHeap$/^PublicSignature$/^SourceDependencies$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-PublicSignature-SourceDependencies-heap.txt"
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^PublicSignature$/^AutomaticDeclarations$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-PublicSignature-AutomaticDeclarations-work.txt"
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "heap",
+      "pattern": "^BenchmarkEditorDeclarationProducerRetainedHeap$/^PublicSignature$/^AutomaticDeclarations$",
+      "benchtime": "1x",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-PublicSignature-AutomaticDeclarations-heap.txt"
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^ProducerConfig$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-ProducerConfig-SourceDependencies-work.txt"
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^ProducerConfig$/^AutomaticDeclarations$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-ProducerConfig-AutomaticDeclarations-work.txt"
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "package": "project",
+      "variant": "final",
+      "mode": "SourceDependencies",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^TransitiveSignature$/^SourceDependencies$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-TransitiveSignature-SourceDependencies-work.txt"
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "package": "project",
+      "variant": "final",
+      "mode": "AutomaticDeclarations",
+      "workload": "work",
+      "pattern": "^BenchmarkEditorDeclarationProducerChanges$/^TransitiveSignature$/^AutomaticDeclarations$",
+      "benchtime": "1s",
+      "expected_benchmarks": [
+        "BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations"
+      ],
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+      "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+      "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+      "tree": "f420672d0070240847f0938e68319bc9fdc660b2",
+      "build_manifest": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "file": "producer-TransitiveSignature-AutomaticDeclarations-work.txt"
+    }
+  ],
+  "builds": {
+    "transpile": {
+      "path": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/build-variants.json",
+      "sha256": "04f681d8d877baa3295d0fa548a045974cac5b721bc1cb99dec00ce8eb1b731d",
+      "manifest": {
+        "common_test_sha256": {
+          "tsc/internal/transpile/execution_options_test.go": "018aa808d6ec4752678ef483d0c3e9b8c299e60499047b75c87e3f3a4cf5bf71",
+          "tsc/internal/transpile/fs_test.go": "2992e5080de30bb1e0fd5458d0fa8ce6aa52c254164beac32b7db74b951b91ee",
+          "tsc/internal/transpile/options_test.go": "0333af316fcd4eb3f540b700a134e6b375294530b8c6d71609b2bee463e8c621",
+          "tsc/internal/transpile/transpile_bench_test.go": "9d12d0f1cdee87446bd8286e966c11b18048844c21187854f8733844d105a0af"
+        },
+        "common_test_sources": {
+          "tsc/internal/transpile/execution_options_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "018aa808d6ec4752678ef483d0c3e9b8c299e60499047b75c87e3f3a4cf5bf71",
+            "ref": "cda2c80535c31e0824392816a23f952ad334e545",
+            "revision": "cda2c80535c31e0824392816a23f952ad334e545",
+            "sha256": "018aa808d6ec4752678ef483d0c3e9b8c299e60499047b75c87e3f3a4cf5bf71",
+            "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213"
+          },
+          "tsc/internal/transpile/fs_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "2992e5080de30bb1e0fd5458d0fa8ce6aa52c254164beac32b7db74b951b91ee",
+            "ref": "cda2c80535c31e0824392816a23f952ad334e545",
+            "revision": "cda2c80535c31e0824392816a23f952ad334e545",
+            "sha256": "2992e5080de30bb1e0fd5458d0fa8ce6aa52c254164beac32b7db74b951b91ee",
+            "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213"
+          },
+          "tsc/internal/transpile/options_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "0333af316fcd4eb3f540b700a134e6b375294530b8c6d71609b2bee463e8c621",
+            "ref": "cda2c80535c31e0824392816a23f952ad334e545",
+            "revision": "cda2c80535c31e0824392816a23f952ad334e545",
+            "sha256": "0333af316fcd4eb3f540b700a134e6b375294530b8c6d71609b2bee463e8c621",
+            "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213"
+          },
+          "tsc/internal/transpile/transpile_bench_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "9d12d0f1cdee87446bd8286e966c11b18048844c21187854f8733844d105a0af",
+            "ref": "cda2c80535c31e0824392816a23f952ad334e545",
+            "revision": "cda2c80535c31e0824392816a23f952ad334e545",
+            "sha256": "9d12d0f1cdee87446bd8286e966c11b18048844c21187854f8733844d105a0af",
+            "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213"
+          }
+        },
+        "excluded_package_tests": [],
+        "go": "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+        "go_env": {
+          "CGO_ENABLED": "1",
+          "GOAMD64": "v1",
+          "GOARCH": "amd64",
+          "GOCACHE": "/root/.cache/go-build",
+          "GOFLAGS": "",
+          "GOOS": "linux",
+          "GOPATH": "/root/go",
+          "GOTOOLCHAIN": "local",
+          "GOWORK": "off"
+        },
+        "go_version": "go version go1.27.3 linux/amd64",
+        "harness_ref": "cda2c80535c31e0824392816a23f952ad334e545",
+        "harness_revision": "cda2c80535c31e0824392816a23f952ad334e545",
+        "harness_tree": "2fffa5ecb65a7bd33c06830e48073745323a4213",
+        "package": "./internal/transpile",
+        "repo": "/workspace/scratch/610fb4329ae2/ts-small",
+        "source_files": [
+          "tsc/internal/api/session.go",
+          "tsc/internal/checker/emitresolver.go",
+          "tsc/internal/compiler/fileloader.go",
+          "tsc/internal/compiler/program.go",
+          "tsc/internal/compiler/projectreferencedeclarations.go",
+          "tsc/internal/compiler/projectreferencedtsfakinghost.go",
+          "tsc/internal/compiler/projectreferencefilemapper.go",
+          "tsc/internal/compiler/projectreferenceparser.go",
+          "tsc/internal/ls/lsconv/converters.go",
+          "tsc/internal/printer/emitresolver.go",
+          "tsc/internal/project/project.go",
+          "tsc/internal/project/projectcollectionbuilder.go",
+          "tsc/internal/project/session.go",
+          "tsc/internal/project/snapshot.go",
+          "tsc/internal/transformers/declarations/transform.go",
+          "tsc/internal/transformers/declarations/util.go",
+          "tsc/internal/transpile/transpile.go"
+        ],
+        "trimpath": true,
+        "variants": {
+          "25": {
+            "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant25.test",
+            "binary_sha256": "645795c048f6309806b582846b361cb25c02e52fe8f2f26acbb113cc112c473f",
+            "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant25.build.log",
+            "build_seconds": 98.319,
+            "command": [
+              "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+              "test",
+              "-c",
+              "-tags=embed",
+              "-p=2",
+              "-buildvcs=false",
+              "-trimpath",
+              "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant25.overlay.json",
+              "-o",
+              "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant25.test",
+              "./internal/transpile"
+            ],
+            "excluded_package_tests": [],
+            "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant25.overlay.json",
+            "overlay_sha256": "390b78ab7a75e869f0d8411063cfa208eeeafd55d09f453020ec5d90e03a5106",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "returncode": 0,
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "source_sha256": {
+              "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+              "tsc/internal/checker/emitresolver.go": "b8304d10672a6facd4274b4deed21dfdcd27f5fc02691e956588bfb3324e20ac",
+              "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+              "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+              "tsc/internal/compiler/projectreferencedeclarations.go": null,
+              "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+              "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+              "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+              "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+              "tsc/internal/printer/emitresolver.go": "a1d3b6e88062a4162cd9f86b498c7d05912d6e01703d922980ca5a189135d93f",
+              "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+              "tsc/internal/project/projectcollectionbuilder.go": "b831f2c35b54cf8e06db990b81ec9a9cc4c180566963f352a3aa17a64c382306",
+              "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+              "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+              "tsc/internal/transformers/declarations/transform.go": "1c9517f4a6584ff83087ea51f2549b29ea710bb9db2ccf9740ccce3767aa0005",
+              "tsc/internal/transformers/declarations/util.go": "8107f680ab351eeef817e7df2dc35558b0914e377e4a2f8a7dbd21aa761ffb46",
+              "tsc/internal/transpile/transpile.go": "fade085941726dc9dd0f454603f108a24fefca2f8a1ff7c753214d1f5b390e34"
+            },
+            "status": "built",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "26": {
+            "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant26.test",
+            "binary_sha256": "cddc9dfe89db2f70c62ea192cac9d3b032cc1c651babf838ddade2f5cd4165ca",
+            "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant26.build.log",
+            "build_seconds": 6.308,
+            "command": [
+              "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+              "test",
+              "-c",
+              "-tags=embed",
+              "-p=2",
+              "-buildvcs=false",
+              "-trimpath",
+              "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant26.overlay.json",
+              "-o",
+              "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant26.test",
+              "./internal/transpile"
+            ],
+            "excluded_package_tests": [],
+            "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile/variant26.overlay.json",
+            "overlay_sha256": "485a19fdc98de2b5fe0f5465c4e1733aaa96da051ffc91a90007beef1ea7dff5",
+            "ref": "cda2c80535c31e0824392816a23f952ad334e545",
+            "returncode": 0,
+            "revision": "cda2c80535c31e0824392816a23f952ad334e545",
+            "source_sha256": {
+              "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+              "tsc/internal/checker/emitresolver.go": "b8304d10672a6facd4274b4deed21dfdcd27f5fc02691e956588bfb3324e20ac",
+              "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+              "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+              "tsc/internal/compiler/projectreferencedeclarations.go": null,
+              "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+              "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+              "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+              "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+              "tsc/internal/printer/emitresolver.go": "a1d3b6e88062a4162cd9f86b498c7d05912d6e01703d922980ca5a189135d93f",
+              "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+              "tsc/internal/project/projectcollectionbuilder.go": "b831f2c35b54cf8e06db990b81ec9a9cc4c180566963f352a3aa17a64c382306",
+              "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+              "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+              "tsc/internal/transformers/declarations/transform.go": "1c9517f4a6584ff83087ea51f2549b29ea710bb9db2ccf9740ccce3767aa0005",
+              "tsc/internal/transformers/declarations/util.go": "8107f680ab351eeef817e7df2dc35558b0914e377e4a2f8a7dbd21aa761ffb46",
+              "tsc/internal/transpile/transpile.go": "dc287216bf5231f0ef74b60a46ef7db5035aac5a92cf8f003a118c07eae735bb"
+            },
+            "status": "built",
+            "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213"
+          }
+        }
+      }
+    },
+    "compiler": {
+      "path": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/build-variants.json",
+      "sha256": "ca26f1da5a9d27dbf90e3c8a1f1b2da8b45336879f6ba2b8a1327af1c4cf2692",
+      "manifest": {
+        "common_test_sha256": {
+          "tsc/internal/compiler/checkerpool_test.go": "a0184aaff7e511c476cee144d1a7512ebb413676a62a3f9a5dcef0c1d07b962d",
+          "tsc/internal/compiler/contentmapper_test.go": "630f10ec32eb34f500aad399f6b7a54122a11921c1a23ee72e51acb982a8f334",
+          "tsc/internal/compiler/declaration_bench_test.go": "e9ca7d6fa7ff7751193090210e6f9d5e90acd87eee46be6ae85be8d69387272f",
+          "tsc/internal/compiler/declaration_boundary_bench_test.go": "5d5e05aa15df562aaae1c8c94426092c525802ce6f7987f3eeb185f4e901a39d",
+          "tsc/internal/compiler/declaration_check_order_test.go": "98090d043eb9b074210edad8316bee6ccee3ef434c4f65a3def2b4339ce543be",
+          "tsc/internal/compiler/declaration_class_bench_test.go": "1580c5ac3a8936a02c57a20f00a447f5966f6d3babd51f80ade0cebb2ce73df6",
+          "tsc/internal/compiler/declaration_diagnostics_test.go": "c95409dde252ad10dc9ab626f1a5338de593391624dcb53d42fe8110f2731d78",
+          "tsc/internal/compiler/declaration_eligibility_bench_test.go": "073dd2bc194d9251362aa83b0f82b22703b52bbc7248a8fb52ad775f829ee575",
+          "tsc/internal/compiler/declaration_producer_test.go": "12e5e4f81155035918536ac90caf2d82e7a2bb4896f7dd8a3e47580424e644e1",
+          "tsc/internal/compiler/emit_metadata_test.go": "35406ca4a9fd27def6527443db8c9d60698ae3a24a6015ac4c4ee38b672e4eaa",
+          "tsc/internal/compiler/emit_ownership_test.go": "36d4f5a0979cf74b8a8c9d3e550ac373bc19e57bbe92c536941dcbd9785124a5",
+          "tsc/internal/compiler/emit_preflight_test.go": "7b03932d8e5f82a205a2567d763c96ed74d6ae7feff595e23644f93310381f25",
+          "tsc/internal/compiler/emit_retention_bench_test.go": "9c9417502f5524863ba070fe811e078b37cad70570c82e53a2e30bcf6aea85eb",
+          "tsc/internal/compiler/emit_test.go": "363f1c9903a2708a52c3d8071d7d67d11e3008a82ee77d0c301deceafe7de6e4",
+          "tsc/internal/compiler/host_test.go": "6633e40fa0386c804cfbcd1d57d74828c85fc5d6f3966abeb33bdc027badbfca",
+          "tsc/internal/compiler/program_test.go": "e6842b5cf93185d93f81c5d6b9b1c8b3b2280cc479a7705ac008d61ef9dc43ab",
+          "tsc/internal/compiler/projectreferencefilemapper_test.go": "0928d04f4b7cb90bfd74070d8d69c092125bff30e9f86a17076112dc135da54c",
+          "tsc/internal/compiler/test_helpers_test.go": "6365e0133fc971689c283b8ad37fb6b6d09c9f4485f04597f13f174f5e00b9fb"
+        },
+        "common_test_sources": {
+          "tsc/internal/compiler/checkerpool_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "a0184aaff7e511c476cee144d1a7512ebb413676a62a3f9a5dcef0c1d07b962d",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "a0184aaff7e511c476cee144d1a7512ebb413676a62a3f9a5dcef0c1d07b962d",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/contentmapper_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "630f10ec32eb34f500aad399f6b7a54122a11921c1a23ee72e51acb982a8f334",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "630f10ec32eb34f500aad399f6b7a54122a11921c1a23ee72e51acb982a8f334",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_bench_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "e9ca7d6fa7ff7751193090210e6f9d5e90acd87eee46be6ae85be8d69387272f",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "e9ca7d6fa7ff7751193090210e6f9d5e90acd87eee46be6ae85be8d69387272f",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_boundary_bench_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "5d5e05aa15df562aaae1c8c94426092c525802ce6f7987f3eeb185f4e901a39d",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "5d5e05aa15df562aaae1c8c94426092c525802ce6f7987f3eeb185f4e901a39d",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_check_order_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "98090d043eb9b074210edad8316bee6ccee3ef434c4f65a3def2b4339ce543be",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "98090d043eb9b074210edad8316bee6ccee3ef434c4f65a3def2b4339ce543be",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_class_bench_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "1580c5ac3a8936a02c57a20f00a447f5966f6d3babd51f80ade0cebb2ce73df6",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "1580c5ac3a8936a02c57a20f00a447f5966f6d3babd51f80ade0cebb2ce73df6",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_diagnostics_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "c95409dde252ad10dc9ab626f1a5338de593391624dcb53d42fe8110f2731d78",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "c95409dde252ad10dc9ab626f1a5338de593391624dcb53d42fe8110f2731d78",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_eligibility_bench_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "073dd2bc194d9251362aa83b0f82b22703b52bbc7248a8fb52ad775f829ee575",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "073dd2bc194d9251362aa83b0f82b22703b52bbc7248a8fb52ad775f829ee575",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/declaration_producer_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "12e5e4f81155035918536ac90caf2d82e7a2bb4896f7dd8a3e47580424e644e1",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "12e5e4f81155035918536ac90caf2d82e7a2bb4896f7dd8a3e47580424e644e1",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/emit_metadata_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "35406ca4a9fd27def6527443db8c9d60698ae3a24a6015ac4c4ee38b672e4eaa",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "35406ca4a9fd27def6527443db8c9d60698ae3a24a6015ac4c4ee38b672e4eaa",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/emit_ownership_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "36d4f5a0979cf74b8a8c9d3e550ac373bc19e57bbe92c536941dcbd9785124a5",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "36d4f5a0979cf74b8a8c9d3e550ac373bc19e57bbe92c536941dcbd9785124a5",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/emit_preflight_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "7b03932d8e5f82a205a2567d763c96ed74d6ae7feff595e23644f93310381f25",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "7b03932d8e5f82a205a2567d763c96ed74d6ae7feff595e23644f93310381f25",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/emit_retention_bench_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "9c9417502f5524863ba070fe811e078b37cad70570c82e53a2e30bcf6aea85eb",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "9c9417502f5524863ba070fe811e078b37cad70570c82e53a2e30bcf6aea85eb",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/emit_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "363f1c9903a2708a52c3d8071d7d67d11e3008a82ee77d0c301deceafe7de6e4",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "363f1c9903a2708a52c3d8071d7d67d11e3008a82ee77d0c301deceafe7de6e4",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/host_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "6633e40fa0386c804cfbcd1d57d74828c85fc5d6f3966abeb33bdc027badbfca",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "6633e40fa0386c804cfbcd1d57d74828c85fc5d6f3966abeb33bdc027badbfca",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/program_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "e6842b5cf93185d93f81c5d6b9b1c8b3b2280cc479a7705ac008d61ef9dc43ab",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "e6842b5cf93185d93f81c5d6b9b1c8b3b2280cc479a7705ac008d61ef9dc43ab",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/projectreferencefilemapper_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "0928d04f4b7cb90bfd74070d8d69c092125bff30e9f86a17076112dc135da54c",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "0928d04f4b7cb90bfd74070d8d69c092125bff30e9f86a17076112dc135da54c",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          },
+          "tsc/internal/compiler/test_helpers_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "6365e0133fc971689c283b8ad37fb6b6d09c9f4485f04597f13f174f5e00b9fb",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "sha256": "6365e0133fc971689c283b8ad37fb6b6d09c9f4485f04597f13f174f5e00b9fb",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          }
+        },
+        "excluded_package_tests": [
+          "tsc/internal/compiler/projectreferencedeclarationgraph_test.go",
+          "tsc/internal/compiler/projectreferencedeclarationlinks_test.go",
+          "tsc/internal/compiler/projectreferencedeclarations_ownership_test.go",
+          "tsc/internal/compiler/projectreferencedeclarations_test.go"
+        ],
+        "go": "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+        "go_env": {
+          "CGO_ENABLED": "1",
+          "GOAMD64": "v1",
+          "GOARCH": "amd64",
+          "GOCACHE": "/root/.cache/go-build",
+          "GOFLAGS": "",
+          "GOOS": "linux",
+          "GOPATH": "/root/go",
+          "GOTOOLCHAIN": "local",
+          "GOWORK": "off"
+        },
+        "go_version": "go version go1.27.3 linux/amd64",
+        "harness_ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+        "harness_revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+        "harness_tree": "c635457e8b279d02b4589a8302692f53510d70f6",
+        "package": "./internal/compiler",
+        "repo": "/workspace/scratch/610fb4329ae2/ts-small",
+        "source_files": [
+          "tsc/internal/api/session.go",
+          "tsc/internal/checker/emitresolver.go",
+          "tsc/internal/compiler/fileloader.go",
+          "tsc/internal/compiler/program.go",
+          "tsc/internal/compiler/projectreferencedeclarations.go",
+          "tsc/internal/compiler/projectreferencedtsfakinghost.go",
+          "tsc/internal/compiler/projectreferencefilemapper.go",
+          "tsc/internal/compiler/projectreferenceparser.go",
+          "tsc/internal/ls/lsconv/converters.go",
+          "tsc/internal/printer/emitresolver.go",
+          "tsc/internal/project/project.go",
+          "tsc/internal/project/projectcollectionbuilder.go",
+          "tsc/internal/project/session.go",
+          "tsc/internal/project/snapshot.go",
+          "tsc/internal/transformers/declarations/transform.go",
+          "tsc/internal/transformers/declarations/util.go",
+          "tsc/internal/transpile/transpile.go"
+        ],
+        "trimpath": true,
+        "variants": {
+          "27": {
+            "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.test",
+            "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+            "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.build.log",
+            "build_seconds": 0.138,
+            "command": [
+              "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+              "test",
+              "-c",
+              "-tags=embed",
+              "-p=2",
+              "-buildvcs=false",
+              "-trimpath",
+              "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.overlay.json",
+              "-o",
+              "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.test",
+              "./internal/compiler"
+            ],
+            "excluded_package_tests": [
+              "tsc/internal/compiler/projectreferencedeclarationgraph_test.go",
+              "tsc/internal/compiler/projectreferencedeclarationlinks_test.go",
+              "tsc/internal/compiler/projectreferencedeclarations_ownership_test.go",
+              "tsc/internal/compiler/projectreferencedeclarations_test.go"
+            ],
+            "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.overlay.json",
+            "overlay_sha256": "bdbbdb3833886ebfefb9c306b5bbe653d795d300daaa36f661dc174ff3c3798e",
+            "ref": "73dfc32cb10de002dba43d76655259ca64315ff4",
+            "returncode": 0,
+            "revision": "73dfc32cb10de002dba43d76655259ca64315ff4",
+            "source_sha256": {
+              "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+              "tsc/internal/checker/emitresolver.go": "b8304d10672a6facd4274b4deed21dfdcd27f5fc02691e956588bfb3324e20ac",
+              "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+              "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+              "tsc/internal/compiler/projectreferencedeclarations.go": null,
+              "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+              "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+              "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+              "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+              "tsc/internal/printer/emitresolver.go": "a1d3b6e88062a4162cd9f86b498c7d05912d6e01703d922980ca5a189135d93f",
+              "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+              "tsc/internal/project/projectcollectionbuilder.go": "228a36060b548fc4a96ce6e5bf00d3454e8e33da96e95b23be440b58db3a925b",
+              "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+              "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+              "tsc/internal/transformers/declarations/transform.go": "1c9517f4a6584ff83087ea51f2549b29ea710bb9db2ccf9740ccce3767aa0005",
+              "tsc/internal/transformers/declarations/util.go": "8107f680ab351eeef817e7df2dc35558b0914e377e4a2f8a7dbd21aa761ffb46",
+              "tsc/internal/transpile/transpile.go": "dc287216bf5231f0ef74b60a46ef7db5035aac5a92cf8f003a118c07eae735bb"
+            },
+            "status": "built",
+            "tree": "451d438ae0b83548c9881230c135d2495ed88fd3"
+          },
+          "28": {
+            "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.test",
+            "binary_sha256": "edc87938af2ccbc6d82bd45c098bb4b2de912fa5acc20263852ce787226078a8",
+            "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.build.log",
+            "build_seconds": 0.128,
+            "command": [
+              "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+              "test",
+              "-c",
+              "-tags=embed",
+              "-p=2",
+              "-buildvcs=false",
+              "-trimpath",
+              "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.overlay.json",
+              "-o",
+              "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.test",
+              "./internal/compiler"
+            ],
+            "excluded_package_tests": [
+              "tsc/internal/compiler/projectreferencedeclarationgraph_test.go",
+              "tsc/internal/compiler/projectreferencedeclarationlinks_test.go",
+              "tsc/internal/compiler/projectreferencedeclarations_ownership_test.go",
+              "tsc/internal/compiler/projectreferencedeclarations_test.go"
+            ],
+            "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.overlay.json",
+            "overlay_sha256": "17a38d6e2df605ed511858a5d482e2f9921555a463a95a8917fb35f4ae9e403d",
+            "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "returncode": 0,
+            "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+            "source_sha256": {
+              "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+              "tsc/internal/checker/emitresolver.go": "35e2ebd4629b0639ed7cf0e6980fd1f804ea198ba7f885e69f5e14ee1efc2f00",
+              "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+              "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+              "tsc/internal/compiler/projectreferencedeclarations.go": null,
+              "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+              "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+              "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+              "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+              "tsc/internal/printer/emitresolver.go": "4d5f2587d73104c5e3a08be703e7055a7fbb1b936264a56a2f31bb0d08672c48",
+              "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+              "tsc/internal/project/projectcollectionbuilder.go": "228a36060b548fc4a96ce6e5bf00d3454e8e33da96e95b23be440b58db3a925b",
+              "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+              "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+              "tsc/internal/transformers/declarations/transform.go": "12556a2ebab9751d708b6f36732d4737c63ed0fd5f0481a17ba8c924e55b9267",
+              "tsc/internal/transformers/declarations/util.go": "40cc7a13f5eac9148200df44d09de0242d35d99ddc94d483955a3dd01c6be38a",
+              "tsc/internal/transpile/transpile.go": "dc287216bf5231f0ef74b60a46ef7db5035aac5a92cf8f003a118c07eae735bb"
+            },
+            "status": "built",
+            "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+          }
+        }
+      }
+    },
+    "project": {
+      "path": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/build-variants.json",
+      "sha256": "8e22562413aa07fddf6e3f796368401e381727b4292ebf1d5e511f3097e1979f",
+      "manifest": {
+        "common_test_sha256": {
+          "tsc/internal/project/bulkcache_test.go": "2811894ad6a847d7e35289136a40aba0e93a2c7eeced2361d648906b6095faca",
+          "tsc/internal/project/checkerpool_test.go": "cfefdb0b92e360573bf6ab034c67993e6133cfc978c1de6c00e67197615fed6e",
+          "tsc/internal/project/compilerhost_test.go": "c6ca7d6f92a0f6e54c7e00dbd322a12a7af4d57331578e4cc513116f2782f630",
+          "tsc/internal/project/configfilechanges_test.go": "1432d2473d27e97950783f89c9b9e78c1288f86f06d4a5de2bd006054bcd01e0",
+          "tsc/internal/project/contentmapper_test.go": "9e6de2d05f2cbfc8029bafc50b4345014887e8df1d4316305cf94b7b9e3089ae",
+          "tsc/internal/project/customconfigfilename_test.go": "c117231afe525e3355d6f1f687ff1aa5b6a71d615636dbb1a1004e716e396d9d",
+          "tsc/internal/project/declaration_boundary_bench_test.go": "b7f7e7ae564a12a14ca7e4d5715249326c4ddbf4469a78807aa3ee2867239a44",
+          "tsc/internal/project/extendedconfigcache_test.go": "baaed2a663e1b6b7dfda52b5861181e977beee8e6a7f26d08c9421892ac0bbbd",
+          "tsc/internal/project/overlayfs_test.go": "48b72d8309114abf27e193c2f08d4da69c880f533acbb454cab242348f26749f",
+          "tsc/internal/project/project_test.go": "285c03b242b26c015ee0e2a4e97d80180a90c8408b33fdbfbdbd27c7351941b3",
+          "tsc/internal/project/projectcollectionbuilder_test.go": "a14f0861e1ab0a344a28a9e0394d8773f95fd9668225705b9e2d0ffe1d4b991f",
+          "tsc/internal/project/projectcollectiondefaultproject_test.go": "bf27053e2409ffb520e0f7a2edf6fe63f3eff6789b5481e94751501fb7fcb299",
+          "tsc/internal/project/projecthandle_test.go": "737f5302dca2ca0381a117123947999b06d4bc4c06c8b38f0f6d02d565beeb22",
+          "tsc/internal/project/projectlifetime_test.go": "e30da65c92c8f582e69335f94505c800ec183fb31015369fd62fc5cd3a124f0a",
+          "tsc/internal/project/projectreferencesprogram_test.go": "fe8550ef2bd80856ac4ead6958a0026df815a5cfb189bbe5a32b26b1e64b56e7",
+          "tsc/internal/project/refcountcache_test.go": "9e315c00eb7690608d89cd1d6ce7690db74c91874a79a46a02fabc089b20e489",
+          "tsc/internal/project/session_test.go": "6de1d81aa99a2145ce1e9570a68fe7bf09b17fd86f192bfcdf0be8bc61469a8e",
+          "tsc/internal/project/snapshot_test.go": "fe663e4b7a584814638f302752c681bdfb86bc34e40e5d1eacdfef313c31c7aa",
+          "tsc/internal/project/snapshotfs_test.go": "69e135a7d5c95e4b3d95779e2ac0a5b738e2466ec73a6706dcf0a388078330af",
+          "tsc/internal/project/testmain_test.go": "4186bc87f8f7d2d838ba6befb44f07a336406658c4afc5a16df2d1dd8d4c159d",
+          "tsc/internal/project/untitled_test.go": "755d45ad370537bf5889d3f12361aebce7ee2af06a0f0007a738d492edcf0d1b",
+          "tsc/internal/project/watch_test.go": "b762dad9ef73745b953c122aea07f09b8754b53ce563d9c3b874fb3d9e2b2228",
+          "tsc/internal/project/watchtimeout_test.go": "b66f337497aa8a61ad117228a6857c2aa6d091054463becd43cb6847f6a50ffd"
+        },
+        "common_test_sources": {
+          "tsc/internal/project/bulkcache_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "2811894ad6a847d7e35289136a40aba0e93a2c7eeced2361d648906b6095faca",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "2811894ad6a847d7e35289136a40aba0e93a2c7eeced2361d648906b6095faca",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/checkerpool_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "cfefdb0b92e360573bf6ab034c67993e6133cfc978c1de6c00e67197615fed6e",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "cfefdb0b92e360573bf6ab034c67993e6133cfc978c1de6c00e67197615fed6e",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/compilerhost_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "c6ca7d6f92a0f6e54c7e00dbd322a12a7af4d57331578e4cc513116f2782f630",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "c6ca7d6f92a0f6e54c7e00dbd322a12a7af4d57331578e4cc513116f2782f630",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/configfilechanges_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "1432d2473d27e97950783f89c9b9e78c1288f86f06d4a5de2bd006054bcd01e0",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "1432d2473d27e97950783f89c9b9e78c1288f86f06d4a5de2bd006054bcd01e0",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/contentmapper_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "9e6de2d05f2cbfc8029bafc50b4345014887e8df1d4316305cf94b7b9e3089ae",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "9e6de2d05f2cbfc8029bafc50b4345014887e8df1d4316305cf94b7b9e3089ae",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/customconfigfilename_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "c117231afe525e3355d6f1f687ff1aa5b6a71d615636dbb1a1004e716e396d9d",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "c117231afe525e3355d6f1f687ff1aa5b6a71d615636dbb1a1004e716e396d9d",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/declaration_boundary_bench_test.go": {
+            "omitted_functions": [
+              "TestEditorDeclarationBoundaryPhysicalOutputLifecycle"
+            ],
+            "original_sha256": "265661b70537bc784a17f5f14e429fba4991f4141d97141678d995e13f449d1d",
+            "ref": "6496147f56a566562a1b1cc2f735d60276ae9d48",
+            "revision": "6496147f56a566562a1b1cc2f735d60276ae9d48",
+            "sha256": "b7f7e7ae564a12a14ca7e4d5715249326c4ddbf4469a78807aa3ee2867239a44",
+            "tree": "769c47f073c0f2c3cb46cd6859db2b7f0581d40b"
+          },
+          "tsc/internal/project/extendedconfigcache_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "baaed2a663e1b6b7dfda52b5861181e977beee8e6a7f26d08c9421892ac0bbbd",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "baaed2a663e1b6b7dfda52b5861181e977beee8e6a7f26d08c9421892ac0bbbd",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/overlayfs_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "48b72d8309114abf27e193c2f08d4da69c880f533acbb454cab242348f26749f",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "48b72d8309114abf27e193c2f08d4da69c880f533acbb454cab242348f26749f",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/project_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "285c03b242b26c015ee0e2a4e97d80180a90c8408b33fdbfbdbd27c7351941b3",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "285c03b242b26c015ee0e2a4e97d80180a90c8408b33fdbfbdbd27c7351941b3",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/projectcollectionbuilder_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "a14f0861e1ab0a344a28a9e0394d8773f95fd9668225705b9e2d0ffe1d4b991f",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "a14f0861e1ab0a344a28a9e0394d8773f95fd9668225705b9e2d0ffe1d4b991f",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/projectcollectiondefaultproject_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "bf27053e2409ffb520e0f7a2edf6fe63f3eff6789b5481e94751501fb7fcb299",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "bf27053e2409ffb520e0f7a2edf6fe63f3eff6789b5481e94751501fb7fcb299",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/projecthandle_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "737f5302dca2ca0381a117123947999b06d4bc4c06c8b38f0f6d02d565beeb22",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "737f5302dca2ca0381a117123947999b06d4bc4c06c8b38f0f6d02d565beeb22",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/projectlifetime_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "e30da65c92c8f582e69335f94505c800ec183fb31015369fd62fc5cd3a124f0a",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "e30da65c92c8f582e69335f94505c800ec183fb31015369fd62fc5cd3a124f0a",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/projectreferencesprogram_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "fe8550ef2bd80856ac4ead6958a0026df815a5cfb189bbe5a32b26b1e64b56e7",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "fe8550ef2bd80856ac4ead6958a0026df815a5cfb189bbe5a32b26b1e64b56e7",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/refcountcache_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "9e315c00eb7690608d89cd1d6ce7690db74c91874a79a46a02fabc089b20e489",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "9e315c00eb7690608d89cd1d6ce7690db74c91874a79a46a02fabc089b20e489",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/session_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "6de1d81aa99a2145ce1e9570a68fe7bf09b17fd86f192bfcdf0be8bc61469a8e",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "6de1d81aa99a2145ce1e9570a68fe7bf09b17fd86f192bfcdf0be8bc61469a8e",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/snapshot_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "fe663e4b7a584814638f302752c681bdfb86bc34e40e5d1eacdfef313c31c7aa",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "fe663e4b7a584814638f302752c681bdfb86bc34e40e5d1eacdfef313c31c7aa",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/snapshotfs_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "69e135a7d5c95e4b3d95779e2ac0a5b738e2466ec73a6706dcf0a388078330af",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "69e135a7d5c95e4b3d95779e2ac0a5b738e2466ec73a6706dcf0a388078330af",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/testmain_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "4186bc87f8f7d2d838ba6befb44f07a336406658c4afc5a16df2d1dd8d4c159d",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "4186bc87f8f7d2d838ba6befb44f07a336406658c4afc5a16df2d1dd8d4c159d",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/untitled_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "755d45ad370537bf5889d3f12361aebce7ee2af06a0f0007a738d492edcf0d1b",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "755d45ad370537bf5889d3f12361aebce7ee2af06a0f0007a738d492edcf0d1b",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/watch_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "b762dad9ef73745b953c122aea07f09b8754b53ce563d9c3b874fb3d9e2b2228",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "b762dad9ef73745b953c122aea07f09b8754b53ce563d9c3b874fb3d9e2b2228",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "tsc/internal/project/watchtimeout_test.go": {
+            "omitted_functions": [],
+            "original_sha256": "b66f337497aa8a61ad117228a6857c2aa6d091054463becd43cb6847f6a50ffd",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "sha256": "b66f337497aa8a61ad117228a6857c2aa6d091054463becd43cb6847f6a50ffd",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          }
+        },
+        "excluded_package_tests": [
+          "tsc/internal/project/generateddeclarationinvalidation_test.go",
+          "tsc/internal/project/generateddeclarations_test.go",
+          "tsc/internal/project/resolutioninvalidation_test.go",
+          "tsc/internal/project/resolutionwatchers_test.go"
+        ],
+        "go": "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+        "go_env": {
+          "CGO_ENABLED": "1",
+          "GOAMD64": "v1",
+          "GOARCH": "amd64",
+          "GOCACHE": "/root/.cache/go-build",
+          "GOFLAGS": "",
+          "GOOS": "linux",
+          "GOPATH": "/root/go",
+          "GOTOOLCHAIN": "local",
+          "GOWORK": "off"
+        },
+        "go_version": "go version go1.27.3 linux/amd64",
+        "harness_ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+        "harness_revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+        "harness_tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3",
+        "package": "./internal/project",
+        "repo": "/workspace/scratch/610fb4329ae2/ts-small",
+        "source_files": [
+          "tsc/internal/api/session.go",
+          "tsc/internal/checker/emitresolver.go",
+          "tsc/internal/compiler/fileloader.go",
+          "tsc/internal/compiler/program.go",
+          "tsc/internal/compiler/projectreferencedeclarations.go",
+          "tsc/internal/compiler/projectreferencedtsfakinghost.go",
+          "tsc/internal/compiler/projectreferencefilemapper.go",
+          "tsc/internal/compiler/projectreferenceparser.go",
+          "tsc/internal/ls/lsconv/converters.go",
+          "tsc/internal/printer/emitresolver.go",
+          "tsc/internal/project/project.go",
+          "tsc/internal/project/projectcollectionbuilder.go",
+          "tsc/internal/project/session.go",
+          "tsc/internal/project/snapshot.go",
+          "tsc/internal/transformers/declarations/transform.go",
+          "tsc/internal/transformers/declarations/util.go",
+          "tsc/internal/transpile/transpile.go"
+        ],
+        "trimpath": false,
+        "variants": {
+          "25": {
+            "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.test",
+            "binary_sha256": "29c4ca7cd9c2daae3138363649e365eca2549acc7346872f572f0fe597a30718",
+            "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.build.log",
+            "build_seconds": 93.039,
+            "command": [
+              "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+              "test",
+              "-c",
+              "-tags=embed",
+              "-p=2",
+              "-buildvcs=false",
+              "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.overlay.json",
+              "-o",
+              "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.test",
+              "./internal/project"
+            ],
+            "excluded_package_tests": [
+              "tsc/internal/project/generateddeclarationinvalidation_test.go",
+              "tsc/internal/project/generateddeclarations_test.go",
+              "tsc/internal/project/resolutioninvalidation_test.go",
+              "tsc/internal/project/resolutionwatchers_test.go"
+            ],
+            "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variant25.overlay.json",
+            "overlay_sha256": "cf03611fadefadb7d28406f9e007aeb3b63d1f3f7e65a1b910b8562ef23cc740",
+            "ref": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "returncode": 0,
+            "revision": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+            "source_sha256": {
+              "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+              "tsc/internal/checker/emitresolver.go": "b8304d10672a6facd4274b4deed21dfdcd27f5fc02691e956588bfb3324e20ac",
+              "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+              "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+              "tsc/internal/compiler/projectreferencedeclarations.go": null,
+              "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+              "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+              "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+              "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+              "tsc/internal/printer/emitresolver.go": "a1d3b6e88062a4162cd9f86b498c7d05912d6e01703d922980ca5a189135d93f",
+              "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+              "tsc/internal/project/projectcollectionbuilder.go": "b831f2c35b54cf8e06db990b81ec9a9cc4c180566963f352a3aa17a64c382306",
+              "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+              "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+              "tsc/internal/transformers/declarations/transform.go": "1c9517f4a6584ff83087ea51f2549b29ea710bb9db2ccf9740ccce3767aa0005",
+              "tsc/internal/transformers/declarations/util.go": "8107f680ab351eeef817e7df2dc35558b0914e377e4a2f8a7dbd21aa761ffb46",
+              "tsc/internal/transpile/transpile.go": "fade085941726dc9dd0f454603f108a24fefca2f8a1ff7c753214d1f5b390e34"
+            },
+            "status": "built",
+            "tree": "1be0a262665cea7f13542c71fe25c5ef250a52c3"
+          },
+          "final": {
+            "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+            "binary_sha256": "a929fd0fadb5ae56627670c50b5ff3b3e7302d3dc3926c6577e3dcf2833100de",
+            "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.build.log",
+            "build_seconds": 20.065,
+            "command": [
+              "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+              "test",
+              "-c",
+              "-tags=embed",
+              "-p=2",
+              "-buildvcs=false",
+              "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.overlay.json",
+              "-o",
+              "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.test",
+              "./internal/project"
+            ],
+            "excluded_package_tests": [
+              "tsc/internal/project/generateddeclarationinvalidation_test.go",
+              "tsc/internal/project/generateddeclarations_test.go",
+              "tsc/internal/project/resolutioninvalidation_test.go",
+              "tsc/internal/project/resolutionwatchers_test.go"
+            ],
+            "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project/variantfinal.overlay.json",
+            "overlay_sha256": "ced372dca74b8a9a629d80cb39395c091c71099eb3c9116ee7a34d90f6062a68",
+            "ref": "52121ea757d9259238d5362ddf3188f82cb80297",
+            "returncode": 0,
+            "revision": "52121ea757d9259238d5362ddf3188f82cb80297",
+            "source_sha256": {
+              "tsc/internal/api/session.go": "dacfdac3b89c0fb604d19f752fa06e88b11212ab659b5b66e94d90a3467bdc59",
+              "tsc/internal/checker/emitresolver.go": "35e2ebd4629b0639ed7cf0e6980fd1f804ea198ba7f885e69f5e14ee1efc2f00",
+              "tsc/internal/compiler/fileloader.go": "998064cc770c5beac163512401bea49f99b5edde5852dc675c41f72824a6f394",
+              "tsc/internal/compiler/program.go": "0e4d72d09e779fc04b7a01138288e4d4543a955b2ad1fdf9a2368a05fbbaf743",
+              "tsc/internal/compiler/projectreferencedeclarations.go": "c05267b92d0f84d17beea4f52890288af2bf2d17ad7b8268ebea1434d60d5403",
+              "tsc/internal/compiler/projectreferencedtsfakinghost.go": "4b4d2b316cc56c923efdabc2438c72cf556b39a47aa5b6ba747587b8e2c3050b",
+              "tsc/internal/compiler/projectreferencefilemapper.go": "b90ecdc73e43bbe26228f12c123396733d96f31f4c5b2af83da3e84b5f767efe",
+              "tsc/internal/compiler/projectreferenceparser.go": "b208a25f9d1178bd33965eb2435accc1a4e9a24cef949456ce3d31be43926c59",
+              "tsc/internal/ls/lsconv/converters.go": "6919a1edf974eade2ce7e2991cb9cd9cfd388a20380a03d320a4b030c4e585aa",
+              "tsc/internal/printer/emitresolver.go": "4d5f2587d73104c5e3a08be703e7055a7fbb1b936264a56a2f31bb0d08672c48",
+              "tsc/internal/project/project.go": "10a91efcdad67557e1216a9b1060fd12d0193bcb48222bce226e9e79a65a35d5",
+              "tsc/internal/project/projectcollectionbuilder.go": "7eec77fd0ad5a1db75af969e8af139c1f87695ddfc0c4b1358b0dae475b189d4",
+              "tsc/internal/project/session.go": "321ded51bb740bd2d61fb63cface3366f6db4d07c89fe32fefb8ad2a8d474a48",
+              "tsc/internal/project/snapshot.go": "f9446dc37ed4d4e20d515feb9492e98760400510da915f2cc67f7391d3baae95",
+              "tsc/internal/transformers/declarations/transform.go": "12556a2ebab9751d708b6f36732d4737c63ed0fd5f0481a17ba8c924e55b9267",
+              "tsc/internal/transformers/declarations/util.go": "40cc7a13f5eac9148200df44d09de0242d35d99ddc94d483955a3dd01c6be38a",
+              "tsc/internal/transpile/transpile.go": "dc287216bf5231f0ef74b60a46ef7db5035aac5a92cf8f003a118c07eae735bb"
+            },
+            "status": "built",
+            "tree": "f420672d0070240847f0938e68319bc9fdc660b2"
+          }
+        }
+      }
+    }
+  },
+  "ordering": "Pairs alternate; three arms rotate and reverse across six rounds.",
+  "fixture": {
+    "producer_modules": 48,
+    "locals_per_module": 256,
+    "producer_files_including_barrel": 49,
+    "retained_sessions": 4,
+    "edits_per_retained_session": 16
+  },
+  "scope": {
+    "automatic": "Per-loader singleflight output strings. A full consumer rebuild regenerates the complete producer; no persistent cross-snapshot extraction cache.",
+    "consumer_reuse": "Generation is outside steady consumer-edit timing; normal Program cloning reuses declaration ASTs and existing owned output.",
+    "producer_changes": "Producer edit, watched-file notification, regeneration when required, consumer diagnostics and background drain are all timed.",
+    "read_counters": "Successful underlying producer/src ReadFile calls/bytes only. SnapshotFS can serve cached inputs during regeneration; these are not extraction calls or cache hit/miss counts.",
+    "retention": "Post-GC marginal live heap, not RSS/peak. Prepared text is shared; automatic generated output and tracking state are owned separately per Session.",
+    "source_control": "Same new benchmark functions on exact production25 and final runtime; source-only arm bounds overhead outside automatic mode.",
+    "project_harness": "Package tests frozen at25; benchmark file frozen at33 in both binaries. Only unrelated physical-output regression is omitted to avoid APIs absent at25; no benchmark code changes."
+  },
+  "samples": [
+    {
+      "group": "transpile",
+      "arm": "25",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.049556987996766
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 4.993710824997834
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.142016755999066
+    },
+    {
+      "group": "transpile",
+      "arm": "25",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 4.978118723996886
+    },
+    {
+      "group": "transpile",
+      "arm": "25",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.1632489479998185
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.1404233100001875
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.1291210660019715
+    },
+    {
+      "group": "transpile",
+      "arm": "25",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 4.836678077001125
+    },
+    {
+      "group": "transpile",
+      "arm": "25",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 4.915748006002104
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.012479693999921
+    },
+    {
+      "group": "transpile",
+      "arm": "26",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 5.228837741000461
+    },
+    {
+      "group": "transpile",
+      "arm": "25",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 4.853400882999267
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.719171849999839
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.925611592996574
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.934043123001175
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.96134676499787
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.890591287999996
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.93754901599823
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.768522997001128
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.87688872200306
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 10.021886387999984
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.852194266000879
+    },
+    {
+      "group": "modifiers",
+      "arm": "28",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.608278391999193
+    },
+    {
+      "group": "modifiers",
+      "arm": "27",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 9.728874106000148
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2133898379979655
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3963086450021365
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1569401280030434
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37103409900009865
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1710269850009354
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37395699199987575
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1821757100005925
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3599243659991771
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.160490125999786
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3659536970008048
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2149523029984266
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3839395329996478
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2267077850010537
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3728256059985142
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1844321520002268
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3762012919978588
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2573030960011238
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3557331810006872
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1862668560024758
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.38035624000258395
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2370295450018602
+    },
+    {
+      "group": "source-overhead",
+      "arm": "final",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3800238370022271
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1769113769987598
+    },
+    {
+      "group": "source-overhead",
+      "arm": "25",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37354833799690823
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1838043709976773
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.35703270800149767
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.240101829997002
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.25204624099933426
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2916661179988296
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3825520860009419
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2007164230017224
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3794887389994983
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2234253339993302
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3876099869994505
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2647073450025346
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.2666515119999531
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2583846580018871
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37130834399795276
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.196134631998575
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37699531199905323
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2712931640016905
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.25010293400191586
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3126417269995727
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3906461920014408
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2714976649986056
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.23853697999948054
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1130608269995719
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.36662952400001814
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1727496240018809
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.2630609230000118
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2596827689994825
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37760646199967596
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1546494649992383
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.358856240996829
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2707727669985616
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "PreparedDeclarations",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.2612943780004571
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2283269959989411
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.5111642810006742
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2787032309970527
+    },
+    {
+      "group": "consumer-reuse",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.37573391199839534
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2232644320029067
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.4056793630006723
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.45066604800013
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.3707509220002976
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3211781279969728
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.052033980999113
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3139011079983902
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3861217759986175
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2382897970019258
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3705523950011411
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3470810639992123
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.27394577999803
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4022723649977706
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.3003577219969884
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2118109930015635
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.44431152399920393
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2408840410025732
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.41621359399869107
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3117771389988775
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.4308280830009608
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4014796349983953
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.2997190189998946
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2042796700006875
+    },
+    {
+      "group": "producer-BodyOnly",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.4164001069984806
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2655598260025727
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.403418406000128
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.376044976997946
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.314369430001534
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3163065549997555
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.3938951329982956
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1405566269968404
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3912184430009802
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.292001028003142
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.4462847880022309
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4038573930010898
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.32614085500245
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4782518749998417
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.1803179220005404
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.1472172389985644
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.3881005399998685
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2591613980002876
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.40409983599965926
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3868176150026557
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.3783547850034665
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4288748350008973
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 3.308015784001327
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2104748419988027
+    },
+    {
+      "group": "producer-PublicSignature",
+      "arm": "SourceDependencies",
+      "workload": "heap",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 0.409078104999935
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2454942789991037
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2524429170007352
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3265856799989706
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2719438130006893
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.264875935998134
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3568066820007516
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3327364750002744
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.328975904998515
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.247950426000898
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4188026470001205
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2343937570003618
+    },
+    {
+      "group": "producer-ProducerConfig",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.261819611001556
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2877461730022333
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 1,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3549626079984591
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4332508080005937
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 2,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3002755959969363
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2296949529991252
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 3,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3131160739976622
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2144391910005652
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 4,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2207198559990502
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.2677005320001626
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 5,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.3248277610000514
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "AutomaticDeclarations",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.4046254019995104
+    },
+    {
+      "group": "producer-TransitiveSignature",
+      "arm": "SourceDependencies",
+      "workload": "work",
+      "round": 6,
+      "returncode": 0,
+      "valid": true,
+      "seconds": 1.250188760997844
+    }
+  ],
+  "complete": true
+}

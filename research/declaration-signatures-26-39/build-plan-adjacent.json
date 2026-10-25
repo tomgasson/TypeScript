@@ -1,0 +1,47 @@
+{
+  "mode": "adjacent",
+  "build": true,
+  "repo": "/workspace/scratch/610fb4329ae2/ts-small",
+  "resolved_commits": {
+    "25": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+    "26": "cda2c80535c31e0824392816a23f952ad334e545",
+    "27": "73dfc32cb10de002dba43d76655259ca64315ff4",
+    "28": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723"
+  },
+  "commands": [
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/610fb4329ae2/measurements-26-plus/build_variants.py",
+      "--repo",
+      "/workspace/scratch/610fb4329ae2/ts-small",
+      "--base-ref",
+      "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "--package",
+      "transpile",
+      "--test-ref",
+      "cda2c80535c31e0824392816a23f952ad334e545",
+      "--output-dir",
+      "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-transpile",
+      "25=19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "26=cda2c80535c31e0824392816a23f952ad334e545",
+      "--build"
+    ],
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/610fb4329ae2/measurements-26-plus/build_variants.py",
+      "--repo",
+      "/workspace/scratch/610fb4329ae2/ts-small",
+      "--base-ref",
+      "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "--package",
+      "compiler",
+      "--test-ref",
+      "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "--output-dir",
+      "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler",
+      "27=73dfc32cb10de002dba43d76655259ca64315ff4",
+      "28=5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "--build"
+    ]
+  ]
+}

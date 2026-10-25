@@ -1,0 +1,24 @@
+--- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics (0.01s)
+    --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=false/initiallyESM=false (0.00s)
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=false/initiallyESM=false/memory (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 0 (int) != 1 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[] fresh=[Module '"/producer/dist/index"' has no default export.]
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=false/initiallyESM=false/build_info (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 0 (int) != 1 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[] fresh=[Module '"/producer/dist/index"' has no default export.]
+    --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=false/initiallyESM=true (0.00s)
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=false/initiallyESM=true/memory (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 1 (int) != 0 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[Module '"/producer/dist/index"' has no default export.] fresh=[]
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=false/initiallyESM=true/build_info (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 1 (int) != 0 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[Module '"/producer/dist/index"' has no default export.] fresh=[]
+    --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=true/initiallyESM=false (0.00s)
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=true/initiallyESM=false/memory (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 0 (int) != 1 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[] fresh=[Module '"/producer/dist/index"' has no default export.]
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=true/initiallyESM=false/build_info (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 0 (int) != 1 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[] fresh=[Module '"/producer/dist/index"' has no default export.]
+    --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=true/initiallyESM=true (0.00s)
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=true/initiallyESM=true/memory (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 1 (int) != 0 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[Module '"/producer/dist/index"' has no default export.] fresh=[]
+        --- FAIL: TestProjectReferenceModuleChangeInvalidatesDiagnostics/disk=true/initiallyESM=true/build_info (0.00s)
+            projectreference_module_config_test.go:73: assertion failed: 1 (int) != 0 (int): producer module change must invalidate synthetic-default diagnostics: incremental=[Module '"/producer/dist/index"' has no default export.] fresh=[]
+FAIL
+FAIL	github.com/microsoft/TypeScript/tsc/internal/execute/incremental	0.018s
+FAIL

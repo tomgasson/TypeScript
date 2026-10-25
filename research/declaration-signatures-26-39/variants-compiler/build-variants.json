@@ -1,0 +1,316 @@
+{
+  "common_test_sha256": {
+    "tsc/internal/compiler/checkerpool_test.go": "a0184aaff7e511c476cee144d1a7512ebb413676a62a3f9a5dcef0c1d07b962d",
+    "tsc/internal/compiler/contentmapper_test.go": "630f10ec32eb34f500aad399f6b7a54122a11921c1a23ee72e51acb982a8f334",
+    "tsc/internal/compiler/declaration_bench_test.go": "e9ca7d6fa7ff7751193090210e6f9d5e90acd87eee46be6ae85be8d69387272f",
+    "tsc/internal/compiler/declaration_boundary_bench_test.go": "5d5e05aa15df562aaae1c8c94426092c525802ce6f7987f3eeb185f4e901a39d",
+    "tsc/internal/compiler/declaration_check_order_test.go": "98090d043eb9b074210edad8316bee6ccee3ef434c4f65a3def2b4339ce543be",
+    "tsc/internal/compiler/declaration_class_bench_test.go": "1580c5ac3a8936a02c57a20f00a447f5966f6d3babd51f80ade0cebb2ce73df6",
+    "tsc/internal/compiler/declaration_diagnostics_test.go": "c95409dde252ad10dc9ab626f1a5338de593391624dcb53d42fe8110f2731d78",
+    "tsc/internal/compiler/declaration_eligibility_bench_test.go": "073dd2bc194d9251362aa83b0f82b22703b52bbc7248a8fb52ad775f829ee575",
+    "tsc/internal/compiler/declaration_producer_test.go": "12e5e4f81155035918536ac90caf2d82e7a2bb4896f7dd8a3e47580424e644e1",
+    "tsc/internal/compiler/emit_metadata_test.go": "35406ca4a9fd27def6527443db8c9d60698ae3a24a6015ac4c4ee38b672e4eaa",
+    "tsc/internal/compiler/emit_ownership_test.go": "36d4f5a0979cf74b8a8c9d3e550ac373bc19e57bbe92c536941dcbd9785124a5",
+    "tsc/internal/compiler/emit_preflight_test.go": "7b03932d8e5f82a205a2567d763c96ed74d6ae7feff595e23644f93310381f25",
+    "tsc/internal/compiler/emit_retention_bench_test.go": "9c9417502f5524863ba070fe811e078b37cad70570c82e53a2e30bcf6aea85eb",
+    "tsc/internal/compiler/emit_test.go": "363f1c9903a2708a52c3d8071d7d67d11e3008a82ee77d0c301deceafe7de6e4",
+    "tsc/internal/compiler/host_test.go": "6633e40fa0386c804cfbcd1d57d74828c85fc5d6f3966abeb33bdc027badbfca",
+    "tsc/internal/compiler/program_test.go": "e6842b5cf93185d93f81c5d6b9b1c8b3b2280cc479a7705ac008d61ef9dc43ab",
+    "tsc/internal/compiler/projectreferencefilemapper_test.go": "0928d04f4b7cb90bfd74070d8d69c092125bff30e9f86a17076112dc135da54c",
+    "tsc/internal/compiler/test_helpers_test.go": "6365e0133fc971689c283b8ad37fb6b6d09c9f4485f04597f13f174f5e00b9fb"
+  },
+  "common_test_sources": {
+    "tsc/internal/compiler/checkerpool_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "a0184aaff7e511c476cee144d1a7512ebb413676a62a3f9a5dcef0c1d07b962d",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "a0184aaff7e511c476cee144d1a7512ebb413676a62a3f9a5dcef0c1d07b962d",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/contentmapper_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "630f10ec32eb34f500aad399f6b7a54122a11921c1a23ee72e51acb982a8f334",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "630f10ec32eb34f500aad399f6b7a54122a11921c1a23ee72e51acb982a8f334",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_bench_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "e9ca7d6fa7ff7751193090210e6f9d5e90acd87eee46be6ae85be8d69387272f",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "e9ca7d6fa7ff7751193090210e6f9d5e90acd87eee46be6ae85be8d69387272f",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_boundary_bench_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "5d5e05aa15df562aaae1c8c94426092c525802ce6f7987f3eeb185f4e901a39d",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "5d5e05aa15df562aaae1c8c94426092c525802ce6f7987f3eeb185f4e901a39d",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_check_order_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "98090d043eb9b074210edad8316bee6ccee3ef434c4f65a3def2b4339ce543be",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "98090d043eb9b074210edad8316bee6ccee3ef434c4f65a3def2b4339ce543be",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_class_bench_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "1580c5ac3a8936a02c57a20f00a447f5966f6d3babd51f80ade0cebb2ce73df6",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "1580c5ac3a8936a02c57a20f00a447f5966f6d3babd51f80ade0cebb2ce73df6",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_diagnostics_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "c95409dde252ad10dc9ab626f1a5338de593391624dcb53d42fe8110f2731d78",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "c95409dde252ad10dc9ab626f1a5338de593391624dcb53d42fe8110f2731d78",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_eligibility_bench_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "073dd2bc194d9251362aa83b0f82b22703b52bbc7248a8fb52ad775f829ee575",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "073dd2bc194d9251362aa83b0f82b22703b52bbc7248a8fb52ad775f829ee575",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/declaration_producer_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "12e5e4f81155035918536ac90caf2d82e7a2bb4896f7dd8a3e47580424e644e1",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "12e5e4f81155035918536ac90caf2d82e7a2bb4896f7dd8a3e47580424e644e1",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/emit_metadata_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "35406ca4a9fd27def6527443db8c9d60698ae3a24a6015ac4c4ee38b672e4eaa",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "35406ca4a9fd27def6527443db8c9d60698ae3a24a6015ac4c4ee38b672e4eaa",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/emit_ownership_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "36d4f5a0979cf74b8a8c9d3e550ac373bc19e57bbe92c536941dcbd9785124a5",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "36d4f5a0979cf74b8a8c9d3e550ac373bc19e57bbe92c536941dcbd9785124a5",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/emit_preflight_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "7b03932d8e5f82a205a2567d763c96ed74d6ae7feff595e23644f93310381f25",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "7b03932d8e5f82a205a2567d763c96ed74d6ae7feff595e23644f93310381f25",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/emit_retention_bench_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "9c9417502f5524863ba070fe811e078b37cad70570c82e53a2e30bcf6aea85eb",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "9c9417502f5524863ba070fe811e078b37cad70570c82e53a2e30bcf6aea85eb",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/emit_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "363f1c9903a2708a52c3d8071d7d67d11e3008a82ee77d0c301deceafe7de6e4",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "363f1c9903a2708a52c3d8071d7d67d11e3008a82ee77d0c301deceafe7de6e4",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/host_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "6633e40fa0386c804cfbcd1d57d74828c85fc5d6f3966abeb33bdc027badbfca",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "6633e40fa0386c804cfbcd1d57d74828c85fc5d6f3966abeb33bdc027badbfca",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/program_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "e6842b5cf93185d93f81c5d6b9b1c8b3b2280cc479a7705ac008d61ef9dc43ab",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "e6842b5cf93185d93f81c5d6b9b1c8b3b2280cc479a7705ac008d61ef9dc43ab",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/projectreferencefilemapper_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "0928d04f4b7cb90bfd74070d8d69c092125bff30e9f86a17076112dc135da54c",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "0928d04f4b7cb90bfd74070d8d69c092125bff30e9f86a17076112dc135da54c",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    },
+    "tsc/internal/compiler/test_helpers_test.go": {
+      "omitted_functions": [],
+      "original_sha256": "6365e0133fc971689c283b8ad37fb6b6d09c9f4485f04597f13f174f5e00b9fb",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "sha256": "6365e0133fc971689c283b8ad37fb6b6d09c9f4485f04597f13f174f5e00b9fb",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    }
+  },
+  "excluded_package_tests": [
+    "tsc/internal/compiler/projectreferencedeclarationgraph_test.go",
+    "tsc/internal/compiler/projectreferencedeclarationlinks_test.go",
+    "tsc/internal/compiler/projectreferencedeclarations_ownership_test.go",
+    "tsc/internal/compiler/projectreferencedeclarations_test.go"
+  ],
+  "go": "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+  "go_env": {
+    "CGO_ENABLED": "1",
+    "GOAMD64": "v1",
+    "GOARCH": "amd64",
+    "GOCACHE": "/root/.cache/go-build",
+    "GOFLAGS": "",
+    "GOOS": "linux",
+    "GOPATH": "/root/go",
+    "GOTOOLCHAIN": "local",
+    "GOWORK": "off"
+  },
+  "go_version": "go version go1.27.3 linux/amd64",
+  "harness_ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+  "harness_revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+  "harness_tree": "c635457e8b279d02b4589a8302692f53510d70f6",
+  "package": "./internal/compiler",
+  "repo": "/workspace/scratch/610fb4329ae2/ts-small",
+  "source_files": [
+    "tsc/internal/api/session.go",
+    "tsc/internal/checker/emitresolver.go",
+    "tsc/internal/compiler/fileloader.go",
+    "tsc/internal/compiler/program.go",
+    "tsc/internal/compiler/projectreferencedeclarations.go",
+    "tsc/internal/compiler/projectreferencedtsfakinghost.go",
+    "tsc/internal/compiler/projectreferencefilemapper.go",
+    "tsc/internal/compiler/projectreferenceparser.go",
+    "tsc/internal/ls/lsconv/converters.go",
+    "tsc/internal/printer/emitresolver.go",
+    "tsc/internal/project/project.go",
+    "tsc/internal/project/projectcollectionbuilder.go",
+    "tsc/internal/project/session.go",
+    "tsc/internal/project/snapshot.go",
+    "tsc/internal/transformers/declarations/transform.go",
+    "tsc/internal/transformers/declarations/util.go",
+    "tsc/internal/transpile/transpile.go"
+  ],
+  "trimpath": true,
+  "variants": {
+    "27": {
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.test",
+      "binary_sha256": "7c4ff1368efa92d6d2287aea970d7630aef17a42c25a05f3ec677e7ad1f32a9c",
+      "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.build.log",
+      "build_seconds": 0.138,
+      "command": [
+        "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+        "test",
+        "-c",
+        "-tags=embed",
+        "-p=2",
+        "-buildvcs=false",
+        "-trimpath",
+        "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.overlay.json",
+        "-o",
+        "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.test",
+        "./internal/compiler"
+      ],
+      "excluded_package_tests": [
+        "tsc/internal/compiler/projectreferencedeclarationgraph_test.go",
+        "tsc/internal/compiler/projectreferencedeclarationlinks_test.go",
+        "tsc/internal/compiler/projectreferencedeclarations_ownership_test.go",
+        "tsc/internal/compiler/projectreferencedeclarations_test.go"
+      ],
+      "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant27.overlay.json",
+      "overlay_sha256": "bdbbdb3833886ebfefb9c306b5bbe653d795d300daaa36f661dc174ff3c3798e",
+      "ref": "73dfc32cb10de002dba43d76655259ca64315ff4",
+      "returncode": 0,
+      "revision": "73dfc32cb10de002dba43d76655259ca64315ff4",
+      "source_sha256": {
+        "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+        "tsc/internal/checker/emitresolver.go": "b8304d10672a6facd4274b4deed21dfdcd27f5fc02691e956588bfb3324e20ac",
+        "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+        "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+        "tsc/internal/compiler/projectreferencedeclarations.go": null,
+        "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+        "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+        "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+        "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+        "tsc/internal/printer/emitresolver.go": "a1d3b6e88062a4162cd9f86b498c7d05912d6e01703d922980ca5a189135d93f",
+        "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+        "tsc/internal/project/projectcollectionbuilder.go": "228a36060b548fc4a96ce6e5bf00d3454e8e33da96e95b23be440b58db3a925b",
+        "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+        "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+        "tsc/internal/transformers/declarations/transform.go": "1c9517f4a6584ff83087ea51f2549b29ea710bb9db2ccf9740ccce3767aa0005",
+        "tsc/internal/transformers/declarations/util.go": "8107f680ab351eeef817e7df2dc35558b0914e377e4a2f8a7dbd21aa761ffb46",
+        "tsc/internal/transpile/transpile.go": "dc287216bf5231f0ef74b60a46ef7db5035aac5a92cf8f003a118c07eae735bb"
+      },
+      "status": "built",
+      "tree": "451d438ae0b83548c9881230c135d2495ed88fd3"
+    },
+    "28": {
+      "binary": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.test",
+      "binary_sha256": "edc87938af2ccbc6d82bd45c098bb4b2de912fa5acc20263852ce787226078a8",
+      "build_log": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.build.log",
+      "build_seconds": 0.128,
+      "command": [
+        "/workspace/scratch/610fb4329ae2/toolchain/go/bin/go",
+        "test",
+        "-c",
+        "-tags=embed",
+        "-p=2",
+        "-buildvcs=false",
+        "-trimpath",
+        "-overlay=/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.overlay.json",
+        "-o",
+        "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.test",
+        "./internal/compiler"
+      ],
+      "excluded_package_tests": [
+        "tsc/internal/compiler/projectreferencedeclarationgraph_test.go",
+        "tsc/internal/compiler/projectreferencedeclarationlinks_test.go",
+        "tsc/internal/compiler/projectreferencedeclarations_ownership_test.go",
+        "tsc/internal/compiler/projectreferencedeclarations_test.go"
+      ],
+      "overlay": "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-compiler/variant28.overlay.json",
+      "overlay_sha256": "17a38d6e2df605ed511858a5d482e2f9921555a463a95a8917fb35f4ae9e403d",
+      "ref": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "returncode": 0,
+      "revision": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+      "source_sha256": {
+        "tsc/internal/api/session.go": "4a7c646ae81251edf28c0a5107b7e827b1eaffe61f61ff27a662ab30350c693a",
+        "tsc/internal/checker/emitresolver.go": "35e2ebd4629b0639ed7cf0e6980fd1f804ea198ba7f885e69f5e14ee1efc2f00",
+        "tsc/internal/compiler/fileloader.go": "276efe96759398ee18307fac0f5d613f18f4a02ff47f38c6e2f7676edbe567f6",
+        "tsc/internal/compiler/program.go": "afe314623d719234eedf606e71947f8603d0e14d819af8be4c47e71d477cfe81",
+        "tsc/internal/compiler/projectreferencedeclarations.go": null,
+        "tsc/internal/compiler/projectreferencedtsfakinghost.go": "cd285644c8eed56acd79f680c01cdc962e56fedc6e836d722c2f1fedd11ac087",
+        "tsc/internal/compiler/projectreferencefilemapper.go": "66df5a68cd04f96102528daeb5516c5d3cc3115156f7a4cb2fe7fa81a518a312",
+        "tsc/internal/compiler/projectreferenceparser.go": "31d0280dfb90c3a72f6623e756b6ee797e8dc1a937962b914bde9b160356c0fb",
+        "tsc/internal/ls/lsconv/converters.go": "1a55afacec541e6c1c570e42b75742ca7365a40e6b08e4b4164104d03fcd52ff",
+        "tsc/internal/printer/emitresolver.go": "4d5f2587d73104c5e3a08be703e7055a7fbb1b936264a56a2f31bb0d08672c48",
+        "tsc/internal/project/project.go": "73f1d908a212ad18712a14ac0af8665fbd62dae73c9936e93a4af9246fcec127",
+        "tsc/internal/project/projectcollectionbuilder.go": "228a36060b548fc4a96ce6e5bf00d3454e8e33da96e95b23be440b58db3a925b",
+        "tsc/internal/project/session.go": "3c083205eea654b68d92552849b5644e71a41de68ed3fde67bae2714b026fe7b",
+        "tsc/internal/project/snapshot.go": "723f2f5e15fc6d82792909b57effc6f33b7e291015d444a02d6741ef6e1557c0",
+        "tsc/internal/transformers/declarations/transform.go": "12556a2ebab9751d708b6f36732d4737c63ed0fd5f0481a17ba8c924e55b9267",
+        "tsc/internal/transformers/declarations/util.go": "40cc7a13f5eac9148200df44d09de0242d35d99ddc94d483955a3dd01c6be38a",
+        "tsc/internal/transpile/transpile.go": "dc287216bf5231f0ef74b60a46ef7db5035aac5a92cf8f003a118c07eae735bb"
+      },
+      "status": "built",
+      "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+    }
+  }
+}

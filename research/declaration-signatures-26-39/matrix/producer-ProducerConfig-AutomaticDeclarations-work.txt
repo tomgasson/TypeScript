@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations         	      20	  53086236 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	21995853 B/op	  223462 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations         	      24	  48398983 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	21996045 B/op	  223461 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations         	      26	  45340553 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	21997593 B/op	  223462 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations         	      25	  46620096 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	21996573 B/op	  223462 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations         	      26	  47517802 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	21995860 B/op	  223461 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/AutomaticDeclarations         	      22	  48601585 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	21992380 B/op	  223460 allocs/op
+PASS

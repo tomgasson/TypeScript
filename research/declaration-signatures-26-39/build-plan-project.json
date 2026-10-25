@@ -1,0 +1,37 @@
+{
+  "mode": "project",
+  "build": true,
+  "repo": "/workspace/scratch/610fb4329ae2/ts-small",
+  "resolved_commits": {
+    "25": "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+    "26": "cda2c80535c31e0824392816a23f952ad334e545",
+    "27": "73dfc32cb10de002dba43d76655259ca64315ff4",
+    "28": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+    "final": "52121ea757d9259238d5362ddf3188f82cb80297",
+    "project_tests": "6496147f56a566562a1b1cc2f735d60276ae9d48"
+  },
+  "commands": [
+    [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "/workspace/scratch/610fb4329ae2/measurements-26-plus/build_variants.py",
+      "--repo",
+      "/workspace/scratch/610fb4329ae2/ts-small",
+      "--base-ref",
+      "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "--package",
+      "project",
+      "--test-ref",
+      "19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "--no-trimpath",
+      "--test-override",
+      "tsc/internal/project/declaration_boundary_bench_test.go=6496147f56a566562a1b1cc2f735d60276ae9d48",
+      "--omit-test-function",
+      "TestEditorDeclarationBoundaryPhysicalOutputLifecycle",
+      "--output-dir",
+      "/workspace/scratch/610fb4329ae2/measurements-26-plus/variants-project",
+      "25=19e34233bfe1aadb262d4a4b61b5dd51207a7c8f",
+      "final=52121ea757d9259238d5362ddf3188f82cb80297",
+      "--build"
+    ]
+  ]
+}

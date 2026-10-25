@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations         	      28	  46043273 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	21673757 B/op	  220612 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations         	      26	  44539101 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	21663790 B/op	  220610 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations         	      24	  49780105 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	21675578 B/op	  220615 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations         	      26	  47729973 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	21670437 B/op	  220609 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations         	      26	  43653997 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	21668993 B/op	  220615 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/AutomaticDeclarations         	      26	  47667340 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	21667966 B/op	  220611 allocs/op
+PASS

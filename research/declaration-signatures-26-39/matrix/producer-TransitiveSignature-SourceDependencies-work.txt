@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies         	     604	   2032096 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	  610658 B/op	    2753 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies         	     616	   2021598 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	  611005 B/op	    2753 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies         	     572	   2049881 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	  609800 B/op	    2753 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies         	     566	   2052196 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	  609643 B/op	    2753 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies         	     612	   1974174 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	  610894 B/op	    2753 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/SourceDependencies         	     616	   1940638 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	  610996 B/op	    2753 allocs/op
+PASS

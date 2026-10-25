@@ -1,0 +1,54 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/transpile
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTranspile/Module/Annotated_1         	    7346	    160555 ns/op	   0.64 MB/s	  142935 B/op	    1191 allocs/op
+BenchmarkTranspile/Module/Annotated_200       	     259	   4649482 ns/op	   4.45 MB/s	 2074729 B/op	   13520 allocs/op
+BenchmarkTranspile/Declaration/Annotated_1    	    9156	    148168 ns/op	   0.69 MB/s	  177542 B/op	     808 allocs/op
+BenchmarkTranspile/Declaration/Annotated_200  	     385	   3201735 ns/op	   6.46 MB/s	 1766947 B/op	   14962 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/transpile
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTranspile/Module/Annotated_1         	    8684	    154570 ns/op	   0.66 MB/s	  154269 B/op	    1191 allocs/op
+BenchmarkTranspile/Module/Annotated_200       	     268	   4688012 ns/op	   4.41 MB/s	 2091121 B/op	   13520 allocs/op
+BenchmarkTranspile/Declaration/Annotated_1    	    8521	    155574 ns/op	   0.66 MB/s	  185720 B/op	     808 allocs/op
+BenchmarkTranspile/Declaration/Annotated_200  	     372	   3225796 ns/op	   6.41 MB/s	 1775137 B/op	   14962 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/transpile
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTranspile/Module/Annotated_1         	    8780	    162977 ns/op	   0.63 MB/s	  155063 B/op	    1191 allocs/op
+BenchmarkTranspile/Module/Annotated_200       	     268	   4386103 ns/op	   4.72 MB/s	 2091126 B/op	   13520 allocs/op
+BenchmarkTranspile/Declaration/Annotated_1    	    8751	    150239 ns/op	   0.68 MB/s	  187520 B/op	     808 allocs/op
+BenchmarkTranspile/Declaration/Annotated_200  	     382	   3147028 ns/op	   6.57 MB/s	 1775139 B/op	   14962 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/transpile
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTranspile/Module/Annotated_1         	    9070	    152046 ns/op	   0.67 MB/s	  157358 B/op	    1191 allocs/op
+BenchmarkTranspile/Module/Annotated_200       	     268	   4470121 ns/op	   4.63 MB/s	 2098699 B/op	   13520 allocs/op
+BenchmarkTranspile/Declaration/Annotated_1    	    8406	    153487 ns/op	   0.66 MB/s	  188469 B/op	     808 allocs/op
+BenchmarkTranspile/Declaration/Annotated_200  	     382	   3262484 ns/op	   6.34 MB/s	 1775133 B/op	   14962 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/transpile
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTranspile/Module/Annotated_1         	    8424	    152429 ns/op	   0.67 MB/s	  152030 B/op	    1191 allocs/op
+BenchmarkTranspile/Module/Annotated_200       	     262	   4568701 ns/op	   4.53 MB/s	 2091101 B/op	   13520 allocs/op
+BenchmarkTranspile/Declaration/Annotated_1    	    8755	    149760 ns/op	   0.68 MB/s	  184488 B/op	     808 allocs/op
+BenchmarkTranspile/Declaration/Annotated_200  	     386	   3120300 ns/op	   6.63 MB/s	 1775133 B/op	   14962 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/transpile
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkTranspile/Module/Annotated_1         	    8569	    153743 ns/op	   0.66 MB/s	  153296 B/op	    1191 allocs/op
+BenchmarkTranspile/Module/Annotated_200       	     256	   4632588 ns/op	   4.47 MB/s	 2091099 B/op	   13520 allocs/op
+BenchmarkTranspile/Declaration/Annotated_1    	    8814	    165211 ns/op	   0.62 MB/s	  185911 B/op	     808 allocs/op
+BenchmarkTranspile/Declaration/Annotated_200  	     386	   3244657 ns/op	   6.38 MB/s	 1775133 B/op	   14962 allocs/op
+PASS

@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies         	     493	   2400018 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  573507 B/op	    5383 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies         	     565	   2149532 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  573844 B/op	    5383 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies         	     572	   2110731 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  573907 B/op	    5384 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies         	     574	   2217473 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  573852 B/op	    5383 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies         	     553	   2146947 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  573805 B/op	    5383 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/ProducerConfig/SourceDependencies         	     552	   2184696 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  573843 B/op	    5384 allocs/op
+PASS

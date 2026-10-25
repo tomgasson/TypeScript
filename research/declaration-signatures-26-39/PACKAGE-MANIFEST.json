@@ -1,0 +1,255 @@
+{
+  "purpose": "Measurement evidence staging only; originals preserved; no benchmarks run during packaging.",
+  "files": {
+    "PORTABLE-REPRODUCE.md": {
+      "bytes": 6378,
+      "sha256": "a5ea47ed2d4bf74b4272490f482d6ad7ea8851b0dd01fc45fdd4992e77c8537e",
+      "byte_identical_to_original_workspace_file": false
+    },
+    "PROVENANCE.json": {
+      "bytes": 6663,
+      "sha256": "66d73a67b645c7c856e0f11d5dae96ebb70f9c5a0ba0c900df9203108e7101e9",
+      "byte_identical_to_original_workspace_file": false
+    },
+    "PROVENANCE.md": {
+      "bytes": 3698,
+      "sha256": "45f120d2cbf7f554fd580432bf95fc84f4e28b2a0fd4c6b65b4922a71c27a8ce",
+      "byte_identical_to_original_workspace_file": false
+    },
+    "README.md": {
+      "bytes": 2578,
+      "sha256": "d50d9baef01a61afbaf9795bea32838400b633b5a927629101fc1b2ca50ba373",
+      "byte_identical_to_original_workspace_file": false
+    },
+    "REPRODUCE.md": {
+      "bytes": 5891,
+      "sha256": "2e95025228d65bff15524f85eea24ab94d50180bd90922c1ed359aeeec3aa6ab",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "analyze_matrix.py": {
+      "bytes": 11068,
+      "sha256": "71a95f0a2bb475ee62142a2fd0f572e81857ea144c90dc5bb0de58b047f75736",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "build-plan-adjacent.json": {
+      "bytes": 1646,
+      "sha256": "df6d974ee1e72028ea797edbd41502b5fbb0b87aa9924b2b6da41a2047c83427",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "build-plan-project.json": {
+      "bytes": 1370,
+      "sha256": "e407d582aea26de386ab74e7851ba2faf712f89ec26960b8f9dfd4f7ddb6b93d",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "build_all.py": {
+      "bytes": 3406,
+      "sha256": "df0b3fed9c77696562750dad5e0f6967012390382f20ea8afbc7545b289a4fb5",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "build_variants.py": {
+      "bytes": 13783,
+      "sha256": "a0082c8de310ddaec3f5f641b1aea0b949a07c156ec145ae4ff64830b1b3b2d3",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/consumer-reuse-AutomaticDeclarations-heap.txt": {
+      "bytes": 2616,
+      "sha256": "59a44f74630f88fb484afd99ebe7c0195baf7a5737ea802e8105301d18148a80",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/consumer-reuse-AutomaticDeclarations-work.txt": {
+      "bytes": 2040,
+      "sha256": "423c17f1032c2e21eec4b7875b2cf6b4ac2157534d99703ebf4735d4a2cd90a7",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/consumer-reuse-PreparedDeclarations-heap.txt": {
+      "bytes": 2604,
+      "sha256": "a0c013af0f03eb070c8c39d4d87525a3d6b214f0bbd93e25c59d3d8e0f025feb",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/consumer-reuse-PreparedDeclarations-work.txt": {
+      "bytes": 2034,
+      "sha256": "fd75fa0477c89624e38a03b6e422f8e7fb8a02fcefdc3b7f477157bf43afd497",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/consumer-reuse-SourceDependencies-heap.txt": {
+      "bytes": 2592,
+      "sha256": "60b75eae501d06eba6ac91075e2dfb9c2c48f9c0f9e4e1fde3bdebef69a32960",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/consumer-reuse-SourceDependencies-work.txt": {
+      "bytes": 2022,
+      "sha256": "96b8ab20d16fa00f7b74047c100a7883dd2026c8a54d0c7378cecf4b0a1c4586",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/findings.md": {
+      "bytes": 15504,
+      "sha256": "fb15c79da1ae0e04fb91b5a82a813b98871fc0b314369f456904f078dd62d9c0",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/modifiers-27-work.txt": {
+      "bytes": 7290,
+      "sha256": "521292eee9be8cc5e7c2ff868c5c09661489ecaa595106de9abd2407b43fbae7",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/modifiers-28-work.txt": {
+      "bytes": 7290,
+      "sha256": "f4f043a96886dd0e3d763098ede091842dc539d7d58dc4d4b310df2c40a31d32",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-BodyOnly-AutomaticDeclarations-heap.txt": {
+      "bytes": 2676,
+      "sha256": "1f9d18499d2e18385d2fb5a1799152206b4601822b2401b6530ad32fa06ef374",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-BodyOnly-AutomaticDeclarations-work.txt": {
+      "bytes": 2160,
+      "sha256": "a90fa105d9ecc501860d2732949cfb61a4159b8d65ae5dc69ca6e48e5a630fe7",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-BodyOnly-SourceDependencies-heap.txt": {
+      "bytes": 2646,
+      "sha256": "0e864615aa6dbf161b91d7b054a4e583fcc7d244d0517f3f0828a6acdfc5ea20",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-BodyOnly-SourceDependencies-work.txt": {
+      "bytes": 2142,
+      "sha256": "0663afaeff3a9a754c14c30006c53d7ae4251dff987739b5ced0ef5c2a1bef10",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-ProducerConfig-AutomaticDeclarations-work.txt": {
+      "bytes": 2172,
+      "sha256": "f6945786cbf8e14fd905de0b88f49d7b827f1724abdb2cf3337556f37d90cd7b",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-ProducerConfig-SourceDependencies-work.txt": {
+      "bytes": 2154,
+      "sha256": "9c2696381344d96273306eb548b9d5fdc2064a3a0f7daa828a996bff89f36c22",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-PublicSignature-AutomaticDeclarations-heap.txt": {
+      "bytes": 2718,
+      "sha256": "cb7fd03078bdf2bd6b61eb3c9f38b00d959e972b96ba56e37cf5a31a3fc1c615",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-PublicSignature-AutomaticDeclarations-work.txt": {
+      "bytes": 2202,
+      "sha256": "766d343d5ecda229a0935e8debed50e76ae9b51aa31245351e73cc2298c2145e",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-PublicSignature-SourceDependencies-heap.txt": {
+      "bytes": 2688,
+      "sha256": "307ea7375d0ea2072e4d396747e3bb0826ea444d0c9a1c57511dabdca8522f07",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-PublicSignature-SourceDependencies-work.txt": {
+      "bytes": 2184,
+      "sha256": "ba6529d77121f0dd06e19f1400b048bb55ae156442b080ee37cdaab1da27d207",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-TransitiveSignature-AutomaticDeclarations-work.txt": {
+      "bytes": 2226,
+      "sha256": "8684e514f415cb60e3169ee7ff240d3b84d5616622a8eb4ce4bd80f95e79809b",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/producer-TransitiveSignature-SourceDependencies-work.txt": {
+      "bytes": 2208,
+      "sha256": "8c16543f8ac5db28632a31aa36989f1e34233ecefaaadcb7f1445a15b7d0b525",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/run-manifest.json": {
+      "bytes": 116426,
+      "sha256": "39167c3d8758024e15933dd16acbf44a9e3eedffc20d0eb08b4cdfba39e15df4",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/source-overhead-25-heap.txt": {
+      "bytes": 2592,
+      "sha256": "f0f9443a134864de67ec5137c5521f53760d1ef06c6fb7fbe6144cdef231a2ca",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/source-overhead-25-work.txt": {
+      "bytes": 2022,
+      "sha256": "a2c9069118e1bcc1141694cbe0a7d50cc7384ce51891142f30cb4fb7746bec65",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/source-overhead-final-heap.txt": {
+      "bytes": 2592,
+      "sha256": "a9820e01c8e23be1acf7c42f097a7abc6d48ceb2268566fac81badc4cd0c1a39",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/source-overhead-final-work.txt": {
+      "bytes": 2022,
+      "sha256": "27fea2148536cdceb9d32f6e71129c1ada1033c776aac20bd14cd9dad7ecff4b",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/summary.json": {
+      "bytes": 239485,
+      "sha256": "735150e38f51b09f2348f7f04f2da2f0488e86cf93a5f3721f97d8a47b1c9265",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/transpile-25-work.txt": {
+      "bytes": 3720,
+      "sha256": "2012e5f4843b903b5810d1c9363163990f1fe1893fb151e22491d408a7dc6c68",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "matrix/transpile-26-work.txt": {
+      "bytes": 3720,
+      "sha256": "8815b717a65a1bf92d57dcc5a987855894a07012db07c9964e0867762d998c5d",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "published-26-35.json": {
+      "bytes": 2443,
+      "sha256": "94ff94d8f4db6a2f0bdd46a7d74a560906ef298eaf4b06af3f9574d514780531",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "run_matrix.py": {
+      "bytes": 9703,
+      "sha256": "d9a992de188dd2744a05be6a0678a4091d3ec64988672842a289bf1c890aeab7",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-compiler/build-variants.json": {
+      "bytes": 19365,
+      "sha256": "ca26f1da5a9d27dbf90e3c8a1f1b2da8b45336879f6ba2b8a1327af1c4cf2692",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-compiler/variant27.build.log": {
+      "bytes": 465,
+      "sha256": "e6babd064eefb36e8038ae320f22231e54a5d94535c48e470a964473f369c96c",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-compiler/variant28.build.log": {
+      "bytes": 465,
+      "sha256": "40a3b118849e8d84f87baee3573919047272b7d3e0b00bc0886e572bcb8da1a8",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-project/build-variants.json": {
+      "bytes": 22023,
+      "sha256": "8e22562413aa07fddf6e3f796368401e381727b4292ebf1d5e511f3097e1979f",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-project/variant25.build.log": {
+      "bytes": 464,
+      "sha256": "aef834d2f58e0f7cf86b2f2217a8f9b80838b5cb91cc8a36f46b5e80fac8e3d5",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-project/variantfinal.build.log": {
+      "bytes": 467,
+      "sha256": "574e4fbc4db556c05155da4a8395962c87f20051fddeb2a6b262205772163f97",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-transpile/build-variants.json": {
+      "bytes": 10461,
+      "sha256": "04f681d8d877baa3295d0fa548a045974cac5b721bc1cb99dec00ce8eb1b731d",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-transpile/variant25.build.log": {
+      "bytes": 466,
+      "sha256": "08aa773a8a36b9ea39982360239574cf923c157b1eab281a8b754d89a19292b7",
+      "byte_identical_to_original_workspace_file": true
+    },
+    "variants-transpile/variant26.build.log": {
+      "bytes": 466,
+      "sha256": "d61988f5a88a057a39d1aa206b7448ffe90bb5bd2dc5eaa46974e39c7cb2e6a7",
+      "byte_identical_to_original_workspace_file": true
+    }
+  }
+}

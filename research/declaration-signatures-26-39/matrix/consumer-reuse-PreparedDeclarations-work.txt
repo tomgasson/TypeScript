@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/PreparedDeclarations         	     712	   1646263 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  525907 B/op	    2945 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/PreparedDeclarations         	     742	   1616034 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  526787 B/op	    2945 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/PreparedDeclarations         	     729	   1647121 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  526415 B/op	    2945 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/PreparedDeclarations         	     674	   1785189 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  524711 B/op	    2945 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/PreparedDeclarations         	     651	   1688044 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  524071 B/op	    2945 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/PreparedDeclarations         	     739	   1628555 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  526699 B/op	    2945 allocs/op
+PASS

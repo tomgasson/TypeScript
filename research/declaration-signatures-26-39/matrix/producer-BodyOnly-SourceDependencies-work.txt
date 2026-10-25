@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies         	     579	   2017251 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	  600151 B/op	    2666 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies         	     616	   2046316 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	  601178 B/op	    2666 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies         	     625	   1896259 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	  601427 B/op	    2666 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies         	     553	   2087556 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	  599414 B/op	    2666 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies         	     615	   1925969 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	  601144 B/op	    2666 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/BodyOnly/SourceDependencies         	     564	   2021685 ns/op	     23334 producer-source-read-B/op	         2.000 producer-source-reads/op	  599738 B/op	    2666 allocs/op
+PASS

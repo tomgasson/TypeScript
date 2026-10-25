@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 273548373 ns/op	        51.00 cache-entries/session	         0 declaration-text-B/session	  49736496 live-B/batch	  12434124 live-B/session	         0 shared-declaration-B	85184416 B/op	  315967 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 247255113 ns/op	        51.00 cache-entries/session	         0 declaration-text-B/session	  49740288 live-B/batch	  12435072 live-B/session	         0 shared-declaration-B	85188368 B/op	  315990 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 253196838 ns/op	        51.00 cache-entries/session	         0 declaration-text-B/session	  49736432 live-B/batch	  12434108 live-B/session	         0 shared-declaration-B	85181952 B/op	  315952 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 259404687 ns/op	        51.00 cache-entries/session	         0 declaration-text-B/session	  49738416 live-B/batch	  12434604 live-B/session	         0 shared-declaration-B	85187296 B/op	  315984 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 243251376 ns/op	        51.00 cache-entries/session	         0 declaration-text-B/session	  49738464 live-B/batch	  12434616 live-B/session	         0 shared-declaration-B	85186224 B/op	  315978 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundaryRetainedHeap/SourceDependencies         	       1	 260532095 ns/op	        51.00 cache-entries/session	         0 declaration-text-B/session	  49738096 live-B/batch	  12434524 live-B/session	         0 shared-declaration-B	85183424 B/op	  315960 allocs/op
+PASS

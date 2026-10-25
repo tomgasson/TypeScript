@@ -1,0 +1,4 @@
+ok  	github.com/microsoft/TypeScript/tsc/internal/compiler	0.315s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project	5.800s
+ok  	github.com/microsoft/TypeScript/tsc/internal/api	0.635s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls/lsconv	0.078s

@@ -1,0 +1,12 @@
+ok  	github.com/microsoft/TypeScript/tsc/internal/compiler	0.335s
+ok  	github.com/microsoft/TypeScript/tsc/internal/project	5.066s
+ok  	github.com/microsoft/TypeScript/tsc/internal/parser	1.751s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/build	0.019s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/incremental	0.024s
+ok  	github.com/microsoft/TypeScript/tsc/internal/execute/tsctests	2.948s
+ok  	github.com/microsoft/TypeScript/tsc/internal/transpile	0.010s
+ok  	github.com/microsoft/TypeScript/tsc/internal/api	0.551s
+ok  	github.com/microsoft/TypeScript/tsc/internal/checker	0.126s
+ok  	github.com/microsoft/TypeScript/tsc/internal/ls/lsconv	0.065s
+ok  	github.com/microsoft/TypeScript/tsc/internal/testrunner	64.110s
+ok  	github.com/microsoft/TypeScript/tsc/internal/fourslash/tests	14.693s

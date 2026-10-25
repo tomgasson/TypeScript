@@ -1,0 +1,86 @@
+[
+  {
+    "branch": "refactor/26-single-file-transpile-checker",
+    "local_sha": "cda2c80535c31e0824392816a23f952ad334e545",
+    "sha": "87f275782fb54d29475aeb3ddd7adc38b9bba587",
+    "tree": "2fffa5ecb65a7bd33c06830e48073745323a4213"
+  },
+  {
+    "branch": "refactor/27-preserve-negative-directory-dependencies",
+    "local_sha": "73dfc32cb10de002dba43d76655259ca64315ff4",
+    "sha": "7fb6e44af580ffb29c621bdf3dac3da090098bf9",
+    "tree": "451d438ae0b83548c9881230c135d2495ed88fd3"
+  },
+  {
+    "branch": "refactor/28-syntax-only-declaration-modifiers",
+    "local_sha": "5aac8cbaccd3cbcb895a243ae7f0ba75e8dc4723",
+    "sha": "6f6a82e68e020667056606a2859ac2b2e5228410",
+    "tree": "c635457e8b279d02b4589a8302692f53510d70f6"
+  },
+  {
+    "branch": "refactor/29-use-default-project-resolver",
+    "local_sha": "5987816acdf6c5b425f5c0eb07a01307102c3f50",
+    "sha": "0b55e51a00c2fcf7c3ac9102e7770b6db544cceb",
+    "tree": "4887a9a995e3f0c60ad060fb4aa835d419f146d5"
+  },
+  {
+    "branch": "refactor/30-refresh-resolution-watchers",
+    "local_sha": "041ea7a27043966afa11d67c64c889c95cc943be",
+    "sha": "a0156f2a3c19e4ab03648e47e0d70aff5b459028",
+    "tree": "16ff57e021aea005d8b05b3386af57b46c9bbe7d"
+  },
+  {
+    "branch": "refactor/31-virtual-source-diagnostic-positions",
+    "local_sha": "08aa0ea4765254f358b3aacce3a4c5a7751b738a",
+    "sha": "5003382392eaac6985b6a391795016cf96ea0849",
+    "tree": "21d7543d3e95e1df2f37f5e1af147e931571b9b2"
+  },
+  {
+    "branch": "refactor/32-generate-missing-project-declarations",
+    "local_sha": "d54767aeb109696febfa029416c7c02164dc743e",
+    "sha": "8f2d999f1ac37bae5b45fcc154e9532227348b7d",
+    "tree": "752498c898b0c6b8bdab9babb3d29c544318c3b5"
+  },
+  {
+    "branch": "refactor/33-automatic-declaration-edit-benchmarks",
+    "local_sha": "6496147f56a566562a1b1cc2f735d60276ae9d48",
+    "sha": "135d0c1b8a6785b8dd2a571b59f5c40541a4adf2",
+    "tree": "769c47f073c0f2c3cb46cd6859db2b7f0581d40b"
+  },
+  {
+    "branch": "refactor/34-preserve-source-resolution-fast-paths",
+    "local_sha": "2d2fd2ab2b46eec9d20583280a4ea3ae81905308",
+    "sha": "ce4066ccf93f1fb01cb19fca3fa69f079fa9c4c7",
+    "tree": "06ea81e2d182daa3c5388a08f8f68b78f55a695a"
+  },
+  {
+    "branch": "refactor/35-confine-declaration-producer-lifetime",
+    "local_sha": "52121ea757d9259238d5362ddf3188f82cb80297",
+    "sha": "72e8095fa3bd757d724afaafe7d234b740dc6e05",
+    "tree": "f420672d0070240847f0938e68319bc9fdc660b2"
+  },
+  {
+    "branch": "refactor/36-declaration-graph-and-recovery-tests",
+    "local_sha": "6a236193fb290be9f60b9bfe900f0348cf2d7c69",
+    "sha": "043e5119b1d505381de5332d28332bcc12bbe984",
+    "tree": "9057358b0ea851944f1c7be36d9b40c50d763e5e"
+  },
+  {
+    "branch": "refactor/37-version-referenced-declaration-context",
+    "local_sha": "1fa8f7acebbfeac9c3fe8f6c638828061996e740",
+    "sha": "df9f0d60ddbd020887758837610a301ea8e31aad",
+    "tree": "41e4f7eef3a783e95473bad4d929237d9e1a3914"
+  },
+  {
+    "branch": "refactor/38-track-generated-declaration-watch-inputs",
+    "local_sha": "95c1f82a9b0752b2e7a8fbea6be2090230a5e02d",
+    "sha": "70a131fcc4ec3bb1e521390782d7349a40b0908a",
+    "tree": "f7c2637e7569a3ef4e80e4b49cf795e184f12bfd"
+  },
+  {
+    "branch": "refactor/39-reuse-generated-declarations-in-watch",
+    "local_sha": "03217092364fc6835095248f8065b7d5f8c8d6f8",
+    "sha": "3c6bf3a78788112454ede10794969e4d0127c0ac",
+    "tree": "75f2e0fe74f8a00e87ea68e8323d8c41a9e1e3c2"
+  }
+]

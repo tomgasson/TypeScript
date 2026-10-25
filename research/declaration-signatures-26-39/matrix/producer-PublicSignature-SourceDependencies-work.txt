@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies         	     579	   2080737 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	  605458 B/op	    2750 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies         	     529	   2047159 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	  603979 B/op	    2750 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies         	     613	   2013050 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	  606396 B/op	    2750 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies         	     548	   1990830 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	  604563 B/op	    2750 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies         	     618	   1946308 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	  606533 B/op	    2750 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/SourceDependencies         	     577	   1995157 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	  605406 B/op	    2750 allocs/op
+PASS

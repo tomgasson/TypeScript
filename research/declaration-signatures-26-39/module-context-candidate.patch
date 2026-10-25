@@ -1,0 +1,140 @@
+diff --git a/tsc/internal/execute/incremental/programtosnapshot.go b/tsc/internal/execute/incremental/programtosnapshot.go
+index e1e1cc9329..20dd7a5107 100644
+--- a/tsc/internal/execute/incremental/programtosnapshot.go
++++ b/tsc/internal/execute/incremental/programtosnapshot.go
+@@ -2,6 +2,7 @@ package incremental
+ 
+ import (
+ 	"context"
++	"strconv"
+ 
+ 	"github.com/microsoft/TypeScript/tsc/internal/ast"
+ 	"github.com/microsoft/TypeScript/tsc/internal/binder"
+@@ -104,13 +105,17 @@ func (t *toProgramSnapshot) computeProgramFileChanges() {
+ 				versionText = file.OriginalText() + "\x00" + file.ContentMapperTransformIdentity()
+ 			}
+ 			version := t.snapshot.computeHash(versionText)
+-			if t.program.Options().GetIsolatedModules() {
+-				if reference := t.program.GetProjectReferenceFromOutputDts(file.PathKey()); reference != nil {
++			if reference := t.program.GetProjectReferenceFromOutputDts(file.PathKey()); reference != nil {
++				// Synthetic default imports depend on the producer's effective module
++				// format even when the declaration text and ordinary metadata match.
++				referenceContext := "\x00projectReferenceModule:" + strconv.Itoa(int(t.program.GetEmitModuleFormatOfFile(file)))
++				if t.program.Options().GetIsolatedModules() {
+ 					// Ambient const-enum access also depends on the producer's
+ 					// effective preserve setting, even when declaration text is unchanged.
+ 					preserve := reference.Resolved.CompilerOptions().ShouldPreserveConstEnums()
+-					version = t.snapshot.computeHash(version + "\x00preserveConstEnums:" + core.IfElse(preserve, "1", "0"))
++					referenceContext += "\x00preserveConstEnums:" + core.IfElse(preserve, "1", "0")
+ 				}
++				version = t.snapshot.computeHash(version + referenceContext)
+ 			}
+ 			impliedNodeFormat := t.program.GetSourceFileMetaData(file.PathKey()).ImpliedNodeFormat
+ 			affectsGlobalScope := fileAffectsGlobalScope(file)
+diff --git a/tsc/internal/execute/incremental/projectreference_config_test.go b/tsc/internal/execute/incremental/projectreference_config_test.go
+index 5668baa7ca..865afc5ef7 100644
+--- a/tsc/internal/execute/incremental/projectreference_config_test.go
++++ b/tsc/internal/execute/incremental/projectreference_config_test.go
+@@ -71,7 +71,13 @@ func TestProjectReferenceConfigChangeInvalidatesDiagnostics(t *testing.T) {
+ 							assert.Equal(t, text, old.program.GetSourceFile("/producer/dist/index.d.ts").Text(), "only producer configuration changed")
+ 							info, ok := current.snapshot.fileInfos.Load("/producer/dist/index.d.ts")
+ 							assert.Assert(t, ok)
+-							assert.Equal(t, info.version == ComputeHash(text, false), flag == "", "context tagging is limited to consumers that enforce the const-enum restriction")
++							oldInfo, ok := old.snapshot.fileInfos.Load("/producer/dist/index.d.ts")
++							assert.Assert(t, ok)
++							assert.Equal(t, info.version == oldInfo.version, flag == "", "preserve-only changes affect consumers that enforce the const-enum restriction")
++							assert.Assert(t, info.version != ComputeHash(text, false), "referenced declarations include their producer module context")
++							consumerInfo, ok := current.snapshot.fileInfos.Load("/consumer/index.ts")
++							assert.Assert(t, ok)
++							assert.Equal(t, consumerInfo.version, ComputeHash(current.program.GetSourceFile("/consumer/index.ts").Text(), false), "ordinary source files keep plain text versions")
+ 							expected := fresh.GetSemanticDiagnostics(t.Context(), nil)
+ 							assert.Equal(t, len(expected) != 0, preserveInitially && flag != "")
+ 							for _, diagnostic := range expected {
+diff --git a/tsc/internal/execute/incremental/projectreference_module_config_test.go b/tsc/internal/execute/incremental/projectreference_module_config_test.go
+new file mode 100644
+index 0000000000..8ceb473e27
+--- /dev/null
++++ b/tsc/internal/execute/incremental/projectreference_module_config_test.go
+@@ -0,0 +1,82 @@
++package incremental
++
++import (
++	"fmt"
++	"testing"
++
++	"github.com/microsoft/TypeScript/tsc/internal/compiler"
++	"github.com/microsoft/TypeScript/tsc/internal/core"
++	"github.com/microsoft/TypeScript/tsc/internal/tsoptions"
++	"github.com/microsoft/TypeScript/tsc/internal/tspath"
++	"github.com/microsoft/TypeScript/tsc/internal/vfs/vfstest"
++	"gotest.tools/v3/assert"
++)
++
++func TestProjectReferenceModuleChangeInvalidatesDiagnostics(t *testing.T) {
++	t.Parallel()
++	for _, disk := range []bool{false, true} {
++		for _, initiallyESM := range []bool{false, true} {
++			t.Run(fmt.Sprintf("disk=%t/initiallyESM=%t", disk, initiallyESM), func(t *testing.T) {
++				newProgram := func(esm bool, old *Program) *Program {
++					module := core.IfElse(esm, "esnext", "commonjs")
++					files := map[string]string{
++						"/globals.d.ts":           deletionTestLib,
++						"/consumer/tsconfig.json": `{"compilerOptions":{"noLib":true,"strict":true,"incremental":true,"noEmit":true,"allowSyntheticDefaultImports":true,"module":"esnext","moduleResolution":"bundler","tsBuildInfoFile":"./state.tsbuildinfo"},"files":["../globals.d.ts","index.ts"],"references":[{"path":"../producer"}]}`,
++						"/consumer/index.ts":      `import value from '../producer/index'; const result: number = value.named;`,
++						"/producer/tsconfig.json": fmt.Sprintf(`{"compilerOptions":{"noLib":true,"composite":true,"isolatedDeclarations":true,"module":%q,"moduleResolution":"bundler","outDir":"./dist"},"files":["../globals.d.ts","index.ts"]}`, module),
++						"/producer/index.ts":      "export const named: number = 1;",
++					}
++					if disk {
++						files["/producer/dist/index.d.ts"] = "export declare const named: number;\n"
++					}
++					fs := vfstest.FromMap(files, tspath.CaseSensitive)
++					host := compiler.NewCompilerHost(fs, "/", nil, nil, nil)
++					config, diagnostics := tsoptions.GetParsedCommandLineOfConfigFile("/consumer/tsconfig.json", nil, nil, tsoptions.NewDefaultParseConfigHost(fs), nil)
++					assert.Equal(t, len(diagnostics), 0)
++					assert.Assert(t, config != nil)
++					program := compiler.NewProgram(compiler.ProgramOptions{Config: config, Host: host, SingleThreaded: core.TSTrue})
++					assert.Equal(t, len(program.GetProgramDiagnostics()), 0)
++					assert.Assert(t, !program.Options().GetIsolatedModules(), "module context matters even without either isolated-modules flag")
++					assert.Assert(t, program.GetSourceFile("/producer/dist/index.d.ts") != nil)
++					assert.Equal(t, fs.FileExists("/producer/dist/index.d.ts"), disk)
++					return NewProgram(program, old, CreateHost(host), nil, false)
++				}
++				old := newProgram(initiallyESM, nil)
++				oldDiagnostics := old.GetSemanticDiagnostics(t.Context(), nil)
++				assert.Equal(t, len(oldDiagnostics), core.IfElse(initiallyESM, 1, 0))
++				for _, diagnostic := range oldDiagnostics {
++					assert.Equal(t, diagnostic.Code(), int32(1192))
++				}
++				old.Emit(t.Context(), compiler.EmitOptions{})
++				persisted := ReadBuildInfoProgram(old.program.CommandLine(), NewBuildInfoReader(old.program.Host()), old.program.Host())
++				assert.Assert(t, persisted != nil)
++				for _, state := range []struct {
++					name    string
++					program *Program
++				}{{"memory", old}, {"build info", persisted}} {
++					t.Run(state.name, func(t *testing.T) {
++						unchanged := newProgram(initiallyESM, state.program)
++						assert.Assert(t, unchanged.snapshot.changedFilesSet.IsEmpty(), "unchanged producer options must retain normal reuse")
++						assert.Equal(t, len(unchanged.GetSemanticDiagnostics(t.Context(), nil)), len(oldDiagnostics))
++						current := newProgram(!initiallyESM, state.program)
++						fresh := newProgram(!initiallyESM, nil)
++						const output tspath.RootedFilePath = "/producer/dist/index.d.ts"
++						file := current.program.GetSourceFile(output)
++						assert.Equal(t, file.Text(), old.program.GetSourceFile(output).Text())
++						assert.Equal(t, current.program.GetSourceFileMetaData(file.PathKey()), old.program.GetSourceFileMetaData(file.PathKey()), "ordinary declaration metadata remains unchanged")
++						expected := fresh.GetSemanticDiagnostics(t.Context(), nil)
++						assert.Equal(t, len(expected), core.IfElse(initiallyESM, 0, 1))
++						for _, diagnostic := range expected {
++							assert.Equal(t, diagnostic.Code(), int32(1192))
++						}
++						actual := current.GetSemanticDiagnostics(t.Context(), nil)
++						assert.Equal(t, len(actual), len(expected), "producer module change must invalidate synthetic-default diagnostics: incremental=%v fresh=%v", actual, expected)
++						for i, diagnostic := range actual {
++							assert.Equal(t, diagnostic.Code(), expected[i].Code())
++						}
++					})
++				}
++			})
++		}
++	}
++}

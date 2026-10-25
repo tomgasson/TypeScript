@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations         	       1	3182901168 ns/op	        51.00 cache-entries/session	      6296 declaration-text-B/session	  10260440 live-B/batch	   2565110 live-B/session	         0 shared-declaration-B	1478302320 B/op	15018673 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations         	       1	3242765690 ns/op	        51.00 cache-entries/session	      6296 declaration-text-B/session	  10279016 live-B/batch	   2569754 live-B/session	         0 shared-declaration-B	1478286272 B/op	15018726 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations         	       1	3194769626 ns/op	        51.00 cache-entries/session	      6296 declaration-text-B/session	  10261848 live-B/batch	   2565462 live-B/session	         0 shared-declaration-B	1478106256 B/op	15018570 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations         	       1	3054731620 ns/op	        51.00 cache-entries/session	      6296 declaration-text-B/session	  10278632 live-B/batch	   2569658 live-B/session	         0 shared-declaration-B	1478389600 B/op	15018689 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations         	       1	3214442032 ns/op	        51.00 cache-entries/session	      6296 declaration-text-B/session	  10281736 live-B/batch	   2570434 live-B/session	         0 shared-declaration-B	1478284720 B/op	15018685 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerRetainedHeap/PublicSignature/AutomaticDeclarations         	       1	3156593413 ns/op	        51.00 cache-entries/session	      6296 declaration-text-B/session	  10269512 live-B/batch	   2567378 live-B/session	         0 shared-declaration-B	1478268512 B/op	15018624 allocs/op
+PASS

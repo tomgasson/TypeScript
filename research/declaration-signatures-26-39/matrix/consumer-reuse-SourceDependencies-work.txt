@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/SourceDependencies         	     631	   1793428 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  512691 B/op	    2608 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/SourceDependencies         	     633	   1821760 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  512744 B/op	    2608 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/SourceDependencies         	     664	   1731506 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  513615 B/op	    2608 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/SourceDependencies         	     592	   1791166 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  511608 B/op	    2608 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/SourceDependencies         	     625	   1769885 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  512531 B/op	    2608 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationBoundary/SourceDependencies         	     656	   1794176 ns/op	         0 producer-source-read-B/op	         0 producer-source-reads/op	  513396 B/op	    2608 allocs/op
+PASS

@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations         	      26	  46503204 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	21686840 B/op	  220743 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations         	      25	  45744822 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	21685654 B/op	  220744 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations         	      26	  47273238 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	21685559 B/op	  220743 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations         	      28	  46050320 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	21685520 B/op	  220744 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations         	      28	  43837576 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	21690392 B/op	  220744 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/PublicSignature/AutomaticDeclarations         	      25	  49259943 ns/op	     23343 producer-source-read-B/op	         2.000 producer-source-reads/op	21689289 B/op	  220748 allocs/op
+PASS

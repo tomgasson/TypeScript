@@ -1,0 +1,3 @@
+ok  	github.com/microsoft/TypeScript/tsc/internal/transpile	0.014s
+ok  	github.com/microsoft/TypeScript/tsc/internal/compiler	0.011s
+ok  	github.com/microsoft/TypeScript/tsc/internal/testrunner	2.404s

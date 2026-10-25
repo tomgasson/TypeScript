@@ -1,0 +1,36 @@
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations         	      26	  45900471 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	21696918 B/op	  220836 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations         	      28	  45375222 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	21701193 B/op	  220835 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations         	      26	  43436678 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	21700993 B/op	  220836 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations         	      22	  47600101 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	21701723 B/op	  220834 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations         	      26	  45068568 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	21700954 B/op	  220835 allocs/op
+PASS
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/project
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkEditorDeclarationProducerChanges/TransitiveSignature/AutomaticDeclarations         	      28	  44595528 ns/op	     23427 producer-source-read-B/op	         2.000 producer-source-reads/op	21697540 B/op	  220836 allocs/op
+PASS
