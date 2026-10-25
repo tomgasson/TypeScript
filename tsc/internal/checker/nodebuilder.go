@@ -77,6 +77,7 @@ func (b *NodeBuilder) popContext() {
 		b.impl.ctx = nil
 	} else {
 		b.impl.ctx = b.ctxStack[stackSize-1]
+		b.ctxStack[stackSize-1] = nil
 		b.ctxStack = b.ctxStack[:stackSize-1]
 	}
 }
