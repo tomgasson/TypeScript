@@ -1,0 +1,42 @@
+# round 1 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 824389679 ns/op	  15765586 live-B/program	279561880 B/op	 1132124 allocs/op
+PASS
+# round 2 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 826019580 ns/op	  15765590 live-B/program	279564800 B/op	 1132141 allocs/op
+PASS
+# round 3 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 860500167 ns/op	  15765568 live-B/program	279561752 B/op	 1132123 allocs/op
+PASS
+# round 4 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 813756508 ns/op	  15765556 live-B/program	279564616 B/op	 1132141 allocs/op
+PASS
+# round 5 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 809226758 ns/op	  15765558 live-B/program	279562376 B/op	 1132127 allocs/op
+PASS
+# round 6 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclarationRetainedHeap 	       1	 872503725 ns/op	  15765596 live-B/program	279564744 B/op	 1132142 allocs/op
+PASS

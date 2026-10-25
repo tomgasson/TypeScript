@@ -1,0 +1,60 @@
+# round 1 variant before
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached         	     654	   1690259 ns/op	  943872 B/op	   18508 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                        	     456	   2558519 ns/op	 1125963 B/op	   19591 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached              	   50691	     24420 ns/op	   16812 B/op	     281 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                             	   27318	     39396 ns/op	   20240 B/op	     321 allocs/op
+PASS
+# round 2 variant before
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached         	     638	   1699585 ns/op	  943872 B/op	   18508 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                        	     523	   2296190 ns/op	 1125963 B/op	   19591 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached              	   50660	     24716 ns/op	   16812 B/op	     281 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                             	   33106	     36041 ns/op	   20241 B/op	     321 allocs/op
+PASS
+# round 3 variant before
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached         	     674	   1722155 ns/op	  943872 B/op	   18508 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                        	     489	   2387071 ns/op	 1125964 B/op	   19591 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached              	   49424	     24291 ns/op	   16812 B/op	     281 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                             	   34560	     35303 ns/op	   20240 B/op	     321 allocs/op
+PASS
+# round 4 variant before
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached         	     624	   1776606 ns/op	  943872 B/op	   18508 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                        	     472	   2502731 ns/op	 1125964 B/op	   19591 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached              	   45553	     24385 ns/op	   16812 B/op	     281 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                             	   33564	     35799 ns/op	   20239 B/op	     321 allocs/op
+PASS
+# round 5 variant before
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached         	     618	   1786929 ns/op	  943872 B/op	   18508 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                        	     493	   2372433 ns/op	 1125963 B/op	   19591 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached              	   49436	     24265 ns/op	   16812 B/op	     281 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                             	   32251	     36886 ns/op	   20242 B/op	     321 allocs/op
+PASS
+# round 6 variant before
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached         	     602	   1817507 ns/op	  943872 B/op	   18508 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                        	     488	   2400555 ns/op	 1125964 B/op	   19591 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached              	   47776	     24804 ns/op	   16812 B/op	     281 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                             	   31454	     38476 ns/op	   20241 B/op	     321 allocs/op
+PASS

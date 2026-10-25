@@ -1,0 +1,90 @@
+# round 1 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmDiagnosticsUncached         	   20816	     16524 ns/op	   10192 B/op	     180 allocs/op
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit                        	   14143	     25417 ns/op	   13378 B/op	     219 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached       	     204	   1808762 ns/op	  943728 B/op	   18505 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                      	     139	   2515183 ns/op	 1125819 B/op	   19588 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/ColdProgramDiagnostics        	       8	  39638902 ns/op	17458451 B/op	   70761 allocs/op
+BenchmarkDeclaration/JSExpando/WarmDiagnosticsUncached             	   16443	     22212 ns/op	   15276 B/op	     258 allocs/op
+BenchmarkDeclaration/JSExpando/WarmEmit                            	   10000	     32653 ns/op	   18646 B/op	     298 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached            	   14643	     24179 ns/op	   16764 B/op	     280 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                           	   10000	     34425 ns/op	   20192 B/op	     320 allocs/op
+PASS
+# round 2 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmDiagnosticsUncached         	   22698	     15282 ns/op	   10192 B/op	     180 allocs/op
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit                        	   14780	     24497 ns/op	   13380 B/op	     219 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached       	     204	   1724024 ns/op	  943728 B/op	   18505 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                      	     156	   2303114 ns/op	 1125818 B/op	   19588 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/ColdProgramDiagnostics        	       9	  39482886 ns/op	17458276 B/op	   70759 allocs/op
+BenchmarkDeclaration/JSExpando/WarmDiagnosticsUncached             	   16155	     21603 ns/op	   15276 B/op	     258 allocs/op
+BenchmarkDeclaration/JSExpando/WarmEmit                            	   10000	     30748 ns/op	   18646 B/op	     298 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached            	   15440	     22889 ns/op	   16764 B/op	     280 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                           	   10000	     33858 ns/op	   20192 B/op	     320 allocs/op
+PASS
+# round 3 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmDiagnosticsUncached         	   22563	     15103 ns/op	   10192 B/op	     180 allocs/op
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit                        	   15252	     24199 ns/op	   13379 B/op	     219 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached       	     178	   1925809 ns/op	  943728 B/op	   18505 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                      	     130	   2713817 ns/op	 1125815 B/op	   19588 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/ColdProgramDiagnostics        	       9	  44723223 ns/op	17458236 B/op	   70759 allocs/op
+BenchmarkDeclaration/JSExpando/WarmDiagnosticsUncached             	   16528	     21558 ns/op	   15276 B/op	     258 allocs/op
+BenchmarkDeclaration/JSExpando/WarmEmit                            	   10000	     32870 ns/op	   18649 B/op	     298 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached            	   14718	     23804 ns/op	   16764 B/op	     280 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                           	   10000	     35136 ns/op	   20193 B/op	     320 allocs/op
+PASS
+# round 4 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmDiagnosticsUncached         	   21012	     16440 ns/op	   10192 B/op	     180 allocs/op
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit                        	   14217	     25424 ns/op	   13380 B/op	     219 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached       	     184	   2020003 ns/op	  943728 B/op	   18505 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                      	     147	   2405102 ns/op	 1125819 B/op	   19588 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/ColdProgramDiagnostics        	       8	  41482048 ns/op	17458098 B/op	   70758 allocs/op
+BenchmarkDeclaration/JSExpando/WarmDiagnosticsUncached             	   16551	     21406 ns/op	   15276 B/op	     258 allocs/op
+BenchmarkDeclaration/JSExpando/WarmEmit                            	   10000	     31981 ns/op	   18647 B/op	     298 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached            	   15091	     23854 ns/op	   16764 B/op	     280 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                           	   10000	     34834 ns/op	   20192 B/op	     320 allocs/op
+PASS
+# round 5 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmDiagnosticsUncached         	   23170	     15559 ns/op	   10192 B/op	     180 allocs/op
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit                        	   14274	     25677 ns/op	   13378 B/op	     219 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached       	     193	   1880284 ns/op	  943728 B/op	   18505 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                      	     132	   2595701 ns/op	 1125816 B/op	   19588 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/ColdProgramDiagnostics        	       9	  40870383 ns/op	17458237 B/op	   70759 allocs/op
+BenchmarkDeclaration/JSExpando/WarmDiagnosticsUncached             	   15830	     23294 ns/op	   15276 B/op	     258 allocs/op
+BenchmarkDeclaration/JSExpando/WarmEmit                            	    9915	     35355 ns/op	   18649 B/op	     298 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached            	   14934	     23925 ns/op	   16764 B/op	     280 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                           	   10000	     42952 ns/op	   20190 B/op	     320 allocs/op
+PASS
+# round 6 variant maps
+goos: linux
+goarch: amd64
+pkg: github.com/microsoft/TypeScript/tsc/internal/compiler
+cpu: AMD EPYC 9V74 80-Core Processor                
+BenchmarkDeclaration/AnnotatedTS_1/WarmDiagnosticsUncached         	   23245	     15476 ns/op	   10192 B/op	     180 allocs/op
+BenchmarkDeclaration/AnnotatedTS_1/WarmEmit                        	   15352	     23676 ns/op	   13378 B/op	     219 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmDiagnosticsUncached       	     187	   1823070 ns/op	  943728 B/op	   18505 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/WarmEmit                      	     136	   2569348 ns/op	 1125819 B/op	   19588 allocs/op
+BenchmarkDeclaration/AnnotatedTS_200/ColdProgramDiagnostics        	       8	  42387582 ns/op	17458295 B/op	   70760 allocs/op
+BenchmarkDeclaration/JSExpando/WarmDiagnosticsUncached             	   16868	     21665 ns/op	   15276 B/op	     258 allocs/op
+BenchmarkDeclaration/JSExpando/WarmEmit                            	   10000	     31607 ns/op	   18647 B/op	     298 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmDiagnosticsUncached            	   15486	     23666 ns/op	   16764 B/op	     280 allocs/op
+BenchmarkDeclaration/JSCommonJS/WarmEmit                           	   10000	     35187 ns/op	   20191 B/op	     320 allocs/op
+PASS
