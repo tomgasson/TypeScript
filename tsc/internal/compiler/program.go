@@ -1927,25 +1927,23 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 		},
 	}
 	wg := core.NewWorkGroup(p.SingleThreaded())
-	var emitters []*emitter
 	forceDtsEmit := options.EmitOnly == EmitOnlyBuilderSignature || options.ForceEmit && options.EmitOnly == EmitOnlyDts
 	forceJsEmit := options.ForceEmit && options.EmitOnly == EmitOnlyJs
 	sourceFiles := p.getSourceFilesToEmit(options.TargetSourceFiles, forceDtsEmit, forceJsEmit)
+	results := make([]*EmitResult, len(sourceFiles))
 
-	for _, sourceFile := range sourceFiles {
-		emitter := &emitter{
-			writer:     nil,
-			sourceFile: sourceFile,
-			emitOnly:   options.EmitOnly,
-			forceEmit:  options.ForceEmit,
-			writeFile:  options.WriteFile,
-			tr:         p.hosts.Tracing,
-		}
-		emitters = append(emitters, emitter)
+	for i, sourceFile := range sourceFiles {
 		wg.Queue(func() {
 			host, done := newEmitHost(ctx, p, sourceFile)
 			defer done()
-			emitter.host = host
+			emitter := &emitter{
+				host:       host,
+				sourceFile: sourceFile,
+				emitOnly:   options.EmitOnly,
+				forceEmit:  options.ForceEmit,
+				writeFile:  options.WriteFile,
+				tr:         p.hosts.Tracing,
+			}
 
 			// take an unused writer
 			writer := writerPool.Get().(printer.EmitTextWriter)
@@ -1963,6 +1961,11 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 
 			// put the writer back in the pool
 			writerPool.Put(writer)
+
+			// Copy the result so completed workers do not retain their emitter's
+			// host and checker until all other files finish emitting.
+			result := emitter.emitResult
+			results[i] = &result
 		})
 	}
 
@@ -1970,9 +1973,7 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 	wg.RunAndWait()
 
 	// collect results from emit, preserving input order
-	return CombineEmitResults(core.Map(emitters, func(e *emitter) *EmitResult {
-		return &e.emitResult
-	}))
+	return CombineEmitResults(results)
 }
 
 func CombineEmitResults(results []*EmitResult) *EmitResult {
