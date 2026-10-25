@@ -45,10 +45,7 @@ func (mapper *projectReferenceFileMapper) rootConfigPath() tspath.PathKey {
 func (mapper *projectReferenceFileMapper) getParseFileRedirect(file ast.HasFileName) (tspath.RootedFilePath, tspath.PathKey) {
 	if mapper.useSourceOfProjectReference {
 		// Map to source file from project reference
-		source := mapper.getProjectReferenceFromOutputDts(file.PathKey())
-		if source == nil {
-			source, _ = mapper.realpathDtsToSource.Load(file.PathKey())
-		}
+		source := mapper.getProjectReferenceFromOutputDtsOrRealpath(file.PathKey())
 		if source != nil {
 			return source.Source, source.SourcePath
 		}
@@ -83,6 +80,14 @@ func (mapper *projectReferenceFileMapper) getProjectReferenceFromOutputDts(path 
 	return mapper.outputDtsToProjectReference[path]
 }
 
+func (mapper *projectReferenceFileMapper) getProjectReferenceFromOutputDtsOrRealpath(path tspath.PathKey) *tsoptions.SourceOutputAndProjectReference {
+	if reference := mapper.getProjectReferenceFromOutputDts(path); reference != nil {
+		return reference
+	}
+	reference, _ := mapper.realpathDtsToSource.Load(path)
+	return reference
+}
+
 func (mapper *projectReferenceFileMapper) isSourceFromProjectReference(path tspath.PathKey) bool {
 	return mapper.useSourceOfProjectReference && mapper.getProjectReferenceFromSource(path) != nil
 }
@@ -106,14 +111,9 @@ func (mapper *projectReferenceFileMapper) getRedirectForResolution(file ast.HasF
 	}
 
 	// Source file from project reference
-	resultFromDts := mapper.getProjectReferenceFromOutputDts(path)
+	resultFromDts := mapper.getProjectReferenceFromOutputDtsOrRealpath(path)
 	if resultFromDts != nil {
 		return resultFromDts.Resolved, resultFromDts.Source
-	}
-
-	realpathDtsToSource, _ := mapper.realpathDtsToSource.Load(path)
-	if realpathDtsToSource != nil {
-		return realpathDtsToSource.Resolved, realpathDtsToSource.Source
 	}
 	return nil, file.FileName()
 }
