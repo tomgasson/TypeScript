@@ -44,6 +44,14 @@ func declarationEligibilityBenchmarkCases(b *testing.B) []declarationEligibility
 			fileName: "/src/index.d.ts",
 			source:   `export declare function read(value: number): number;`,
 		},
+		{
+			// This file is eligible for declaration transformation. Its warm
+			// requests exercise the normal diagnostic-cache hit path.
+			name:     "EligibleTS",
+			fileName: "/src/index.ts",
+			source:   `export function read(value: number): number { return value + 1; }`,
+			options:  core.CompilerOptions{IsolatedDeclarations: core.TSTrue},
+		},
 	} {
 		fs := bundled.WrapFS(vfstest.FromMap(map[string]string{c.fileName.AsString(): c.source}, tspath.CaseSensitive))
 		c.options.Target = core.ScriptTargetES2015
@@ -98,7 +106,7 @@ func validateDeclarationEligibilityBenchmark(b *testing.B, c declarationEligibil
 		b.Fatal("benchmark source was not associated with its referenced project")
 	}
 	if diags := p.GetDeclarationDiagnostics(context.Background(), file); len(diags) != 0 {
-		b.Fatalf("expected no declaration diagnostics for excluded file: %v", diags)
+		b.Fatalf("unexpected declaration diagnostics: %v", diags)
 	}
 }
 

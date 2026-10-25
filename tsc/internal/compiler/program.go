@@ -1656,7 +1656,7 @@ func (p *Program) getDiagnosticsWithPrecedingDirectives(sourceFile *ast.SourceFi
 }
 
 func (p *Program) getDeclarationDiagnosticsForFile(ctx context.Context, sourceFile *ast.SourceFile) []*ast.Diagnostic {
-	if !sourceFileMayHaveDeclarationDiagnostics(sourceFile, p) {
+	if sourceFile.IsDeclarationFile {
 		return []*ast.Diagnostic{}
 	}
 
@@ -1664,9 +1664,12 @@ func (p *Program) getDeclarationDiagnosticsForFile(ctx context.Context, sourceFi
 		return cached
 	}
 
-	host, done := newEmitHost(ctx, p, sourceFile)
-	defer done()
-	diagnostics := getDeclarationDiagnostics(host, sourceFile)
+	diagnostics := []*ast.Diagnostic{}
+	if sourceFileMayHaveDeclarationDiagnostics(sourceFile, p) {
+		host, done := newEmitHost(ctx, p, sourceFile)
+		defer done()
+		diagnostics = getDeclarationDiagnostics(host, sourceFile)
+	}
 	diagnostics, _ = p.declarationDiagnosticCache.LoadOrStore(sourceFile, diagnostics)
 	return diagnostics
 }
