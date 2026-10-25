@@ -757,8 +757,6 @@ func (r *EmitResolver) CreateLateBoundIndexSignatures(container *ast.Node, enclo
 		instanceInfos = r.checker.getIndexInfosOfIndexSymbol(instanceIndexSymbol, siblingSymbols)
 	}
 
-	requestNodeBuilder := r.nodeBuilder()
-
 	var result []*ast.Node
 	for i, infoList := range [][]*IndexInfo{staticInfos, instanceInfos} {
 		isStatic := true
@@ -805,7 +803,7 @@ func (r *EmitResolver) CreateLateBoundIndexSignatures(container *ast.Node, enclo
 							core.IfElse(mods != nil, r.emitContext.Factory.NewModifierList(mods), nil),
 							c.Name(),
 							c.QuestionToken(),
-							requestNodeBuilder.TypeToTypeNode(r.checker.getTypeOfSymbol(c.Symbol()), enclosingDeclaration, flags, internalFlags, tracker),
+							r.nodeBuilder().TypeToTypeNode(r.checker.getTypeOfSymbol(c.Symbol()), enclosingDeclaration, flags, internalFlags, tracker),
 							nil,
 						)
 						result = append(result, decl)
@@ -813,7 +811,7 @@ func (r *EmitResolver) CreateLateBoundIndexSignatures(container *ast.Node, enclo
 					continue
 				}
 			}
-			node := requestNodeBuilder.IndexInfoToIndexSignatureDeclaration(info, enclosingDeclaration, flags, internalFlags, tracker)
+			node := r.nodeBuilder().IndexInfoToIndexSignatureDeclaration(info, enclosingDeclaration, flags, internalFlags, tracker)
 			if node != nil && isStatic {
 				modNodes := []*ast.Node{r.emitContext.Factory.NewModifier(ast.KindStaticKeyword)}
 				modNodes = append(modNodes, node.ModifierNodes()...)
