@@ -1955,12 +1955,17 @@ func (p *Program) Emit(ctx context.Context, options EmitOptions) *EmitResult {
 
 func (p *Program) emitWorker(ctx context.Context, options EmitOptions) *EmitResult {
 	newLine := p.Options().NewLine.GetNewLineCharacter()
-	writerPool := &sync.Pool{
-		New: func() any {
-			return printer.NewTextWriter(newLine, 0)
-		},
+	singleThreaded := p.SingleThreaded()
+	var singleWriter printer.EmitTextWriter
+	var writerPool *sync.Pool
+	if !singleThreaded {
+		writerPool = &sync.Pool{
+			New: func() any {
+				return printer.NewTextWriter(newLine, 0)
+			},
+		}
 	}
-	wg := core.NewWorkGroup(p.SingleThreaded())
+	wg := core.NewWorkGroup(singleThreaded)
 	forceDtsEmit := options.EmitOnly == EmitOnlyBuilderSignature || options.ForceEmit && options.EmitOnly == EmitOnlyDts
 	forceJsEmit := options.ForceEmit && options.EmitOnly == EmitOnlyJs
 	sourceFiles := p.getSourceFilesToEmit(options.TargetSourceFiles, forceDtsEmit, forceJsEmit)
@@ -1991,8 +1996,16 @@ func (p *Program) emitWorker(ctx context.Context, options EmitOptions) *EmitResu
 				tr:         p.hosts.Tracing,
 			}
 
-			// take an unused writer
-			writer := writerPool.Get().(printer.EmitTextWriter)
+			// Serial emission can reuse one writer without allocating a pool.
+			var writer printer.EmitTextWriter
+			if singleThreaded {
+				if singleWriter == nil {
+					singleWriter = printer.NewTextWriter(newLine, 0)
+				}
+				writer = singleWriter
+			} else {
+				writer = writerPool.Get().(printer.EmitTextWriter)
+			}
 			writer.Clear()
 
 			// attach writer and perform emit
@@ -2000,8 +2013,9 @@ func (p *Program) emitWorker(ctx context.Context, options EmitOptions) *EmitResu
 			emitter.emit()
 			emitter.writer = nil
 
-			// put the writer back in the pool
-			writerPool.Put(writer)
+			if writerPool != nil {
+				writerPool.Put(writer)
+			}
 
 			// Copy the result so completed workers do not retain their emitter's
 			// host and checker until all other files finish emitting.
